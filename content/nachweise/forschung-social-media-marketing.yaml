@@ -1,0 +1,15 @@
+order: 4
+type: "forschung"
+date: "2026-04-19"
+source: "FFHS, Quantitative Forschungsmethoden"
+pdf: "/pdf/forschung-social-media-marketing-markenwert.pdf"
+image: "/images/research/quantitative-smma.webp"
+de:
+  title: "Der Einfluss von Social-Media-Marketing-Aktivitäten auf Markenwert und Kundenreaktion"
+  summary: "2×2-Vignettenexperiment für eine fiktive Hautpflegemarke: wie Interaktion und Personalisierung auf Markenwert und Kundenreaktion wirken."
+en:
+  title: "How social media marketing activities affect brand equity and customer response"
+  summary: "A 2×2 vignette experiment for a fictional skincare brand: how interaction and personalisation affect brand equity and customer response."
+it:
+  title: "L'influenza delle attività di social media marketing su brand equity e risposta dei clienti"
+  summary: "Esperimento 2×2 con vignette per un brand fittizio di skincare: l'effetto di interazione e personalizzazione su brand equity e risposta dei clienti."

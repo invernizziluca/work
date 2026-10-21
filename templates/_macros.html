@@ -1,0 +1,36 @@
+{# Small reusable pieces. Imported with context, so ui, page and lang are available. #}
+
+{% macro source_chip(source, href) -%}
+{% set label = ui.sources[source] %}
+{% if href %}
+<a class="chip chip--{{ source }}" href="{{ page.url(href) }}" target="_blank" rel="noopener"><span class="sr-only">{{ ui.sources.source }}: </span>{{ label }}</a>
+{%- else %}
+<span class="chip chip--{{ source }}"><span class="sr-only">{{ ui.sources.source }}: </span>{{ label }}</span>
+{%- endif %}
+{%- endmacro %}
+
+{% macro image_src(value) -%}{{ value.src if value is mapping else value }}{%- endmacro %}
+
+{% macro area_tags(area_ids) -%}
+<ul class="tags">
+{% for id in area_ids %}
+  <li class="tag" data-area="{{ id }}">{{ areas_by_id[id].word|tr(lang) }}</li>
+{% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro person(ref, size='56px') -%}
+{% set image = ref.image.src if ref.image is mapping else ref.image %}
+<div class="person">
+{% if image %}
+  {{ page.img(image, '', sizes=size, css_class='person__photo') }}
+{% else %}
+  <span class="person__initials" aria-hidden="true">{{ ref.name.split()|map('first')|join('')|upper }}</span>
+{% endif %}
+  <div class="person__text">
+    <span class="person__name">{{ ref.name|tr(lang) }}</span>
+    <span class="person__meta">{{ ref.role|tr(lang) }}</span>
+    <span class="person__meta">{{ ref.source|tr(lang) }}, {{ format_date(ref.date, lang) }}</span>
+  </div>
+</div>
+{%- endmacro %}

@@ -1,0 +1,19 @@
+# LINKEDIN POST · shown on the experience page that lists it under "posts"
+order: 1
+date: "2026-03-25"
+url: "https://www.linkedin.com/posts/lucainve_wei%C3%9Ft-du-wie-ein-songwriting-camp-aussieht-activity-7442450315599175680-L-eK/"
+image:
+  src: "/images/works/eintracht-pankow/songwriting-camp-cover.webp"
+  alt:
+    de: "Gruppenfoto beim Songwriting Camp"
+    en: "Group photo at the songwriting camp"
+    it: "Foto di gruppo al songwriting camp"
+de:
+  title: "Weißt du, wie ein Songwriting Camp aussieht?"
+  excerpt: "Organisation, Begleitung der Artists und ein direkter Blick in den kreativen Prozess: drei Tage bei Guesstimate / Loftyard Studios."
+en:
+  title: "Do you know what a songwriting camp looks like?"
+  excerpt: "Organisation, artist support and a direct look at the creative process: three days at Guesstimate / Loftyard Studios."
+it:
+  title: "Sai com'è fatto un songwriting camp?"
+  excerpt: "Organizzazione, accompagnamento degli artisti e uno sguardo diretto sul processo creativo: tre giorni da Guesstimate / Loftyard Studios."

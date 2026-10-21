@@ -1,0 +1,71 @@
+# TEMPLATE · new experience
+# Copy to content/erfahrung/<name>.yaml (lowercase letters and hyphens: "label-xyz.yaml" -> /de/erfahrung/label-xyz/)
+# Put photos into static/images/works/<name>/
+
+order: 6                      # position in the list (1 = top)
+company: "Firma GmbH"         # or one text per language (de / en / it)
+location:
+  de: "Berlin"
+  en: "Berlin"
+  it: "Berlino"
+start: "2027-03"              # "YYYY-MM"
+# end: "2027-08"              # leave out while it is still running (shows "Aktuell")
+website: "https://www.example.com/"
+areas: ["content", "kontakte"]   # one or more of: content, kontakte, koordination
+
+cover:
+  src: "/images/works/<name>/cover.webp"
+  position: "center 30%"      # crop: "center 20%" = higher, "center 80%" = lower
+  alt:
+    de: "Was auf dem Bild zu sehen ist"
+    en: "What the image shows"
+    it: "Cosa mostra l'immagine"
+
+tools: ["Tool 1", "Tool 2"]
+gallery: []                   # same format as cover, one entry per image
+documents: []                 # file names from content/nachweise/, e.g. ["zeugnis-firma"]
+posts: []                     # file names from content/linkedin/
+links: []                     # - label: "Text"  url: "https://…"
+
+de:
+  title: "Firma"
+  role: "Praktikant …"
+  summary: "1–2 Sätze für die Übersicht."
+  context: "Was die Organisation macht."
+  contribution: "Was ich konkret gemacht habe."
+  tasks:
+    - "Aufgabe"
+  outputs:
+    - "Ergebnis (nur was belegbar ist)"
+  highlights: []              # - value: "83.767"  label: "Aufrufe in 14 Tagen"
+  transfer:
+    content: "Wofür das in Kommunikation und Content zählt."
+    kontakte: "Wofür das in Vertrieb und Business Development zählt."
+  learnings:
+    - "Was ich mitnehme"
+
+en:
+  title: "Company"
+  role: "… intern"
+  summary: "…"
+  context: "…"
+  contribution: "…"
+  tasks: ["…"]
+  outputs: ["…"]
+  transfer:
+    content: "…"
+    kontakte: "…"
+  learnings: ["…"]
+
+it:
+  title: "Azienda"
+  role: "Stagista …"
+  summary: "…"
+  context: "…"
+  contribution: "…"
+  tasks: ["…"]
+  outputs: ["…"]
+  transfer:
+    content: "…"
+    kontakte: "…"
+  learnings: ["…"]

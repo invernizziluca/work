@@ -1,0 +1,21 @@
+order: 3
+featured: false
+name: "Kathrin Margarethe Limburg"
+role:
+  de: "Gebrüder Fritz GmbH"
+  en: "Gebrüder Fritz GmbH"
+  it: "Gebrüder Fritz GmbH"
+source:
+  de: "Praktikumszeugnis"
+  en: "Internship reference letter"
+  it: "Certificato di stage"
+date: "2026-01-05"
+image: "/images/references/kathrin-limburg.webp"
+pdf: "/pdf/zeugnis-gebrueder-fritz.pdf"
+original_language: "de"
+de:
+  quote: "Besonders hervorzuheben sind seine guten organisatorischen Fähigkeiten, seine Eigeninitiative sowie sein freundliches und professionelles Auftreten im Umgang mit KundInnen, PartnerInnen und KollegInnen."
+en:
+  quote: "Particularly worth highlighting are his good organisational skills, his initiative and his friendly and professional manner with clients, partners and colleagues."
+it:
+  quote: "Vanno sottolineate in particolare le sue buone capacità organizzative, il suo spirito d'iniziativa e il suo modo di fare cordiale e professionale con clienti, partner e colleghi."

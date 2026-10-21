@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m with context %}
+{% block title %}{{ text.title }}: {{ text.role }} | {{ home.name|tr(lang) }}{% endblock %}
+{% block description %}{{ text.summary }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block body %}
+{% set cover = work.cover if work.cover is mapping else {'src': work.cover} %}
+<div class="frame">
+  <main id="inhalt" class="main" tabindex="-1">
+    <article class="station-main zone">
+      <p class="back"><a href="{{ page.url(home_path(lang) + '#experience') }}">{{ ui.station.back }}</a></p>
+      <header class="station__head">
+        <h1 class="station__title">{{ text.title }}</h1>
+        <p class="station__role">{{ text.role }}</p>
+        <p class="station__meta">{{ format_period(work.start, work.get('end'), ui) }}, {{ work.location|tr(lang) }}</p>
+        <p class="station__lead">{{ text.summary }}</p>
+      </header>
+
+      <figure class="station__cover">
+        {{ page.img(cover.src, cover.alt|tr(lang), sizes='(min-width: 960px) 900px, 100vw', loading='eager', fetchpriority='high', position=cover.position) }}
+      </figure>
+
+{% if text.highlights %}
+      <dl class="highlights">
+{% for item in text.highlights %}
+        <div>
+          <dt>{{ item.value }}</dt>
+          <dd>{{ item.label }}</dd>
+        </div>
+{% endfor %}
+      </dl>
+{% endif %}
+
+      <section class="block" aria-labelledby="context-title">
+        <h2 id="context-title" class="block__title">{{ ui.station.context }}</h2>
+{% for paragraph in text.context|paragraphs %}
+        <p>{{ paragraph }}</p>
+{% endfor %}
+      </section>
+
+      <section class="block" aria-labelledby="role-title">
+        <h2 id="role-title" class="block__title">{{ ui.station.contribution }}</h2>
+{% for paragraph in text.contribution|paragraphs %}
+        <p>{{ paragraph }}</p>
+{% endfor %}
+      </section>
+
+{% if text.tasks %}
+      <section class="block" aria-labelledby="tasks-title">
+        <h2 id="tasks-title" class="block__title">{{ ui.station.tasks }}</h2>
+        <ul class="dotlist">
+{% for task in text.tasks %}
+          <li>{{ task }}</li>
+{% endfor %}
+        </ul>
+      </section>
+{% endif %}
+
+      <section class="block" aria-labelledby="outputs-title">
+        <h2 id="outputs-title" class="block__title">{{ ui.station.outputs }}</h2>
+{% if text.outputs %}
+        <ul class="dotlist">
+{% for output in text.outputs %}
+          <li>{{ output }}</li>
+{% endfor %}
+        </ul>
+{% else %}
+        <p class="muted">{{ ui.station.outputs_pending }}</p>
+{% endif %}
+      </section>
+
+{% if text.transfer %}
+      <section class="block" aria-labelledby="transfer-title">
+        <h2 id="transfer-title" class="block__title">{{ ui.station.transfer }}</h2>
+        <dl class="transfer">
+{% for area in home.focus.areas if text.transfer[area.id] %}
+          <div>
+            <dt>{{ area.word|tr(lang) }}</dt>
+            <dd>{{ text.transfer[area.id] }}</dd>
+          </div>
+{% endfor %}
+        </dl>
+      </section>
+{% endif %}
+
+{% set gallery = work.gallery or [] %}
+{% set post_ids = work.posts or [] %}
+{% set links = work.links or [] %}
+{% if gallery or post_ids or links %}
+      <section class="block" aria-labelledby="proof-title">
+        <h2 id="proof-title" class="block__title">{{ ui.station.proof }}</h2>
+{% if gallery %}
+        <div class="gallery-wrap" data-gallery>
+          <h3 class="label">{{ ui.station.gallery }}</h3>
+          <ul class="gallery gallery--{{ 3 if (gallery|length) % 3 == 0 or (gallery|length) > 6 else 2 }}">
+{% for image in gallery %}
+{% set alt = image.alt|tr(lang) or (text.title ~ ' (' ~ loop.index ~ ')') %}
+{% set caption = image.caption|tr(lang) %}
+            <li>
+              <figure>
+                <button type="button" data-full="{{ page.url(image.src) }}" data-alt="{{ alt }}" data-caption="{{ caption or alt }}" aria-label="{{ ui.gallery.open }}: {{ alt }}">
+                  {{ page.img(image.src, alt, sizes='(min-width: 960px) 18rem, 46vw', position=image.position) }}
+                </button>
+{% if caption %}
+                <figcaption>{{ caption }}</figcaption>
+{% endif %}
+              </figure>
+            </li>
+{% endfor %}
+          </ul>
+          <dialog class="lightbox" aria-label="{{ ui.gallery.open }}">
+            <div class="lightbox__stage"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" data-lightbox-img></div>
+            <div class="lightbox__bar">
+              <button type="button" class="icon-btn" data-prev aria-label="{{ ui.gallery.previous }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+              <p class="lightbox__caption" data-lightbox-caption></p>
+              <button type="button" class="icon-btn" data-next aria-label="{{ ui.gallery.next }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+              <button type="button" class="icon-btn" data-close aria-label="{{ ui.gallery.close }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+            </div>
+          </dialog>
+        </div>
+{% endif %}
+{% if post_ids %}
+        <h3 class="label">{{ ui.station.posts }}</h3>
+        <div class="posts">
+{% for id in post_ids %}
+{% set post = posts_by_id[id] %}
+{% set ptext = localized(post, lang) %}
+          <a class="post" href="{{ post.url }}" target="_blank" rel="noopener">
+            <span class="post__img">{{ page.img(m.image_src(post.image), (post.image.alt|tr(lang)) if post.image is mapping else '', sizes='(min-width: 960px) 18rem, 100vw', position=(post.image.position if post.image is mapping else None)) }}</span>
+            <span class="post__body">
+              <span class="post__title">{{ ptext.title }}</span>
+              <span class="post__meta">{% if post.author %}{{ ui.proof.post_by }} {{ post.author }}, {% endif %}{{ format_date(post.date, lang) }}</span>
+              <span class="post__excerpt">{{ ptext.excerpt }}</span>
+            </span>
+          </a>
+{% endfor %}
+        </div>
+{% endif %}
+{% if links %}
+        <h3 class="label">{{ ui.station.links }}</h3>
+        <ul class="linklist">
+{% for link in links %}
+          <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label|tr(lang) }}</a></li>
+{% endfor %}
+        </ul>
+{% endif %}
+      </section>
+{% endif %}
+
+{% if text.learnings %}
+      <section class="block" aria-labelledby="learnings-title">
+        <h2 id="learnings-title" class="block__title">{{ ui.station.learnings }}</h2>
+        <ul class="dotlist">
+{% for learning in text.learnings %}
+          <li>{{ learning }}</li>
+{% endfor %}
+        </ul>
+      </section>
+{% endif %}
+
+      <nav class="pager" aria-label="{{ ui.station.previous }}, {{ ui.station.next }}">
+{% if previous_work %}
+        <a class="pager__prev" href="{{ page.url(work_path(lang, previous_work.id)) }}">
+          <span class="pager__label">{{ ui.station.previous }}</span>
+          <span class="pager__name">{{ localized(previous_work, lang).title }}</span>
+        </a>
+{% endif %}
+{% if next_work %}
+        <a class="pager__next" href="{{ page.url(work_path(lang, next_work.id)) }}">
+          <span class="pager__label">{{ ui.station.next }}</span>
+          <span class="pager__name">{{ localized(next_work, lang).title }}</span>
+        </a>
+{% endif %}
+      </nav>
+    </article>
+  </main>
+
+  <div class="side">
+    <aside class="side__station zone" aria-label="{{ ui.station.facts }}">
+      <div class="side-block">
+        <h2><span class="pill pill--side">{{ ui.station.facts }}</span></h2>
+        <dl class="facts">
+          <div>
+            <dt>{{ ui.station.company }}</dt>
+            <dd>{{ work.company|tr(lang) }}</dd>
+          </div>
+          <div>
+            <dt>{{ ui.station.role }}</dt>
+            <dd>{{ text.role }}</dd>
+          </div>
+          <div>
+            <dt>{{ ui.station.period }}</dt>
+            <dd>{{ format_period(work.start, work.get('end'), ui) }}</dd>
+          </div>
+          <div>
+            <dt>{{ ui.station.location }}</dt>
+            <dd>{{ work.location|tr(lang) }}</dd>
+          </div>
+{% if work.website %}
+          <div>
+            <dt>{{ ui.station.website }}</dt>
+            <dd><a class="side__a" href="{{ work.website }}" target="_blank" rel="noopener">{{ work.website|replace('https://www.', '')|replace('https://', '')|trim('/') }}</a></dd>
+          </div>
+{% endif %}
+        </dl>
+      </div>
+      <div class="side-block">
+        <h2><span class="pill pill--side">{{ ui.station.areas }}</span></h2>
+        <ul class="side__list">
+{% for id in work.areas %}
+          <li><a class="side__a" href="{{ page.url(home_path(lang) + '?fokus=' + id + '#focus') }}">{{ areas_by_id[id].word|tr(lang) }}</a>: {{ areas_by_id[id].title|tr(lang) }}</li>
+{% endfor %}
+        </ul>
+      </div>
+{% if work.tools %}
+      <div class="side-block">
+        <h2><span class="pill pill--side">{{ ui.station.tools }}</span></h2>
+        <p class="side__text">{{ work.tools|join(', ') }}</p>
+      </div>
+{% endif %}
+{% if work.documents %}
+      <div class="side-block">
+        <h2><span class="pill pill--side">{{ ui.station.documents }}</span></h2>
+        <ul class="side__links">
+{% for id in work.documents %}
+{% set doc = proofs_by_id[id] %}
+          <li><a href="{{ page.url(doc.pdf) if doc.pdf else doc.url }}" target="_blank" rel="noopener">{{ localized(doc, lang).title }}</a>{% if doc.pdf %} (PDF){% endif %}</li>
+{% endfor %}
+        </ul>
+      </div>
+{% endif %}
+    </aside>
+  </div>
+</div>
+{% endblock %}

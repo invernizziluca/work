@@ -1,0 +1,16 @@
+# DOCUMENT · reference letter. type: zeugnis | zertifikat | forschung | artikel
+order: 1
+type: "zeugnis"
+date: "2026-01-31"
+source: "Eintracht Pankow Musik GmbH"
+pdf: "/pdf/zeugnis-eintracht-pankow.pdf"
+image: "/images/proof/zeugnis-eintracht-pankow.webp"
+de:
+  title: "Praktikumszeugnis Eintracht Pankow Musik"
+  summary: "Signings, Playlists, YouTube-Kanal, Musixmatch und Mailouts. Gesamturteil: «jederzeit zu unserer vollsten Zufriedenheit»."
+en:
+  title: "Internship reference letter, Eintracht Pankow Musik"
+  summary: "Signings, playlists, YouTube channel, Musixmatch and mailouts. Rated with the highest grade used in German reference letters."
+it:
+  title: "Certificato di stage Eintracht Pankow Musik"
+  summary: "Signing, playlist, canale YouTube, Musixmatch e mailout. Valutazione con la formula più alta dei certificati tedeschi."

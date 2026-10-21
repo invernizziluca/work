@@ -1,0 +1,15 @@
+order: 2
+type: "zeugnis"
+date: "2026-01-05"
+source: "Gebrüder Fritz GmbH"
+pdf: "/pdf/zeugnis-gebrueder-fritz.pdf"
+image: "/images/proof/zeugnis-gebrueder-fritz.webp"
+de:
+  title: "Praktikumszeugnis Gebrüder Fritz"
+  summary: "Sales und CRM, Newsletter, Events und Content. Hervorgehoben: Organisation, Eigeninitiative und professionelles Auftreten."
+en:
+  title: "Internship reference letter, Gebrüder Fritz"
+  summary: "Sales and CRM, newsletters, events and content. Highlighted: organisation, initiative and a professional manner."
+it:
+  title: "Certificato di stage Gebrüder Fritz"
+  summary: "Sales e CRM, newsletter, eventi e contenuti. In evidenza: organizzazione, spirito d'iniziativa e professionalità."

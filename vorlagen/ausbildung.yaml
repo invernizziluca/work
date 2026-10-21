@@ -1,0 +1,24 @@
+# TEMPLATE · education
+# Copy to content/ausbildung/<name>.yaml
+order: 4
+institution: "Hochschule"
+location:
+  de: "Ort, Land"
+  en: "Place, country"
+  it: "Luogo, paese"
+start: "2027-09"
+# end: "2028-07"
+de:
+  title: "Abschluss"
+  focus: "Vertiefung (optional)"
+  explain: "Was der Abschluss bedeutet, kurz für Leser:innen aus anderen Ländern."
+  points:
+    - "Inhalt oder Projekt"
+en:
+  title: "Degree"
+  explain: "…"
+  points: ["…"]
+it:
+  title: "Titolo"
+  explain: "…"
+  points: ["…"]

@@ -1,0 +1,15 @@
+order: 7
+type: "artikel"
+date: "2025-09-04"
+source: "FFHS News"
+url: "https://www.ffhs.ch/de/ffhs/news/artikel/2025-09-04-mentoring-programm-der-perfekte-ort-fuer-ehrliches-feedback"
+image: "/images/articles/ffhs-mentoring-article.webp"
+de:
+  title: "Mentoring-Programm: Der perfekte Ort für ehrliches Feedback"
+  summary: "Erfahrungsbericht: wie mir das Mentoring der FFHS bei Lebenslauf und Bewerbungen geholfen hat."
+en:
+  title: "Mentoring programme: the perfect place for honest feedback"
+  summary: "Personal report on how the FFHS mentoring programme helped me with my CV and applications."
+it:
+  title: "Programma di mentoring: il posto giusto per un feedback sincero"
+  summary: "La mia testimonianza su come il mentoring della FFHS mi ha aiutato con curriculum e candidature."

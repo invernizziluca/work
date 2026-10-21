@@ -1,0 +1,34 @@
+# EDUCATION · Kantonsschule Bellinzona
+order: 2
+institution:
+  de: "Kantonsschule Bellinzona"
+  en: "Kantonsschule Bellinzona"
+  it: "Liceo cantonale di Bellinzona"
+location:
+  de: "Bellinzona, Schweiz"
+  en: "Bellinzona, Switzerland"
+  it: "Bellinzona, Svizzera"
+start: "2022-08"
+end: "2023-07"
+image:
+  src: "/images/education/kantonsschule-graduation.webp"
+  position: "center 35%"
+  alt:
+    de: "Klassenfoto bei der Maturfeier"
+    en: "Class photo at the graduation ceremony"
+    it: "Foto di classe alla cerimonia di maturità"
+de:
+  title: "Gymnasiale Maturität (Passerelle)"
+  explain: "Ergänzungsprüfung nach der Berufsmaturität. Sie öffnet den Zugang zu allen Schweizer Universitäten."
+  points:
+    - "Intensives Übergangsjahr mit Italienisch, Deutsch, Mathematik, Naturwissenschaften, Geschichte und Geografie"
+en:
+  title: "Swiss academic baccalaureate (Passerelle)"
+  explain: "A supplementary exam after the vocational baccalaureate that gives access to all Swiss universities."
+  points:
+    - "An intensive bridge year with Italian, German, mathematics, natural sciences, history and geography"
+it:
+  title: "Maturità liceale (Passerella)"
+  explain: "Esame complementare dopo la maturità professionale, che dà accesso a tutte le università svizzere."
+  points:
+    - "Un anno intensivo di passaggio con italiano, tedesco, matematica, scienze naturali, storia e geografia"

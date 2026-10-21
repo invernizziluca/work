@@ -1,0 +1,15 @@
+order: 3
+type: "zertifikat"
+date: "2026-06-05"
+source: "FFHS / TOPSIM"
+pdf: "/pdf/zertifikat-topsim-general-management.pdf"
+image: "/images/certificates/topsim-certificate.webp"
+de:
+  title: "TOPSIM General Management"
+  summary: "Unternehmensplanspiel im Team: Bilanzanalyse, Kostenrechnung, strategische Planung und Investitionsrechnung."
+en:
+  title: "TOPSIM General Management"
+  summary: "Business simulation in a team: balance sheet analysis, cost accounting, strategic planning and investment appraisal."
+it:
+  title: "TOPSIM General Management"
+  summary: "Simulazione aziendale in team: analisi di bilancio, contabilità dei costi, pianificazione strategica e calcolo degli investimenti."

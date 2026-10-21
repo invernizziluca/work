@@ -1,0 +1,17 @@
+# TEMPLATE · document (reference letter, certificate, research paper, article)
+# Copy to content/nachweise/<name>.yaml. Put the PDF into static/pdf/ (remove date of birth and address first).
+order: 8
+type: "zeugnis"               # zeugnis | zertifikat | forschung | artikel
+date: "2027-08-31"
+source: "Firma GmbH"
+pdf: "/pdf/zeugnis-firma.pdf" # or  url: "https://…"  for an article
+image: "/images/proof/zeugnis-firma.webp"   # optional small preview
+de:
+  title: "Praktikumszeugnis Firma"
+  summary: "Was drinsteht, in einem Satz."
+en:
+  title: "Internship reference letter, Firma"
+  summary: "…"
+it:
+  title: "Certificato di stage Firma"
+  summary: "…"

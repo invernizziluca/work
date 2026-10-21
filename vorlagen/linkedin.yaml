@@ -1,0 +1,21 @@
+# TEMPLATE · LinkedIn post
+# Copy to content/linkedin/<name>.yaml and add the name to "posts:" of an experience.
+order: 5
+date: "2027-03-15"
+url: "https://www.linkedin.com/posts/…"   # "…" menu on the post -> Copy link
+# author: "Name"              # only for posts written by someone else
+image:
+  src: "/images/works/<name>/bild.webp"
+  alt:
+    de: "Beschreibung"
+    en: "Description"
+    it: "Descrizione"
+de:
+  title: "Titel"
+  excerpt: "Ein Satz zum Inhalt."
+en:
+  title: "Title"
+  excerpt: "…"
+it:
+  title: "Titolo"
+  excerpt: "…"

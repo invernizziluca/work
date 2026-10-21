@@ -1,0 +1,34 @@
+# EDUCATION · Automatiker EFZ (SAMB Bellinzona)
+order: 3
+institution: "Scuola d'arti e mestieri Bellinzona (SAMB)"
+location:
+  de: "Bellinzona, Schweiz"
+  en: "Bellinzona, Switzerland"
+  it: "Bellinzona, Svizzera"
+start: "2018-08"
+end: "2022-07"
+image:
+  src: "/images/education/samb-prototype-hmi.webp"
+  position: "center 45%"
+  alt:
+    de: "Prototyp zur Prüfung von Barcodelesern mit Motor, Steuerung und Touch-Bedienfeld"
+    en: "Prototype for testing barcode readers with motor, controller and touch panel"
+    it: "Prototipo per testare lettori di codici a barre con motore, controllo e pannello touch"
+de:
+  title: "Automatiker EFZ mit Berufsmaturität"
+  explain: "Vierjährige Berufslehre in Automation mit eidgenössischem Fähigkeitszeugnis (EFZ). Die Berufsmaturität öffnet den Zugang zu den Fachhochschulen."
+  points:
+    - "Grundlagen in Elektrotechnik, Elektronik, Automation, Informatik und technischem Englisch"
+    - "Abschlussprojekt: eigenständig entwickelter Prototyp zur Prüfung von Barcodelesern, von Mechanik und Motor bis zu Steuerung und Bedienoberfläche"
+en:
+  title: "Automation technician (Swiss Federal VET Diploma) with vocational baccalaureate"
+  explain: "A four-year apprenticeship in automation with a Swiss Federal VET Diploma (EFZ). The vocational baccalaureate gives access to universities of applied sciences."
+  points:
+    - "Foundations in electrical engineering, electronics, automation, IT and technical English"
+    - "Final project: a self-developed prototype for testing barcode readers, from mechanics and motor to control and user interface"
+it:
+  title: "Automatico AFC con maturità professionale"
+  explain: "Apprendistato quadriennale in automazione con attestato federale di capacità (AFC). La maturità professionale dà accesso alle scuole universitarie professionali."
+  points:
+    - "Basi di elettrotecnica, elettronica, automazione, informatica e inglese tecnico"
+    - "Progetto finale: prototipo sviluppato in autonomia per testare i lettori di codici a barre, dalla meccanica e dal motore fino al controllo e all'interfaccia"

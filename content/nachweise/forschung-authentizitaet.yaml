@@ -1,0 +1,15 @@
+order: 5
+type: "forschung"
+date: "2026-06-16"
+source: "FFHS, Qualitative Forschungsmethoden"
+pdf: "/pdf/forschung-authentizitaet-social-media.pdf"
+image: "/images/research/qualitative-authenticity.webp"
+de:
+  title: "Wahrnehmung von Authentizität in der Social-Media-Kommunikation unabhängiger Musikacts"
+  summary: "Drei Leitfadeninterviews mit Fans: Authentizität entsteht über Natürlichkeit, Werte, Konsistenz, Ästhetik und eine Kommunikation, die nicht zu werblich wirkt."
+en:
+  title: "Perceived authenticity in the social media communication of independent music acts"
+  summary: "Three guided interviews with fans: authenticity comes from naturalness, values, consistency, aesthetics and communication that does not feel too promotional."
+it:
+  title: "La percezione dell'autenticità nella comunicazione social dei music act indipendenti"
+  summary: "Tre interviste guidate con fan: l'autenticità nasce da naturalezza, valori, coerenza, estetica e una comunicazione non troppo promozionale."

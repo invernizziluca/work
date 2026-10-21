@@ -1,0 +1,19 @@
+order: 2
+date: "2025-09-25"
+url: "https://www.linkedin.com/posts/peggy-adamu-8b335a65_rbf25-ugcPost-7376898005272186880-Jqf3"
+author: "Peggy Adamu"   # only for posts written by someone else
+image:
+  src: "/images/works/eintracht-pankow/reeperbahn-panel.webp"
+  alt:
+    de: "Panel beim Reeperbahn Festival 2025"
+    en: "Panel at Reeperbahn Festival 2025"
+    it: "Panel al Reeperbahn Festival 2025"
+de:
+  title: "Reeperbahn Festival 2025"
+  excerpt: "Inputs zu Artist Marketing, Community Building, Algorithmen und Test & Learn, dazu viele Gespräche mit Menschen aus der Musikbranche."
+en:
+  title: "Reeperbahn Festival 2025"
+  excerpt: "Insights into artist marketing, community building, algorithms and test & learn, plus many conversations with people from the music industry."
+it:
+  title: "Reeperbahn Festival 2025"
+  excerpt: "Spunti su artist marketing, community building, algoritmi e test & learn, e tante conversazioni con persone della music industry."

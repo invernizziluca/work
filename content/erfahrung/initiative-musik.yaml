@@ -1,0 +1,92 @@
+# EXPERIENCE · Initiative Musik
+# Page: /de/erfahrung/initiative-musik/ (the file name is the address)
+# Shared data first, then the texts in de / en / it (missing EN/IT fields fall back to German).
+
+order: 1
+company: "Initiative Musik gGmbH"
+location:
+  de: "Berlin"
+  en: "Berlin"
+  it: "Berlino"
+start: "2026-09"
+# end: "2027-02"   <- add the month when the internship ends (the "Aktuell" badge disappears)
+website: "https://www.initiative-musik.de/"
+areas: ["content", "koordination"]
+
+cover:
+  src: "/images/works/initiative-musik/initiative-cover-violet.webp"
+  position: "center center"
+  alt:
+    de: "Logo der Initiative Musik auf violettem Hintergrund"
+    en: "Initiative Musik logo on a violet background"
+    it: "Logo di Initiative Musik su sfondo viola"
+
+tools: ["Adobe Creative Cloud", "Canva", "Microsoft 365", "Asana"]
+gallery: []
+documents: []
+posts: []
+links:
+  - label:
+      de: "Instagram der Initiative Musik (Inhalte von mir seit September 2026)"
+      en: "Initiative Musik on Instagram (my content since September 2026)"
+      it: "Instagram di Initiative Musik (contenuti miei da settembre 2026)"
+    url: "https://www.instagram.com/initiativemusik/"
+
+de:
+  title: "Initiative Musik"
+  role: "Praktikant Presse- und Öffentlichkeitsarbeit"
+  summary: "Seit September 2026 in der Presse- und Öffentlichkeitsarbeit der zentralen Fördereinrichtung für Musik in Deutschland: Social-Media-Content, Medienmonitoring, Newsletter und Kommunikation rund um Branchenveranstaltungen."
+  context: "Die Initiative Musik ist die zentrale Fördereinrichtung und Plattform für Musik in Deutschland, mit Programmen für Künstler:innen, Musikunternehmen, Livemusik und Export."
+  contribution: "Im Praktikum unterstütze ich das Team der Presse- und Öffentlichkeitsarbeit. Ich erstelle Inhalte für Social Media, arbeite an Website und Newsletter mit, beobachte die Medienlandschaft und begleite PR-Aktivitäten und Branchenveranstaltungen kommunikativ."
+  tasks:
+    - "Social-Media-Content in Text, Grafik und Video, Mitarbeit an neuen Formaten"
+    - "Community Management, Reporting, Analyse und Recherche"
+    - "Mitarbeit an Website und Newsletter"
+    - "Medienmonitoring"
+    - "Kommunikative Begleitung von PR-Aktivitäten und Branchenveranstaltungen"
+    - "Drehplan für die Live-Instagram-Stories beim Empfang «S(ch)nacken mit der Initiative Musik und der GVL» auf der Most Wanted: Music 2026"
+  outputs: []
+  highlights: []
+  transfer:
+    content: "Inhalte für eine Institution mit vielen Zielgruppen planen, erstellen und auswerten."
+    koordination: "Kommunikation rund um Veranstaltungen vorbereiten und begleiten."
+  learnings:
+    - "Presse- und Öffentlichkeitsarbeit verlangt präzise Sprache, gutes Timing, gründliche Recherche und ein klares Bild der Zielgruppen."
+
+en:
+  title: "Initiative Musik"
+  role: "Press and public relations intern"
+  summary: "Since September 2026 in the press and public relations team of Germany's central funding institution for music: social media content, media monitoring, newsletters and communication around industry events."
+  context: "Initiative Musik is the central funding institution and platform for music in Germany, with programmes for artists, music companies, live music and export."
+  contribution: "In this internship I support the press and public relations team. I create social media content, contribute to the website and newsletter, monitor the media and support PR activities and industry events with communication."
+  tasks:
+    - "Social media content in text, graphics and video; contributing to new formats"
+    - "Community management, reporting, analysis and research"
+    - "Contributing to the website and newsletter"
+    - "Media monitoring"
+    - "Communication support for PR activities and industry events"
+    - "Shooting plan for the live Instagram stories at the reception “S(ch)nacken mit der Initiative Musik und der GVL” during Most Wanted: Music 2026"
+  transfer:
+    content: "Planning, creating and evaluating content for an institution with many audiences."
+    koordination: "Preparing and supporting communication around events."
+  learnings:
+    - "Press and public relations require precise language, good timing, thorough research and a clear picture of the audience."
+
+it:
+  title: "Initiative Musik"
+  role: "Stagista ufficio stampa e comunicazione"
+  summary: "Da settembre 2026 nell'ufficio stampa dell'ente centrale tedesco per la promozione della musica: contenuti social, media monitoring, newsletter e comunicazione per gli eventi di settore."
+  context: "Initiative Musik è l'ente centrale e la piattaforma per la musica in Germania, con programmi per artisti, aziende musicali, musica dal vivo ed export."
+  contribution: "In questo stage supporto il team dell'ufficio stampa e della comunicazione. Creo contenuti per i social, collaboro a sito e newsletter, monitoro i media e accompagno con la comunicazione attività PR ed eventi di settore."
+  tasks:
+    - "Contenuti social in testo, grafica e video; collaborazione a nuovi format"
+    - "Community management, reporting, analisi e ricerca"
+    - "Collaborazione a sito web e newsletter"
+    - "Media monitoring"
+    - "Comunicazione a supporto di attività PR ed eventi di settore"
+    - "Piano di ripresa per le Instagram stories live al ricevimento «S(ch)nacken mit der Initiative Musik und der GVL» durante Most Wanted: Music 2026"
+  transfer:
+    content: "Pianificare, creare e valutare contenuti per un'istituzione con molti pubblici."
+    koordination: "Preparare e accompagnare la comunicazione degli eventi."
+  learnings:
+    - "L'ufficio stampa richiede linguaggio preciso, tempismo, ricerca accurata e un'idea chiara del pubblico."

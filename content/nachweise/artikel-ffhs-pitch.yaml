@@ -1,0 +1,15 @@
+order: 6
+type: "artikel"
+date: "2026-06-30"
+source: "FFHS News"
+url: "https://www.ffhs.ch/de/ffhs/news/artikel/2026-06-30-ein-jahr-nach-dem-pitch-was-aus-einer-studienidee-wurde"
+image: "/images/articles/ffhs-pitch-article.webp"
+de:
+  title: "Ein Jahr nach dem Pitch: was aus einer Studienidee wurde"
+  summary: "Aus unserer Gruppenidee im Modul Innovationsmanagement entstand ein Prototyp, der aus PET-Flaschen 3D-Druck-Filament herstellt. Mit Zitaten von mir."
+en:
+  title: "One year after the pitch: what became of a study idea"
+  summary: "Our group idea from the innovation management module led to a prototype that turns PET bottles into 3D-printing filament. With quotes from me."
+it:
+  title: "Un anno dopo il pitch: cosa è nato da un'idea di studio"
+  summary: "Dalla nostra idea di gruppo nel modulo di innovation management è nato un prototipo che trasforma bottiglie in PET in filamento per la stampa 3D. Con mie citazioni."

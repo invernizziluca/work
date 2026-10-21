@@ -1,0 +1,23 @@
+# TEMPLATE · quote from a reference letter or recommendation
+# Copy to content/referenzen/<first-last>.yaml. Photo: square, about 240 px, in static/images/references/
+order: 4
+featured: false               # true = large quote on the start page (only one)
+name: "Vorname Nachname"
+role:
+  de: "Funktion, Firma"
+  en: "Role, company"
+  it: "Ruolo, azienda"
+source:
+  de: "Praktikumszeugnis"
+  en: "Internship reference letter"
+  it: "Certificato di stage"
+date: "2027-08-31"
+image: "/images/references/vorname-nachname.webp"
+pdf: "/pdf/zeugnis-firma.pdf" # or  url: "https://www.linkedin.com/…"
+original_language: "de"
+de:
+  quote: "Originaler Wortlaut."
+en:
+  quote: "Translation."
+it:
+  quote: "Traduzione."

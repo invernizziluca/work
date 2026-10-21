@@ -1,0 +1,34 @@
+{% set start = home_path(lang) %}
+{% set nav = [
+  ('#focus', ui.nav.focus),
+  ('#experience', ui.nav.experience),
+  ('#education', ui.nav.education),
+  ('#proof', ui.nav.proof),
+  ('#contact', ui.nav.contact),
+] %}
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="{{ page.url(start) }}">
+      <span class="brand__mark" aria-hidden="true">LI</span>
+      <span class="brand__name">{{ home.name|tr(lang) }}</span>
+    </a>
+    <nav class="topnav" aria-label="{{ ui.menu }}">
+{% for anchor, label in nav %}
+      <a href="{{ page.url(start + anchor) }}">{{ label }}</a>
+{% endfor %}
+    </nav>
+    <div class="langs" role="group" aria-label="{{ ui.language_switch }}">
+{% for code in languages %}
+      <a href="{{ page.url(alternates[code]) }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ all_ui[code].language_name }}"{% if code == lang %} aria-current="true"{% endif %}>{{ code|upper }}</a>
+{% endfor %}
+    </div>
+    <details class="menu">
+      <summary aria-label="{{ ui.menu }}"><span class="menu__bars" aria-hidden="true"></span></summary>
+      <nav class="menu__panel" aria-label="{{ ui.menu }}">
+{% for anchor, label in nav %}
+        <a href="{{ page.url(start + anchor) }}">{{ label }}</a>
+{% endfor %}
+      </nav>
+    </details>
+  </div>
+</header>

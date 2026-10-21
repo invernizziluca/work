@@ -1,0 +1,20 @@
+# Basic settings of the site. Usually you never need to change this file.
+
+# Public address of the site, used for search engines and link previews.
+# The GitHub workflow fills it in automatically from the repository name,
+# so this value is only a fallback for local builds.
+site_url: "https://invernizziluca.github.io/profile/"
+
+# Languages, in the order of the language switch. The first one is also the start page (/).
+languages: ["de", "en", "it"]
+
+# Part of the address of the experience pages in each language:
+#   /de/erfahrung/gebrueder-fritz/   /en/experience/gebrueder-fritz/   /it/esperienze/gebrueder-fritz/
+segments:
+  de: "erfahrung"
+  en: "experience"
+  it: "esperienze"
+
+# The three focus areas. The id is used in content files (areas: [...], evidence)
+# and in shareable links such as  .../de/?fokus=kontakte
+areas: ["content", "kontakte", "koordination"]

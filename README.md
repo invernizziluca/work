@@ -1,8 +1,8 @@
 # Portfolio generale · Luca Invernizzi
 
 Sito portfolio per recruiter di qualsiasi settore (Germania, Svizzera, Polonia), separato dal sito musicale `invernizziluca.github.io`.
-Indirizzo previsto: **https://invernizziluca.github.io/profile/** (repository `profile`).
-Lingue: **DE** (anche come pagina iniziale `/`), **EN** (`/en/`), **IT** (`/it/`).
+Indirizzo previsto: **https://invernizziluca.github.io/work/** (repository `work`).
+Lingue: **EN** (anche come pagina iniziale `/`), **DE** (`/de/`), **IT** (`/it/`).
 
 Il sito è organizzato in tre aree, le stesse in tutte le lingue:
 
@@ -20,9 +20,9 @@ Lo stesso sito si apre già sull'area giusta:
 
 | Candidatura per | Link |
 |---|---|
-| Social media, PR, comunicazione, marketing | `…/profile/de/?fokus=content` |
-| Business development, sales, partnership | `…/profile/de/?fokus=kontakte` |
-| Project management, eventi, operations | `…/profile/de/?fokus=koordination` |
+| Social media, PR, comunicazione, marketing | `…/work/de/?fokus=content` |
+| Business development, sales, partnership | `…/work/de/?fokus=kontakte` |
+| Project management, eventi, operations | `…/work/de/?fokus=koordination` |
 
 Funziona in tutte le lingue (`/en/?fokus=kontakte`, `/it/?fokus=koordination`). Le esperienze che c'entrano vengono evidenziate.
 
@@ -110,19 +110,19 @@ vorlagen/                modelli per nuovi contenuti
 
 ## Note tecniche
 
-- **Link relativi**: tutte le pagine si collegano tra loro con percorsi relativi, quindi il sito funziona sotto `/profile/`, con un dominio proprio o aperto in locale.
+- **Link relativi**: tutte le pagine si collegano tra loro con percorsi relativi, quindi il sito funziona sotto `/work/`, con un dominio proprio o aperto in locale.
 - **Immagini**: a ogni build vengono create versioni da 480, 960 e 1600 px in WebP (`dist/generated/img/`). Le immagini originali restano in `static/images/`.
 - **Anteprime per i link**: per la home (una per lingua) e per ogni esperienza la build crea un'immagine 1200 × 630 (`dist/generated/og/`).
 - **SEO**: title e description per pagina, canonical, hreflang DE/EN/IT, dati strutturati (Person), `sitemap.xml`, `robots.txt`.
-- **Tema scuro**: il sito segue l'impostazione del dispositivo (chiaro o scuro).
+- **Tema chiaro**: palette sempre luminosa, indipendente dalla modalità scura del dispositivo.
 - **Accessibilità**: link «Zum Inhalt springen», focus visibile, testo alternativo per ogni immagine, tab navigabili con le frecce, contrasti AA verificati. Senza JavaScript tutte e tre le aree restano visibili una sotto l'altra.
 - **Privacy**: nei PDF degli Zeugnisse e nella ricerca qualitativa data di nascita, indirizzo e telefono sono oscurati (la pagina con i dati è stata ricreata come immagine, quindi il testo coperto non esiste più).
-- **Caratteri**: TeX Gyre Adventor (gemello libero dell'ITC Avant Garde del CV), licenza GUST in `static/fonts/GUST-FONT-LICENSE.txt`. Nessuna richiesta a Google Fonts.
+- **Caratteri**: system-ui per i testi e TeX Gyre Adventor per titoli e marchio (licenza GUST in `static/fonts/GUST-FONT-LICENSE.txt`). Nessuna richiesta a Google Fonts.
 - **Nessun cookie, nessun tracciamento.**
 
 ## Pubblicazione su GitHub Pages
 
-1. Su GitHub crea un repository nuovo e vuoto chiamato **`profile`** (pubblico).
+1. Su GitHub crea un repository nuovo e vuoto chiamato **`work`** (pubblico).
 2. Carica il contenuto di questa cartella (GitHub Desktop, oppure «Add file → Upload files»).
 3. In **Settings → Pages → Build and deployment → Source** scegli **GitHub Actions**.
 4. A ogni push su `main` il workflow installa Python, esegue `build.py` e pubblica `dist/`. Se qualcosa non va, la scheda **Actions** mostra l'errore e online resta la versione precedente.

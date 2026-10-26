@@ -11,25 +11,39 @@
   <main id="inhalt" class="main" tabindex="-1">
 
     <section class="hero zone" aria-labelledby="hero-name">
+      <p class="hero__eyebrow">{{ home.hero.eyebrow|tr(lang) }}</p>
       <h1 id="hero-name" class="hero__name">{{ home.name|tr(lang) }}</h1>
+      <p class="hero__headline">{{ home.hero.headline|tr(lang) }}</p>
+      <p class="hero__lead">{{ home.hero.lead|tr(lang) }}</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="#experience">{{ ui.nav.experience }} <span aria-hidden="true">↗</span></a>
+        <a class="btn" href="#proof">{{ ui.nav.proof }}</a>
+        <a class="btn btn--quiet" href="#contact">{{ ui.nav.contact }}</a>
+      </div>
+      <div class="hero__proof" aria-label="{{ home.hero.proof_label|tr(lang) }}">
+{% for proof in home.hero.proof_points %}
+        <a class="proof-stat" href="{{ page.url(proof.href) if proof.href.startswith('/') else proof.href }}">
+          <span class="proof-stat__value">{{ proof.value|tr(lang) }}</span>
+          <span class="proof-stat__label">{{ proof.label|tr(lang) }}</span>
+        </a>
+{% endfor %}
+      </div>
+      <div class="hero__focus-head">
+        <h2>{{ home.hero.focus_heading|tr(lang) }}</h2>
+        <p>{{ home.hero.focus_note|tr(lang) }}</p>
+      </div>
       <ul class="triad">
 {% for area in home.focus.areas %}
         <li>
           <a class="triad__link" href="?fokus={{ area.id }}#focus" data-focus-link="{{ area.id }}">
-            <span class="triad__word">{{ area.word|tr(lang) }}.</span>
+            <span class="triad__number">0{{ loop.index }}</span>
+            <span class="triad__word">{{ area.word|tr(lang) }}</span>
             <span class="triad__title">{{ area.title|tr(lang) }}</span>
+            <span class="triad__arrow" aria-hidden="true">↗</span>
           </a>
         </li>
 {% endfor %}
       </ul>
-      <p class="hero__lead">{{ home.hero.lead|tr(lang) }}</p>
-      <div class="actions">
-        <a class="btn btn--primary" href="#focus">{{ ui.focus.show }}</a>
-        <a class="btn" href="#contact">{{ ui.nav.contact }}</a>
-{% if home.contact.cv %}
-        <a class="btn" href="{{ page.url(home.contact.cv) }}" target="_blank" rel="noopener">{{ ui.contact.cv }}</a>
-{% endif %}
-      </div>
     </section>
 
     <section id="focus" class="section zone" aria-labelledby="focus-title">
@@ -89,6 +103,8 @@
 {% for work in works %}
 {% set text = localized(work, lang) %}
         <li class="entry" data-areas="{{ work.areas|join(' ') }}">
+          {% set cover = work.cover if work.cover is mapping else {'src': work.cover} %}
+          <div class="entry__media" aria-hidden="true">{{ page.img(cover.src, '', sizes='(min-width: 960px) 420px, 100vw', position=cover.position) }}</div>
           <p class="entry__when">
             <span>{{ format_period(work.start, work.get('end'), ui) }}</span>
 {% if not work.get('end') %}

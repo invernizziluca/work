@@ -643,7 +643,7 @@ def person_jsonld(home: dict, data: dict, page: "Page", lang: str) -> dict:
         "image": page.absolute(home["portrait"]["src"]),
         "email": f'mailto:{home["contact"]["email"]}',
         "sameAs": [home["contact"]["linkedin"]],
-        "address": {"@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE"},
+        "address": {"@type": "PostalAddress", "addressCountry": "CH"},
         "knowsLanguage": known,
         "alumniOf": [{"@type": "CollegeOrUniversity", "name": tr(entry["institution"], lang)} for entry in data["education"]],
         "description": tr(home["seo"]["description"], lang),

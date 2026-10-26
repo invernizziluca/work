@@ -30,15 +30,54 @@ seo:
     en: "Luca Invernizzi | Communication, business development and projects"
     it: "Luca Invernizzi | Comunicazione, business development e progetti"
   description:
-    de: "Luca Invernizzi, Student der Betriebsökonomie (FFHS) in Berlin: Praxis in Presse- und Öffentlichkeitsarbeit, Social Media, Vertrieb, Events und Projektarbeit, mit Belegen zu jeder Station."
-    en: "Luca Invernizzi, business administration student (FFHS) in Berlin: hands-on experience in press and public relations, social media, sales, events and projects, with evidence for every role."
-    it: "Luca Invernizzi, studente di economia aziendale (FFHS) a Berlino: esperienza in ufficio stampa, social media, vendite, eventi e progetti, con riscontri per ogni esperienza."
+    de: "Luca Invernizzi, Betriebsökonomie-Student (FFHS) mit Berufserfahrung in Berlin: Praxis in Presse- und Öffentlichkeitsarbeit, Social Media, Vertrieb, Events und Projektarbeit, mit Belegen zu jeder Station."
+    en: "Luca Invernizzi, business administration student at FFHS with experience in Berlin: hands-on experience in press and public relations, social media, sales, events and projects, with evidence for every role."
+    it: "Luca Invernizzi, studente di economia aziendale (FFHS) con esperienze a Berlino: esperienza in ufficio stampa, social media, vendite, eventi e progetti, con riscontri per ogni esperienza."
 
 hero:
+  eyebrow:
+    de: "BUSINESS ADMINISTRATION · DIGITAL BUSINESS"
+    en: "BUSINESS ADMINISTRATION · DIGITAL BUSINESS"
+    it: "BUSINESS ADMINISTRATION · DIGITAL BUSINESS"
+  headline:
+    de: "Marketing, Kundenbeziehungen und digitale Projekte."
+    en: "Marketing, client relationships & digital projects."
+    it: "Marketing, relazioni con i clienti e progetti digitali."
   lead:
-    de: "Ich studiere Business Administration mit Vertiefung Digital Business an der FFHS und lebe in Berlin. Praxis habe ich in Pressearbeit, Social Media, Vertrieb und Events gesammelt, bei der Initiative Musik, bei Eintracht Pankow Musik, bei Gebrüder Fritz und in eigenen Projekten. Zu jeder Aussage auf dieser Seite gibt es einen Beleg."
-    en: "I study Business Administration with a major in Digital Business at FFHS and live in Berlin. I have gained hands-on experience in press work, social media, sales and events, at Initiative Musik, Eintracht Pankow Musik, Gebrüder Fritz and in my own projects. Every statement on this page comes with its source."
-    it: "Studio Business Administration con indirizzo Digital Business alla FFHS e vivo a Berlino. Ho fatto esperienza in ufficio stampa, social media, vendite ed eventi, alla Initiative Musik, da Eintracht Pankow Musik, da Gebrüder Fritz e in progetti miei. Ogni affermazione di questa pagina ha la sua fonte."
+    de: "Ich studiere Business Administration mit Vertiefung Digital Business an der FFHS. In Berliner Unternehmen und eigenen Projekten habe ich an CRM und Vertrieb, digitaler Kommunikation sowie der Umsetzung von Marketingaktivitäten mitgearbeitet. Hier zeige ich konkrete Aufgaben, Ergebnisse und die zugehörigen Belege."
+    en: "I'm a Business Administration student specialising in Digital Business at FFHS. Through internships in Berlin and independent projects, I've worked across CRM and sales, digital communication and marketing delivery. Explore the work, results and supporting evidence."
+    it: "Studio Business Administration con indirizzo Digital Business alla FFHS. Attraverso stage a Berlino e progetti indipendenti ho lavorato su CRM e vendite, comunicazione digitale e attività di marketing. Qui trovi esperienze, risultati e relative prove."
+  proof_label:
+    de: "Ausgewählte Fakten"
+    en: "Selected evidence"
+    it: "Risultati e informazioni verificabili"
+  focus_heading:
+    de: "Woran ich gearbeitet habe"
+    en: "What I've worked on"
+    it: "Di cosa mi sono occupato"
+  focus_note:
+    de: "Drei Perspektiven auf dieselben Erfahrungen."
+    en: "Three ways to explore my experience."
+    it: "Tre prospettive sulle mie esperienze."
+  proof_points:
+    - value: "83,767"
+      label:
+        de: "Instagram-Aufrufe in 14 Tagen · Verbano"
+        en: "Instagram views in 14 days · Verbano"
+        it: "Visualizzazioni Instagram in 14 giorni · Verbano"
+      href: "/images/works/verbano-unihockey/instagram-insights.webp"
+    - value: "CRM + Sales"
+      label:
+        de: "Pipedrive, Leads und Kunden-Follow-ups · Gebrüder Fritz"
+        en: "Pipedrive, leads and customer follow-ups · Gebrüder Fritz"
+        it: "Pipedrive, lead e follow-up clienti · Gebrüder Fritz"
+      href: "/pdf/zeugnis-gebrueder-fritz.pdf"
+    - value: "BSc · 2028"
+      label:
+        de: "Digital Business · FFHS · Abschluss geplant Juli 2028"
+        en: "Digital Business · FFHS · expected July 2028"
+        it: "Digital Business · FFHS · laurea prevista luglio 2028"
+      href: "#education"
 
 # Short facts next to the portrait (in the CV-style column).
 facts:
@@ -47,9 +86,17 @@ facts:
       en: "Based in"
       it: "Base"
     value:
-      de: "Berlin"
-      en: "Berlin"
-      it: "Berlino"
+      de: "Schweiz · Berliner Berufserfahrung"
+      en: "Switzerland · Berlin work experience"
+      it: "Svizzera · esperienza professionale a Berlino"
+  - label:
+      de: "Staatsangehörigkeit"
+      en: "Citizenship"
+      it: "Cittadinanza"
+    value:
+      de: "Schweiz"
+      en: "Swiss"
+      it: "Svizzera"
   - label:
       de: "Offen für"
       en: "Open to"
@@ -63,17 +110,17 @@ facts:
       en: "Looking for"
       it: "Cerco"
     value:
-      de: "Praktikum oder Werkstudentenstelle"
-      en: "An internship or a part-time student role"
-      it: "Uno stage o una posizione part-time da studente"
+      de: "Praktikum oder Berufseinstieg im Digital Business"
+      en: "Internship or early-career digital business roles"
+      it: "Stage o ruoli junior in digital business"
   - label:
       de: "Studium"
       en: "Studies"
       it: "Studi"
     value:
-      de: "BSc Business Administration, FFHS, seit 2024"
-      en: "BSc Business Administration, FFHS, since 2024"
-      it: "BSc Business Administration, FFHS, dal 2024"
+      de: "BSc Business Administration · FFHS · bis Juli 2028 (geplant)"
+      en: "BSc Business Administration · FFHS · expected July 2028"
+      it: "BSc Business Administration · FFHS · luglio 2028 previsto"
 
 # ---------------------------------------------------------------------
 # The three focus areas ("lenses"). Order = order of the tabs.
@@ -95,9 +142,9 @@ focus:
   areas:
     - id: "content"
       word:
-        de: "Content"
-        en: "Content"
-        it: "Contenuti"
+        de: "Marketing"
+        en: "Marketing"
+        it: "Marketing"
       title:
         de: "Kommunikation, PR und Social Media"
         en: "Communication, PR and social media"
@@ -157,9 +204,9 @@ focus:
 
     - id: "kontakte"
       word:
-        de: "Kontakte"
-        en: "Contacts"
-        it: "Contatti"
+        de: "Kunden"
+        en: "Clients"
+        it: "Clienti"
       title:
         de: "Business Development, Vertrieb und Partnerschaften"
         en: "Business development, sales and partnerships"
@@ -216,9 +263,9 @@ focus:
 
     - id: "koordination"
       word:
-        de: "Koordination"
-        en: "Coordination"
-        it: "Coordinamento"
+        de: "Projekte"
+        en: "Projects"
+        it: "Progetti"
       title:
         de: "Projektmanagement, Events und Abläufe"
         en: "Project management, events and operations"
@@ -307,9 +354,9 @@ sections:
     en: "Reference letters, certificates and research papers to read in full. Personal data such as date of birth and address have been redacted. The documents are in German."
     it: "Certificati di lavoro, attestati e ricerche da leggere per intero. I dati personali come data di nascita e indirizzo sono oscurati. I documenti sono in tedesco."
   contact:
-    de: "Am schnellsten erreichen Sie mich per E-Mail oder über LinkedIn. Ich lebe in Berlin und bin offen für Stellen in Deutschland, der Schweiz und Polen."
-    en: "The quickest way to reach me is by email or on LinkedIn. I live in Berlin and am open to roles in Germany, Switzerland and Poland."
-    it: "Il modo più rapido per contattarmi è via e-mail o su LinkedIn. Vivo a Berlino e sono disponibile per posizioni in Germania, Svizzera e Polonia."
+    de: "Am schnellsten erreichen Sie mich per E-Mail oder über LinkedIn. Mein Wohnsitz ist in der Schweiz; ich bin offen für Stellen in Deutschland, der Schweiz und Polen und kann für eine Stelle nach Warschau ziehen."
+    en: "The easiest way to reach me is by email or LinkedIn. I am based in Switzerland, have professional experience in Berlin and am open to roles in Germany, Switzerland and Poland, including relocating to Warsaw."
+    it: "Puoi contattarmi via email o LinkedIn. Risiedo in Svizzera, ho esperienza professionale a Berlino e valuto opportunità in Germania, Svizzera e Polonia, incluso un trasferimento a Varsavia."
 
 # ---------------------------------------------------------------------
 # Languages, tools and interests (CV-style column)
@@ -339,9 +386,9 @@ skills:
         en: "French"
         it: "Francese"
       level:
-        de: "Grundkenntnisse"
-        en: "Basic"
-        it: "Base"
+        de: "A1"
+        en: "A1"
+        it: "A1"
   tool_groups:
     - name:
         de: "Content und Design"

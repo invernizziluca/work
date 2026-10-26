@@ -8,8 +8,8 @@
 ] %}
 <header class="topbar">
   <div class="topbar__inner">
-    <a class="brand" href="{{ page.url(start) }}">
-      <span class="brand__mark" aria-hidden="true">LI</span>
+    <a class="brand" href="{{ page.url(start) }}" aria-label="{{ home.name|tr(lang) }}">
+      <span class="brand__mark" aria-hidden="true"><img class="brand__logo" src="{{ page.url('/images/brand/luca-invernizzi-logo.png') }}" alt="" width="1280" height="1280"></span>
       <span class="brand__name">{{ home.name|tr(lang) }}</span>
     </a>
     <nav class="topnav" aria-label="{{ ui.menu }}">

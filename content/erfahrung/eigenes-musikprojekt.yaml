@@ -1,5 +1,8 @@
-# EXPERIENCE · Own music project (Milan)
-# Page: /de/erfahrung/eigenes-musikprojekt/
+# EXPERIENCE · Own music project (Milan / remote)
+# Page: /de/erfahrung/eigenes-musikprojekt/   (the file name is the address)
+# Facts: "more than 30,000 views" applies to some posts and is self-reported (no public screenshot).
+# Jake La Furia: a possible collaboration was prepared, nothing was concluded. Do not write
+# "management agreement", "signed" or "under contract".
 
 order: 5
 company:
@@ -7,12 +10,12 @@ company:
   en: "Own music project"
   it: "Progetto musicale personale"
 location:
-  de: "Mailand, Italien"
-  en: "Milan, Italy"
-  it: "Milano, Italia"
+  de: "Mailand, Italien / remote"
+  en: "Milan, Italy / remote"
+  it: "Milano, Italia / da remoto"
 start: "2024-06"
 end: "2025-07"
-areas: ["content", "kontakte", "koordination"]
+areas: ["koordination", "content", "kontakte"]
 
 cover:
   src: "/images/works/eigenes-musikprojekt/foto-con-renis.webp"
@@ -25,12 +28,6 @@ cover:
 tools: ["Instagram", "Spotify for Artists", "Canva", "CapCut", "FL Studio"]
 
 gallery:
-  - src: "/images/works/eigenes-musikprojekt/foto-con-renis.webp"
-    position: "center 22%"
-    alt:
-      de: "Luca Invernizzi und Renis im Tonstudio"
-      en: "Luca Invernizzi and Renis in the studio"
-      it: "Luca Invernizzi e Renis in studio"
   - src: "/images/works/eigenes-musikprojekt/renis-10-lode.webp"
     alt:
       de: "Cover: Renis, 10 & Lode (Freestyle)"
@@ -51,6 +48,11 @@ gallery:
       de: "Cover: Renis, Nessuno (Freestyle)"
       en: "Cover: Renis, Nessuno (Freestyle)"
       it: "Copertina: Renis, Nessuno (Freestyle)"
+  - src: "/images/works/eigenes-musikprojekt/rs-freestyle.webp"
+    alt:
+      de: "Cover: RS"
+      en: "Cover: RS"
+      it: "Copertina: RS"
   - src: "/images/works/eigenes-musikprojekt/naemi-water.webp"
     position: "center 30%"
     alt:
@@ -60,91 +62,95 @@ gallery:
 
 documents: []
 posts: []
-links: []
+links:
+  - label:
+      de: "Renis auf Spotify"
+      en: "Renis on Spotify"
+      it: "Renis su Spotify"
+    url: "https://open.spotify.com/artist/21zPO2MZlfEQrRXceiuqM3"
+  - label:
+      de: "NAEMI auf Spotify"
+      en: "NAEMI on Spotify"
+      it: "NAEMI su Spotify"
+    url: "https://open.spotify.com/artist/4vrMlRnLvl2hGK3Xjy3shh"
 
 de:
   title: "Eigenes Musikprojekt"
-  role: "Künstler:innenmanagement & Marketing (selbstständig)"
-  summary: "In Mailand habe ich unabhängige Artists betreut und ihre Social-Media-Strategien umgesetzt, im Schnitt mit rund 30.000 Views pro Beitrag."
-  context: "Bevor ich nach Berlin ging, habe ich in Mailand eigene Musikprojekte aufgebaut. Ziel war, unabhängige Artists professioneller sichtbar zu machen: mit klarer Identität, regelmäßigem Content und strukturierten Abläufen von der Idee bis zur Veröffentlichung."
-  contribution: "Ich war Manager, Stratege und Organisator zugleich. Ich entwickelte Social-Media- und Content-Strategien, koordinierte Fotos, Videos und Artworks, begleitete Aufnahmen und Veröffentlichungen und betreute die Artists organisatorisch und kommunikativ. Außerdem bereitete ich eine Zusammenarbeit mit Jake La Furia vor, Rapper und Juror bei X Factor Italia, inklusive Managementvereinbarung."
+  role: "Artist-Koordination & digitales Marketing"
+  category: "Projektkoordination & Content"
+  summary: "Ein eigenes Projekt neben dem Studium: Content-Planung, Social Media und Koordination für Independent Artists in Mailand, von der Idee bis zur Veröffentlichung."
+  context: "Bevor ich nach Berlin zog, habe ich in Mailand neben meinem Studium ein eigenes Musikprojekt mit Independent Artists aus der Urban-Szene aufgebaut."
+  goal: "Independent Artists sichtbarer machen: mit einer klaren Identität, regelmäßigem Content und strukturierten Abläufen von der Idee bis zum Release."
+  contribution: "Ich habe Content- und Social-Media-Strategien entwickelt, Fotos, Videos und Cover koordiniert, Recordings und Releases begleitet und die Kommunikation mit den Artists organisiert. Außerdem habe ich die Vorbereitung einer möglichen Zusammenarbeit mit dem Rapper Jake La Furia begleitet."
   tasks:
-    - "Social-Media- und Content-Strategien für Artists entwickeln und umsetzen"
-    - "Content Creation koordinieren: Video, Foto, Text und Cover-Artworks"
-    - "Aufnahmen, Vorbereitung der Veröffentlichungen und Markenauftritt begleiten"
+    - "Content- und Social-Media-Strategien für Artists entwickeln und umsetzen"
+    - "Content koordinieren: Fotos, Videos, Texte und Cover"
+    - "Recordings, Release-Vorbereitung und Auftritt der Artists begleiten"
     - "Artists organisatorisch und kommunikativ betreuen"
-    - "Zusammenarbeit mit Jake La Furia vorbereiten, inklusive Managementvereinbarung"
-    - "Kreative Abläufe mit digitalen Tools strukturieren"
+    - "Vorbereitung einer möglichen Zusammenarbeit mit Jake La Furia begleiten"
+  scope: "Musik und Artworks gehören den Artists und ihren Teams; mein Teil waren Planung, Koordination und Kommunikation. Die Zusammenarbeit mit Jake La Furia war in Vorbereitung, ein Abschluss wird hier nicht behauptet."
   outputs:
-    - "Social-Media- und Content-Strategien mit im Schnitt rund 30.000 Views pro Beitrag"
-    - "Veröffentlichungen mit durchgängigem visuellem Auftritt: Cover, Fotos und Videos"
-    - "Managementvereinbarung für die Zusammenarbeit mit Jake La Furia vorbereitet"
-    - "Ein strukturierter Ablauf von der Idee über den Content bis zur Veröffentlichung"
-  highlights:
-    - value: "≈ 30.000"
-      label: "Views pro Beitrag im Schnitt"
+    - "Releases mit einheitlichem Auftritt aus Cover, Fotos und Videos (Beispiele unten)"
+    - "Einzelne Beiträge mit über 30.000 Aufrufen (eigene Angabe, nicht öffentlich belegt)"
+    - "Ein strukturierter Ablauf von der Idee über den Content bis zum Release"
   transfer:
-    content: "Content-Strategie, Produktion und Veröffentlichung aus einer Hand."
-    kontakte: "Eine Zusammenarbeit mit einem bekannten Künstler vorbereitet, inklusive Vereinbarung."
-    koordination: "Abläufe von der Idee bis zur Veröffentlichung strukturiert und mehrere Beteiligte koordiniert."
+    koordination: "Abläufe von der Idee bis zur Veröffentlichung strukturieren und mehrere Beteiligte koordinieren."
+    content: "Content planen, produzieren lassen und veröffentlichen."
+    kontakte: "Gespräche über eine mögliche Zusammenarbeit vorbereiten und begleiten."
   learnings:
-    - "Betreuung bedeutet Vertrauen, Timing, klare Kommunikation und Geduld."
-    - "Gute Projekte brauchen beides: eine kreative Identität und eine saubere operative Umsetzung."
+    - "Mit kreativen Menschen zu arbeiten bedeutet Vertrauen, Timing, klare Kommunikation und Geduld."
+    - "Gute Projekte brauchen beides: eine klare Idee und eine saubere Umsetzung."
 
 en:
   title: "Own music project"
-  role: "Artist management & marketing (self-employed)"
-  summary: "In Milan I looked after independent artists and ran their social media strategies, averaging around 30,000 views per post."
-  context: "Before moving to Berlin I built my own music projects in Milan. The goal was to make independent artists more visible in a professional way: with a clear identity, regular content and structured processes from the first idea to the release."
-  contribution: "I was manager, strategist and organiser at once. I developed social media and content strategies, coordinated photos, videos and artwork, supported recordings and releases, and looked after the artists in organisation and communication. I also prepared a collaboration with Jake La Furia, rapper and judge on X Factor Italia, including a management agreement."
+  role: "Artist coordination and digital marketing"
+  category: "Project coordination & content"
+  summary: "My own project alongside my studies: content planning, social media and coordination for independent artists in Milan, from the first idea to the release."
+  context: "Before moving to Berlin I built my own music project in Milan with independent artists from the urban scene, alongside my studies."
+  goal: "Make independent artists more visible: with a clear identity, regular content and structured processes from the first idea to the release."
+  contribution: "I developed content and social media strategies, coordinated photos, videos and covers, supported recordings and releases, and organised communication with the artists. I also supported the preparation of a possible collaboration with the rapper Jake La Furia."
   tasks:
-    - "Developing and running social media and content strategies for artists"
-    - "Coordinating content creation: video, photo, copy and cover artwork"
-    - "Supporting recordings, release preparation and artist branding"
+    - "Developing and running content and social media strategies for artists"
+    - "Coordinating content: photos, videos, copy and covers"
+    - "Supporting recordings, release preparation and the artists' presence"
     - "Looking after the artists in organisation and communication"
-    - "Preparing a collaboration with Jake La Furia, including a management agreement"
-    - "Structuring creative workflows with digital tools"
+    - "Supporting the preparation of a possible collaboration with Jake La Furia"
+  scope: "The music and artwork belong to the artists and their teams; my part was planning, coordination and communication. The collaboration with Jake La Furia was being prepared; no completed deal is claimed here."
   outputs:
-    - "Social media and content strategies averaging around 30,000 views per post"
-    - "Releases with a consistent visual identity: covers, photos and videos"
-    - "Prepared a management agreement for the collaboration with Jake La Furia"
-    - "A structured workflow from idea to content to release"
-  highlights:
-    - value: "≈ 30,000"
-      label: "views per post on average"
+    - "Releases with a consistent look across covers, photos and videos (examples below)"
+    - "Some posts with more than 30,000 views (self-reported, not publicly documented)"
+    - "A structured process from idea to content to release"
   transfer:
-    content: "Content strategy, production and publishing from a single source."
-    kontakte: "Prepared a collaboration with a well-known artist, including an agreement."
-    koordination: "Structured the steps from idea to release and coordinated several people involved."
+    koordination: "Structuring the steps from idea to release and coordinating several people involved."
+    content: "Planning content, briefing its production and publishing it."
+    kontakte: "Preparing and supporting talks about a possible collaboration."
   learnings:
-    - "Looking after people means trust, timing, clear communication and patience."
-    - "Good projects need both: a creative identity and clean operational execution."
+    - "Working with creative people means trust, timing, clear communication and patience."
+    - "Good projects need both: a clear idea and clean execution."
 
 it:
   title: "Progetto musicale personale"
-  role: "Artist management e marketing (in proprio)"
-  summary: "A Milano ho seguito artisti indipendenti e realizzato le loro strategie social, con in media circa 30.000 visualizzazioni per post."
-  context: "Prima di trasferirmi a Berlino ho costruito a Milano i miei progetti musicali. L'obiettivo era dare più visibilità, in modo professionale, ad artisti indipendenti: con un'identità chiara, contenuti regolari e processi strutturati dall'idea alla pubblicazione."
-  contribution: "Ero manager, stratega e organizzatore allo stesso tempo. Ho sviluppato strategie social e di contenuto, coordinato foto, video e artwork, seguito registrazioni e pubblicazioni e accompagnato gli artisti nell'organizzazione e nella comunicazione. Ho inoltre preparato una collaborazione con Jake La Furia, rapper e giudice di X Factor Italia, incluso un accordo di management."
+  role: "Coordinamento artisti e marketing digitale"
+  category: "Coordinamento e contenuti"
+  summary: "Un mio progetto accanto allo studio: pianificazione dei contenuti, social e coordinamento per artisti indipendenti a Milano, dall'idea alla pubblicazione."
+  context: "Prima di trasferirmi a Berlino ho costruito a Milano, accanto allo studio, un mio progetto musicale con artisti indipendenti della scena urban."
+  goal: "Dare più visibilità ad artisti indipendenti: con un'identità chiara, contenuti regolari e processi strutturati dall'idea alla release."
+  contribution: "Ho sviluppato strategie social e di contenuto, coordinato foto, video e copertine, seguito registrazioni e release e organizzato la comunicazione con gli artisti. Ho inoltre seguito la preparazione di una possibile collaborazione con il rapper Jake La Furia."
   tasks:
     - "Sviluppare e realizzare strategie social e di contenuto per artisti"
-    - "Coordinare la creazione di contenuti: video, foto, testi e copertine"
-    - "Seguire registrazioni, preparazione delle pubblicazioni e immagine dell'artista"
+    - "Coordinare i contenuti: foto, video, testi e copertine"
+    - "Seguire registrazioni, preparazione delle release e immagine degli artisti"
     - "Accompagnare gli artisti nell'organizzazione e nella comunicazione"
-    - "Preparare una collaborazione con Jake La Furia, incluso un accordo di management"
-    - "Strutturare i processi creativi con strumenti digitali"
+    - "Seguire la preparazione di una possibile collaborazione con Jake La Furia"
+  scope: "Musica e artwork appartengono agli artisti e ai loro team; la mia parte erano pianificazione, coordinamento e comunicazione. La collaborazione con Jake La Furia era in preparazione; non si afferma che sia stata conclusa."
   outputs:
-    - "Strategie social e di contenuto con in media circa 30.000 visualizzazioni per post"
-    - "Pubblicazioni con un'identità visiva coerente: copertine, foto e video"
-    - "Accordo di management preparato per la collaborazione con Jake La Furia"
-    - "Un processo strutturato dall'idea al contenuto fino alla pubblicazione"
-  highlights:
-    - value: "≈ 30.000"
-      label: "visualizzazioni per post in media"
+    - "Release con un'immagine coerente tra copertine, foto e video (esempi qui sotto)"
+    - "Alcuni post con oltre 30.000 visualizzazioni (dato personale, non documentato pubblicamente)"
+    - "Un processo strutturato dall'idea al contenuto fino alla release"
   transfer:
-    content: "Strategia, produzione e pubblicazione dei contenuti seguite in prima persona."
-    kontakte: "Preparata una collaborazione con un artista noto, incluso un accordo."
-    koordination: "Strutturati i passaggi dall'idea alla pubblicazione e coordinate più persone coinvolte."
+    koordination: "Strutturare i passaggi dall'idea alla pubblicazione e coordinare più persone coinvolte."
+    content: "Pianificare i contenuti, coordinarne la produzione e pubblicarli."
+    kontakte: "Preparare e seguire i colloqui per una possibile collaborazione."
   learnings:
-    - "Seguire delle persone significa fiducia, tempismo, comunicazione chiara e pazienza."
-    - "I buoni progetti hanno bisogno di entrambe le cose: un'identità creativa e un'esecuzione operativa pulita."
+    - "Lavorare con persone creative significa fiducia, tempismo, comunicazione chiara e pazienza."
+    - "I buoni progetti hanno bisogno di entrambe le cose: un'idea chiara e un'esecuzione pulita."

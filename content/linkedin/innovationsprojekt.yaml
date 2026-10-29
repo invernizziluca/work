@@ -7,6 +7,7 @@ image:
     de: "Whiteboard mit Ideen aus der ersten Phase des Innovationsprojekts"
     en: "Whiteboard with ideas from the first phase of the innovation project"
     it: "Lavagna con le idee della prima fase del progetto di innovazione"
+show_on_home: false   # true = also shown in "Nachweise" on the start page
 de:
   title: "Innovationsmanagement und Cross-Industry-Innovation"
   excerpt: "Über mein Innovationsprojekt an der FFHS und darüber, wie aus einer Studienidee ein greifbarer Prototyp wurde."

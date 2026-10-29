@@ -1,5 +1,7 @@
 # EXPERIENCE · Gebrüder Fritz
-# Page: /de/erfahrung/gebrueder-fritz/
+# Page: /de/erfahrung/gebrueder-fritz/   (the file name is the address)
+# Source: reference letter of 05.01.2026 (static/pdf/zeugnis-gebrueder-fritz.pdf).
+# No revenue, booking or conversion figures are documented: do not add any.
 
 order: 3
 company: "Gebrüder Fritz GmbH"
@@ -20,25 +22,20 @@ cover:
     en: "Team and guests at the Gebrüder Fritz anniversary in a period building"
     it: "Team e ospiti all'anniversario di Gebrüder Fritz in una location d'epoca"
 
-tools: ["Pipedrive", "Sevdesk", "Mailchimp", "CapCut", "Trello", "Excel", "OneDrive", "Google Docs"]
+tools: ["Pipedrive", "Sevdesk", "Mailchimp", "Trello", "Excel", "OneDrive", "Google Docs", "CapCut"]
 
 gallery:
-  - src: "/images/works/gebrueder-fritz/jubilaeum-team.webp"
-    alt:
-      de: "Gruppenfoto beim Jubiläum von Gebrüder Fritz"
-      en: "Group photo at the Gebrüder Fritz anniversary"
-      it: "Foto di gruppo all'anniversario di Gebrüder Fritz"
   - src: "/images/works/gebrueder-fritz/jubilaeum-toast.webp"
     alt:
-      de: "Anstoßen beim Jubiläum"
-      en: "A toast at the anniversary"
-      it: "Un brindisi all'anniversario"
+      de: "Anstoßen beim Jubiläum von Gebrüder Fritz"
+      en: "A toast at the Gebrüder Fritz anniversary"
+      it: "Un brindisi all'anniversario di Gebrüder Fritz"
   - src: "/images/works/gebrueder-fritz/gebrueder-management.webp"
     position: "center 25%"
     alt:
-      de: "Luca mit dem Team von Gebrüder Fritz"
-      en: "Luca with the Gebrüder Fritz team"
-      it: "Luca con il team di Gebrüder Fritz"
+      de: "Luca Invernizzi mit dem Team von Gebrüder Fritz"
+      en: "Luca Invernizzi with the Gebrüder Fritz team"
+      it: "Luca Invernizzi con il team di Gebrüder Fritz"
   - src: "/images/works/gebrueder-fritz/gift-bag.webp"
     position: "center 40%"
     alt:
@@ -52,85 +49,96 @@ links: []
 
 de:
   title: "Gebrüder Fritz"
-  role: "Praktikant Marketing, Sales & Administration"
-  summary: "Meine erste Station in Berlin: Vertrieb, Marketing und Events für einen Anbieter außergewöhnlicher Eventlocations, vom ersten Kundenkontakt bis zum Abbau."
-  context: "Gebrüder Fritz betreibt außergewöhnliche Altbau-Locations in Berlin. Gebucht werden sie von mittelständischen Unternehmen, Großkonzernen, Organisationen, PR- und Eventagenturen sowie Film- und Fotoproduktionen, für Workshops, Empfänge, Produktpräsentationen und Private Dinings."
-  contribution: "Im Sales- und Marketingteam pflegte ich das CRM, legte Deals an und verfolgte sie bis zur Angebotsphase, arbeitete an Angeboten und Rechnungen mit und erstellte Newsletter-Kampagnen sowie Foto- und Videocontent im Corporate Design. Bei Events unterstützte ich von der Planung bis zum Abbau."
+  role: "Praktikum Sales, Marketing & Administration"
+  category: "CRM & Vertriebsunterstützung"
+  summary: "Meine erste Station in Berlin: Kundendaten und Deals in Pipedrive, Angebote und Rechnungen in Sevdesk, Newsletter mit Mailchimp und Events in Altbau-Locations."
+  context: "Gebrüder Fritz betreibt Eventlocations in Berliner Altbauten. Gebucht werden sie von mittelständischen Unternehmen, Großkonzernen, Organisationen, PR- und Eventagenturen sowie Film- und Fotoproduktionen, für Workshops, Empfänge, Produktpräsentationen und Private Dinings."
+  goal: "Anfragen und Kundenbeziehungen sauber begleiten, die Locations über Newsletter und Content sichtbar machen und Events zuverlässig umsetzen."
+  contribution: "Im Sales- und Marketingteam pflegte ich Kundendaten und Deals in Pipedrive, verfolgte Anfragen vom Erstkontakt bis zur Angebotsphase und arbeitete an Angeboten und Rechnungen in Sevdesk mit. Ich erstellte und versendete Newsletter-Kampagnen, produzierte Foto- und Videocontent im Corporate Design und half bei Events von der Planung bis zum Abbau."
   tasks:
-    - "Sales und CRM: Kundendaten in Pipedrive pflegen und verwalten, Deals vom Erstkontakt bis zur Angebotsphase anlegen und nachverfolgen, Mitarbeit an Angeboten und Rechnungen in Sevdesk"
-    - "Marketing und Kommunikation: Unterstützung bei Marketingmaßnahmen, Newsletter-Rückläufer bearbeiten, Kontakte pflegen, Kampagnen erstellen und versenden, LinkedIn-Recherchen"
-    - "Event-Management: Unterstützung bei Planung, Aufbau, Organisation und Abbau von Events"
-    - "Content Creation: Foto- und Videomaterial für Marketing und Social Media erstellen und bearbeiten, unter Beachtung der Corporate Identity (zum Beispiel mit CapCut)"
-    - "Projektmanagement und Tools: Aufgaben mit der Eisenhower-Matrix organisieren und priorisieren; Trello, Excel, OneDrive, Google Docs, Pipedrive, Sevdesk und Mailchimp"
+    - "Sales & CRM: Kundendaten in Pipedrive pflegen, Deals vom Erstkontakt bis zur Angebotsphase anlegen und nachverfolgen"
+    - "Mitarbeit an Angeboten und Rechnungen in Sevdesk"
+    - "Newsletter: Rückläufer bearbeiten, Kontakte pflegen, Kampagnen mit Mailchimp und Pipedrive erstellen und versenden"
+    - "LinkedIn-Recherchen und Unterstützung bei der Planung und Umsetzung von Marketingmaßnahmen"
+    - "Events mitplanen, aufbauen, organisieren und abbauen"
+    - "Foto- und Videocontent für Marketing und Social Media im Corporate Design, zum Beispiel mit CapCut"
+    - "Aufgaben mit der Eisenhower-Matrix organisieren und priorisieren"
     - "Administration: Postfach, Abwesenheitsnotizen, Ansprechpartner und Kontaktdaten aktuell halten"
+  scope: "Angebote, Preise und Kundenentscheidungen lagen bei Geschäftsführung und Sales-Team. Ich habe Daten gepflegt, nachgefasst und Unterlagen vorbereitet. Zahlen zu Umsatz oder Buchungen nenne ich nicht."
   outputs:
+    - "Deals im CRM nachvollziehbar dokumentiert und bis zur Angebotsphase nachverfolgt"
+    - "Angebote und Rechnungen vorbereitet"
     - "Newsletter-Kampagnen erstellt und versendet, Kontakte in Mailchimp und Pipedrive gepflegt"
-    - "Deals im CRM vom Erstkontakt bis zur Angebotsphase angelegt und nachverfolgt"
-    - "An Angeboten und Rechnungen mitgearbeitet"
-    - "Foto- und Videomaterial für Marketing und Social Media im Corporate Design erstellt"
-    - "Events von der Planung bis zum Abbau unterstützt"
-    - "Im Zeugnis hervorgehoben: gute organisatorische Fähigkeiten, Eigeninitiative und ein freundliches, professionelles Auftreten"
-  highlights: []
+    - "Foto- und Videomaterial für Marketing und Social Media im Corporate Design"
+    - "Im Zeugnis hervorgehoben: gute organisatorische Fähigkeiten, Eigeninitiative und ein freundliches, professionelles Auftreten gegenüber Kund:innen, Partner:innen und Kolleg:innen"
   transfer:
     kontakte: "CRM-Pflege, Deal-Verfolgung und Mitarbeit an Angeboten im B2B-Vertrieb."
     content: "Newsletter und Content im Corporate Design eines Unternehmens."
     koordination: "Events vorbereiten und vor Ort umsetzen; Aufgaben nach Dringlichkeit und Wichtigkeit priorisieren."
   learnings:
     - "Professionelle Kommunikation beginnt bei sauberer Datenpflege, klaren Follow-ups und guter Vorbereitung."
-    - "Events wirken nach außen leicht, brauchen intern aber präzise Planung, Timing und viele kleine Details."
+    - "Events wirken nach außen leicht, brauchen intern aber präzise Planung und viele kleine Details."
 
 en:
   title: "Gebrüder Fritz"
-  role: "Marketing, sales & administration intern"
-  summary: "My first role in Berlin: sales, marketing and events for a company that runs exceptional event venues, from the first client contact to the breakdown after the event."
-  context: "Gebrüder Fritz runs exceptional event venues in historic Berlin buildings. They are booked by medium-sized companies, large corporations, organisations, PR and event agencies, and film and photo productions for workshops, receptions, product launches and private dinners."
-  contribution: "In the sales and marketing team I maintained the CRM, created deals and followed them up to the offer stage, helped prepare offers and invoices, and created newsletter campaigns and photo and video content in the corporate design. At events I helped from planning to breakdown."
+  role: "Intern, sales, marketing and administration"
+  category: "CRM & sales support"
+  summary: "My first role in Berlin: client data and deals in Pipedrive, offers and invoices in Sevdesk, newsletters with Mailchimp and events in period-building venues."
+  context: "Gebrüder Fritz runs event venues in historic Berlin buildings. They are booked by medium-sized companies, large corporations, organisations, PR and event agencies, and film and photo productions, for workshops, receptions, product launches and private dinners."
+  goal: "Handle enquiries and client relationships carefully, make the venues visible through newsletters and content, and deliver events reliably."
+  contribution: "In the sales and marketing team I maintained client data and deals in Pipedrive, followed enquiries from first contact to the offer stage and helped prepare offers and invoices in Sevdesk. I created and sent newsletter campaigns, produced photo and video content in the corporate design and helped at events from planning to breakdown."
   tasks:
-    - "Sales and CRM: maintaining client data in Pipedrive, creating and tracking deals from first contact to the offer stage, helping prepare offers and invoices in Sevdesk"
-    - "Marketing and communication: supporting marketing activities, handling newsletter bounces, maintaining contacts, creating and sending campaigns, LinkedIn research"
-    - "Event management: supporting the planning, setup, organisation and breakdown of events"
-    - "Content creation: creating and editing photo and video material for marketing and social media in line with the corporate identity (for example with CapCut)"
-    - "Project management and tools: organising and prioritising tasks with the Eisenhower matrix; Trello, Excel, OneDrive, Google Docs, Pipedrive, Sevdesk and Mailchimp"
-    - "Administration: keeping the inbox, out-of-office notes, contact persons and contact data up to date"
+    - "Sales & CRM: maintaining client data in Pipedrive, creating deals and following them from first contact to the offer stage"
+    - "Helping prepare offers and invoices in Sevdesk"
+    - "Newsletters: handling bounces, maintaining contacts, creating and sending campaigns with Mailchimp and Pipedrive"
+    - "LinkedIn research and support with planning and running marketing activities"
+    - "Helping to plan, set up, organise and break down events"
+    - "Photo and video content for marketing and social media in the corporate design, for example with CapCut"
+    - "Organising and prioritising tasks with the Eisenhower matrix"
+    - "Administration: inbox, out-of-office notes, contact persons and contact data"
+  scope: "Offers, prices and client decisions were made by the management and the sales team. I maintained data, followed up and prepared documents. I do not quote revenue or booking figures."
   outputs:
+    - "Documented deals in the CRM and followed them up to the offer stage"
+    - "Prepared offers and invoices"
     - "Created and sent newsletter campaigns, maintained contacts in Mailchimp and Pipedrive"
-    - "Created and tracked deals in the CRM from first contact to the offer stage"
-    - "Helped prepare offers and invoices"
-    - "Created photo and video material for marketing and social media in the corporate design"
-    - "Supported events from planning to breakdown"
-    - "Highlighted in the reference letter: good organisational skills, initiative and a friendly, professional manner"
+    - "Photo and video material for marketing and social media in the corporate design"
+    - "Highlighted in the reference letter: good organisational skills, initiative and a friendly, professional manner with clients, partners and colleagues"
   transfer:
     kontakte: "Maintaining a CRM, tracking deals and helping prepare offers in B2B sales."
     content: "Newsletters and content in a company's corporate design."
     koordination: "Preparing events and delivering them on site; prioritising tasks by urgency and importance."
   learnings:
     - "Professional communication starts with clean data, clear follow-ups and good preparation."
-    - "Events look effortless from the outside, but need precise planning, timing and many small details."
+    - "Events look effortless from the outside but need precise planning and many small details."
 
 it:
   title: "Gebrüder Fritz"
-  role: "Stagista marketing, sales e amministrazione"
-  summary: "La mia prima esperienza a Berlino: vendite, marketing ed eventi per un'azienda di location fuori dal comune, dal primo contatto con il cliente allo smontaggio dopo l'evento."
+  role: "Stage, sales, marketing e amministrazione"
+  category: "CRM e supporto vendite"
+  summary: "La mia prima esperienza a Berlino: dati clienti e trattative in Pipedrive, offerte e fatture in Sevdesk, newsletter con Mailchimp ed eventi in location d'epoca."
   context: "Gebrüder Fritz gestisce location per eventi in palazzi storici di Berlino. Le prenotano medie imprese, grandi gruppi, organizzazioni, agenzie PR ed eventi e produzioni foto e video, per workshop, ricevimenti, presentazioni di prodotto e cene private."
-  contribution: "Nel team sales e marketing ho curato il CRM, creato le trattative e le ho seguite fino alla fase di offerta, ho collaborato a offerte e fatture e ho creato campagne newsletter e contenuti foto e video secondo la corporate identity. Agli eventi ho dato una mano dalla pianificazione allo smontaggio."
+  goal: "Seguire con cura richieste e rapporti con i clienti, rendere visibili le location con newsletter e contenuti e realizzare eventi in modo affidabile."
+  contribution: "Nel team sales e marketing ho curato dati clienti e trattative in Pipedrive, seguito le richieste dal primo contatto fino all'offerta e collaborato a offerte e fatture in Sevdesk. Ho creato e inviato campagne newsletter, prodotto contenuti foto e video secondo la corporate identity e aiutato agli eventi dalla pianificazione allo smontaggio."
   tasks:
-    - "Sales e CRM: gestione dei dati clienti in Pipedrive, creazione e follow-up delle trattative dal primo contatto alla fase di offerta, collaborazione a offerte e fatture in Sevdesk"
-    - "Marketing e comunicazione: supporto alle attività di marketing, gestione dei rimbalzi delle newsletter, cura dei contatti, creazione e invio delle campagne, ricerche su LinkedIn"
-    - "Event management: supporto a pianificazione, allestimento, organizzazione e smontaggio degli eventi"
-    - "Content creation: creazione e montaggio di materiale foto e video per marketing e social nel rispetto della corporate identity (ad esempio con CapCut)"
-    - "Project management e strumenti: compiti organizzati e messi in ordine di priorità con la matrice di Eisenhower; Trello, Excel, OneDrive, Google Docs, Pipedrive, Sevdesk e Mailchimp"
-    - "Amministrazione: casella e-mail, risposte automatiche, referenti e dati di contatto sempre aggiornati"
+    - "Sales e CRM: gestione dei dati clienti in Pipedrive, creazione e follow-up delle trattative dal primo contatto fino all'offerta"
+    - "Collaborazione a offerte e fatture in Sevdesk"
+    - "Newsletter: gestione dei rimbalzi, cura dei contatti, creazione e invio di campagne con Mailchimp e Pipedrive"
+    - "Ricerche su LinkedIn e supporto nella pianificazione e realizzazione di attività di marketing"
+    - "Aiuto nella pianificazione, allestimento, organizzazione e smontaggio degli eventi"
+    - "Contenuti foto e video per marketing e social secondo la corporate identity, per esempio con CapCut"
+    - "Organizzazione dei compiti e priorità con la matrice di Eisenhower"
+    - "Amministrazione: casella e-mail, risposte automatiche, referenti e dati di contatto"
+  scope: "Offerte, prezzi e decisioni con i clienti spettavano alla direzione e al team sales. Io ho curato i dati, fatto follow-up e preparato documenti. Non indico numeri di fatturato o prenotazioni."
   outputs:
+    - "Trattative documentate nel CRM e seguite fino alla fase di offerta"
+    - "Offerte e fatture preparate"
     - "Campagne newsletter create e inviate, contatti curati in Mailchimp e Pipedrive"
-    - "Trattative create e seguite nel CRM dal primo contatto alla fase di offerta"
-    - "Collaborazione a offerte e fatture"
-    - "Materiale foto e video per marketing e social creato secondo la corporate identity"
-    - "Supporto agli eventi dalla pianificazione allo smontaggio"
-    - "Sottolineate nel certificato: buone capacità organizzative, spirito d'iniziativa e un modo di fare cordiale e professionale"
+    - "Materiale foto e video per marketing e social secondo la corporate identity"
+    - "Sottolineate nel certificato: buone capacità organizzative, spirito d'iniziativa e un modo di fare cordiale e professionale con clienti, partner e colleghi"
   transfer:
     kontakte: "Gestione del CRM, follow-up delle trattative e collaborazione alle offerte nelle vendite B2B."
     content: "Newsletter e contenuti secondo la corporate identity di un'azienda."
     koordination: "Preparare gli eventi e realizzarli sul posto; ordinare i compiti per urgenza e importanza."
   learnings:
     - "La comunicazione professionale inizia da dati puliti, follow-up chiari e una buona preparazione."
-    - "Da fuori gli eventi sembrano semplici, ma richiedono pianificazione precisa, tempismo e tanti piccoli dettagli."
+    - "Da fuori gli eventi sembrano semplici, ma richiedono pianificazione precisa e tanti piccoli dettagli."

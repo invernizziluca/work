@@ -1,0 +1,37 @@
+# TEMPLATE · one card under "Ausgewählte Arbeiten / Selected work" on the start page
+# Paste it into content/home.yaml under  featured: -> items:  (3 cards is the plan).
+# "mine" = what I did myself, "credit" = what the team or others did. "metric" only with a visible source.
+- work: "firma"                         # file name in content/erfahrung/ (the card links there)
+  image:
+    src: "/images/works/firma/bild.webp"
+    position: "center 30%"
+    alt:
+      de: "Was auf dem Bild zu sehen ist"
+      en: "What the image shows"
+      it: "Cosa mostra l'immagine"
+  label:
+    de: "CRM und Vertrieb"
+    en: "CRM and sales"
+    it: "CRM e vendite"
+  title:
+    de: "Kurzer Titel der Arbeit"
+    en: "Short title of the work"
+    it: "Titolo breve del lavoro"
+  # metric:                             # optional, only a documented number
+  #   value: {de: "83.767", en: "83,767", it: "83.767"}
+  #   label: {de: "Aufrufe in 14 Tagen", en: "views in 14 days", it: "visualizzazioni in 14 giorni"}
+  #   source: {de: "Instagram Insights, 5.–18. August", en: "Instagram insights, 5–18 August", it: "Insights di Instagram, 5–18 agosto"}
+  text:
+    de: "Zwei Sätze: wofür, was, mit welchem Ergebnis."
+    en: "…"
+    it: "…"
+  mine:
+    de: "Mein Anteil in einem Satz."
+    en: "…"
+    it: "…"
+  credit:
+    de: "Was das Team oder andere gemacht haben."
+    en: "…"
+    it: "…"
+  links: []                             # - label: {de: "Beispiel auf Instagram", en: "Example on Instagram", it: "Esempio su Instagram"}
+                                        #   url: "https://www.instagram.com/p/…"

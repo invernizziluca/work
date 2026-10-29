@@ -4,7 +4,8 @@
 #   de: "…"
 #   en: "…"
 #   it: "…"
-# Links inside the site: "/pdf/…", "/images/…" for files.
+# Files: "/pdf/…", "/images/…". German pages use the polite "Sie".
+# Rule: only facts that can be shown. "mine" = what I did myself, "credit" = what others did.
 # =====================================================================
 
 name: "Luca Invernizzi"
@@ -12,83 +13,57 @@ name: "Luca Invernizzi"
 contact:
   email: "luca.invernizzi@students.ffhs.ch"
   linkedin: "https://www.linkedin.com/in/lucainve/"
-  # Put a general CV into static/pdf/ and write its path here, e.g. "/pdf/lebenslauf-luca-invernizzi.pdf".
-  # While this is empty, no CV button is shown.
-  cv: ""
+  # General business CV (not tailored to one company). Source: cv_source/business-general-2026.tex (XeLaTeX)
+  cv: "/pdf/luca-invernizzi-cv-general-en.pdf"
 
 portrait:
   src: "/images/profile/luca-portrait.webp"
-  position: "50% 6%"
+  position: "50% 8%"
   alt:
-    de: "Porträt von Luca Invernizzi im schwarzen Rollkragenpullover vor goldbraunem Hintergrund"
-    en: "Portrait of Luca Invernizzi in a black turtleneck against a golden-brown background"
-    it: "Ritratto di Luca Invernizzi con dolcevita nero su sfondo color oro"
+    de: "Porträt von Luca Invernizzi im schwarzen Rollkragenpullover"
+    en: "Portrait of Luca Invernizzi in a black turtleneck"
+    it: "Ritratto di Luca Invernizzi con dolcevita nero"
 
 seo:
   title:
-    de: "Luca Invernizzi | Kommunikation, Business Development und Projekte"
-    en: "Luca Invernizzi | Communication, business development and projects"
-    it: "Luca Invernizzi | Comunicazione, business development e progetti"
+    de: "Luca Invernizzi | Marketing, Kundenbeziehungen und digitale Projekte"
+    en: "Luca Invernizzi | Marketing, client relationships and digital projects"
+    it: "Luca Invernizzi | Marketing, relazioni con i clienti e progetti digitali"
   description:
-    de: "Luca Invernizzi, Betriebsökonomie-Student (FFHS) mit Berufserfahrung in Berlin: Praxis in Presse- und Öffentlichkeitsarbeit, Social Media, Vertrieb, Events und Projektarbeit, mit Belegen zu jeder Station."
-    en: "Luca Invernizzi, business administration student at FFHS with experience in Berlin: hands-on experience in press and public relations, social media, sales, events and projects, with evidence for every role."
-    it: "Luca Invernizzi, studente di economia aziendale (FFHS) con esperienze a Berlino: esperienza in ufficio stampa, social media, vendite, eventi e progetti, con riscontri per ogni esperienza."
+    de: "Luca Invernizzi studiert Business Administration an der FFHS: CRM und Vertrieb, digitale Kommunikation und Projekte in Berliner Unternehmen, mit Belegen."
+    en: "Luca Invernizzi, Business Administration student at FFHS: CRM and sales support, digital communication and projects at Berlin companies, with evidence."
+    it: "Luca Invernizzi studia Business Administration alla FFHS: CRM e vendite, comunicazione digitale e progetti in aziende di Berlino, con riscontri."
+  # One line under the claim on the link preview image (generated/og/home-*.jpg)
+  og_line:
+    de: "BSc Business Administration (Digital Business), FFHS"
+    en: "BSc Business Administration (Digital Business), FFHS"
+    it: "BSc Business Administration (Digital Business), FFHS"
 
 hero:
-  eyebrow:
-    de: "BUSINESS ADMINISTRATION · DIGITAL BUSINESS"
-    en: "BUSINESS ADMINISTRATION · DIGITAL BUSINESS"
-    it: "BUSINESS ADMINISTRATION · DIGITAL BUSINESS"
-  headline:
+  # kicker: optional short line above the name (left out on purpose: the facts panel says it)
+  claim:
     de: "Marketing, Kundenbeziehungen und digitale Projekte."
-    en: "Marketing, client relationships & digital projects."
+    en: "Marketing, client relationships and digital projects."
     it: "Marketing, relazioni con i clienti e progetti digitali."
   lead:
-    de: "Ich studiere Business Administration mit Vertiefung Digital Business an der FFHS. In Berliner Unternehmen und eigenen Projekten habe ich an CRM und Vertrieb, digitaler Kommunikation sowie der Umsetzung von Marketingaktivitäten mitgearbeitet. Hier zeige ich konkrete Aufgaben, Ergebnisse und die zugehörigen Belege."
-    en: "I'm a Business Administration student specialising in Digital Business at FFHS. Through internships in Berlin and independent projects, I've worked across CRM and sales, digital communication and marketing delivery. Explore the work, results and supporting evidence."
-    it: "Studio Business Administration con indirizzo Digital Business alla FFHS. Attraverso stage a Berlino e progetti indipendenti ho lavorato su CRM e vendite, comunicazione digitale e attività di marketing. Qui trovi esperienze, risultati e relative prove."
-  proof_label:
-    de: "Ausgewählte Fakten"
-    en: "Selected evidence"
-    it: "Risultati e informazioni verificabili"
-  focus_heading:
-    de: "Woran ich gearbeitet habe"
-    en: "What I've worked on"
-    it: "Di cosa mi sono occupato"
-  focus_note:
-    de: "Drei Perspektiven auf dieselben Erfahrungen."
-    en: "Three ways to explore my experience."
-    it: "Tre prospettive sulle mie esperienze."
-  proof_points:
-    - value: "83,767"
-      label:
-        de: "Instagram-Aufrufe in 14 Tagen · Verbano"
-        en: "Instagram views in 14 days · Verbano"
-        it: "Visualizzazioni Instagram in 14 giorni · Verbano"
-      href: "/images/works/verbano-unihockey/instagram-insights.webp"
-    - value: "CRM + Sales"
-      label:
-        de: "Pipedrive, Leads und Kunden-Follow-ups · Gebrüder Fritz"
-        en: "Pipedrive, leads and customer follow-ups · Gebrüder Fritz"
-        it: "Pipedrive, lead e follow-up clienti · Gebrüder Fritz"
-      href: "/pdf/zeugnis-gebrueder-fritz.pdf"
-    - value: "BSc · 2028"
-      label:
-        de: "Digital Business · FFHS · Abschluss geplant Juli 2028"
-        en: "Digital Business · FFHS · expected July 2028"
-        it: "Digital Business · FFHS · laurea prevista luglio 2028"
-      href: "#education"
+    de: "In Berliner Unternehmen, einem Sportverein und eigenen Projekten habe ich an CRM und Vertrieb, digitaler Kommunikation und Projekten mitgearbeitet. Hier sehen Sie, was ich jeweils selbst gemacht habe, mit den Belegen dazu."
+    en: "At companies in Berlin, at a sports club and in my own projects I have worked on CRM and sales, digital communication and projects. Here you can see what I did myself in each role, with the evidence."
+    it: "In aziende di Berlino, in una società sportiva e in progetti personali ho lavorato su CRM e vendite, comunicazione digitale e progetti. Qui trovi cosa ho fatto personalmente in ogni esperienza, con i relativi riscontri."
+  primary:
+    de: "Ausgewählte Arbeiten"
+    en: "Selected work"
+    it: "Lavori selezionati"
 
-# Short facts next to the portrait (in the CV-style column).
+# Short facts next to the portrait. Residence and citizenship as set on 26.10.2026 (see CONTENT_REVIEW.md).
 facts:
   - label:
       de: "Basis"
       en: "Based in"
       it: "Base"
     value:
-      de: "Schweiz · Berliner Berufserfahrung"
-      en: "Switzerland · Berlin work experience"
-      it: "Svizzera · esperienza professionale a Berlino"
+      de: "Schweiz, mit Berufserfahrung in Berlin"
+      en: "Switzerland, with work experience in Berlin"
+      it: "Svizzera, con esperienza professionale a Berlino"
   - label:
       de: "Staatsangehörigkeit"
       en: "Citizenship"
@@ -98,43 +73,45 @@ facts:
       en: "Swiss"
       it: "Svizzera"
   - label:
-      de: "Offen für"
-      en: "Open to"
-      it: "Disponibile per"
-    value:
-      de: "Stellen in Deutschland, der Schweiz und Polen"
-      en: "Roles in Germany, Switzerland and Poland"
-      it: "Posizioni in Germania, Svizzera e Polonia"
-  - label:
-      de: "Gesucht"
-      en: "Looking for"
-      it: "Cerco"
-    value:
-      de: "Praktikum oder Berufseinstieg im Digital Business"
-      en: "Internship or early-career digital business roles"
-      it: "Stage o ruoli junior in digital business"
-  - label:
       de: "Studium"
       en: "Studies"
       it: "Studi"
     value:
-      de: "BSc Business Administration · FFHS · bis Juli 2028 (geplant)"
-      en: "BSc Business Administration · FFHS · expected July 2028"
-      it: "BSc Business Administration · FFHS · luglio 2028 previsto"
+      de: "BSc Business Administration, FFHS, voraussichtlich Juli 2028"
+      en: "BSc Business Administration, FFHS, expected July 2028"
+      it: "BSc Business Administration, FFHS, previsto luglio 2028"
+  - label:
+      de: "Sprachen"
+      en: "Languages"
+      it: "Lingue"
+    value:
+      de: "Italienisch (Muttersprache), Deutsch und Englisch C1"
+      en: "Italian (native), German and English C1"
+      it: "Italiano (madrelingua), tedesco e inglese C1"
+  - label:
+      de: "Offen für"
+      en: "Open to"
+      it: "Disponibile per"
+    value:
+      de: "Praktika und Einstiegsstellen in Deutschland, der Schweiz und Polen"
+      en: "Internships and early-career roles in Germany, Switzerland and Poland"
+      it: "Stage e ruoli junior in Germania, Svizzera e Polonia"
 
 # ---------------------------------------------------------------------
-# The three focus areas ("lenses"). Order = order of the tabs.
-#   id:      content / kontakte / koordination (see site.yaml)
-#   word:    the big word at the top of the page
-#   title:   what the area covers
+# The three focus areas ("lenses"), shown as tabs. Order = order of the tabs.
+#   id:      content / kontakte / koordination (see site.yaml). Keep the ids: links like ?fokus=kontakte use them.
+#   word:    tab label (Marketing / Clients / Projects)
 #   evidence: one line per proof
 #     work:   file name of an experience in content/erfahrung/ (links to that page)
 #     org:    name to show when there is no "work" (e.g. FFHS)
 #     source: zeugnis | screenshot | linkedin | zertifikat | artikel | forschung | eigen
 #     href:   where the source can be checked (PDF, image, post). Leave out for "eigen".
-#   roles:   job titles this area fits
 # ---------------------------------------------------------------------
 focus:
+  heading:
+    de: "Schwerpunkte"
+    en: "Focus areas"
+    it: "Ambiti"
   intro:
     de: "Wählen Sie den Bereich, für den Sie jemanden suchen. Zu jeder Aussage steht die Quelle."
     en: "Pick the area you are hiring for. Every statement shows its source."
@@ -150,43 +127,50 @@ focus:
         en: "Communication, PR and social media"
         it: "Comunicazione, PR e social media"
       intro:
-        de: "Ich erstelle Inhalte in Text, Grafik und Video, betreue Kanäle, Newsletter und Websites und plane anhand von Daten. Zurzeit in der Presse- und Öffentlichkeitsarbeit der Initiative Musik."
-        en: "I create content in text, graphics and video, look after channels, newsletters and websites, and plan with data. Currently in the press and public relations team at Initiative Musik."
-        it: "Creo contenuti in testo, grafica e video, curo canali, newsletter e siti web e pianifico sulla base dei dati. Oggi nell'ufficio stampa e comunicazione della Initiative Musik."
+        de: "Ich schreibe Texte für Social Media, pflege Kanäle, Newsletter und Websites und plane mit Daten. Zurzeit im Team Presse- und Öffentlichkeitsarbeit der Initiative Musik."
+        en: "I write social media copy, look after channels, newsletters and websites, and plan with data. Currently in the press and public relations team at Initiative Musik."
+        it: "Scrivo testi per i social, curo canali, newsletter e siti web e pianifico con i dati. Oggi nel team ufficio stampa e comunicazione di Initiative Musik."
       evidence:
         - work: "initiative-musik"
           source: "eigen"
+          href: "https://www.instagram.com/p/DePTpGejdrF/"
           text:
-            de: "Social-Media-Content in Text, Grafik und Video, Community Management und Reporting, Mitarbeit an Website und Newsletter, Medienmonitoring"
-            en: "Social media content in text, graphics and video, community management and reporting, contributions to the website and newsletter, media monitoring"
-            it: "Contenuti social in testo, grafica e video, community management e reporting, collaborazione a sito e newsletter, media monitoring"
+            de: "Texte für einen Großteil der veröffentlichten APPLAUS-2026-Beiträge auf Instagram; mein Anteil ist der Text, nicht Fotos oder Grafik"
+            en: "Wrote most of the copy for the published APPLAUS 2026 Instagram posts; my part is the copy, not the photos or graphics"
+            it: "Testi di gran parte dei post Instagram pubblicati per APPLAUS 2026; la mia parte è il testo, non foto o grafica"
+        - work: "initiative-musik"
+          source: "eigen"
+          text:
+            de: "Medien- und Social-Media-Monitoring, Reportings zu Social-Media-Kennzahlen, Mitarbeit an Newsletter, Website und Community Management"
+            en: "Media and social media monitoring, reports on social media figures, contributions to the newsletter, website and community management"
+            it: "Monitoraggio di media e social, report sui numeri dei social, collaborazione a newsletter, sito e community management"
         - work: "verbano-unihockey"
           source: "screenshot"
           href: "/images/works/verbano-unihockey/instagram-insights.webp"
           text:
-            de: "83.767 Instagram-Aufrufe in 14 Tagen, 59,8 % davon von Nicht-Followern; 1.932 % mehr erreichte Konten als im Vorzeitraum"
-            en: "83,767 Instagram views in 14 days, 59.8% of them from non-followers; 1,932% more accounts reached than in the previous period"
-            it: "83.767 visualizzazioni su Instagram in 14 giorni, il 59,8 % da non follower; account raggiunti +1.932 % rispetto al periodo precedente"
-        - work: "eintracht-pankow"
-          source: "zeugnis"
-          href: "/pdf/zeugnis-eintracht-pankow.pdf"
-          text:
-            de: "YouTube-Kanal des Labels konzipiert, eingerichtet und gepflegt; regelmäßiger Mailout zu Social-Media- und Marketing-Trends für die Artists"
-            en: "Conceived, set up and maintained the label's YouTube channel; regular mailout on social media and marketing trends for the artists"
-            it: "Ideato, creato e gestito il canale YouTube della label; mailout periodico sui trend social e di marketing per gli artisti"
+            de: "Vereinskonto auf Instagram: 83.767 Aufrufe in 14 Tagen, 59,8\u00A0% davon von Nicht-Followern; 4.775 erreichte Konten, +1.931,9\u00A0% gegenüber dem Vorzeitraum"
+            en: "Club Instagram account: 83,767 views in 14 days, 59.8% from non-followers; 4,775 accounts reached, +1,931.9% compared with the previous period"
+            it: "Account Instagram del club: 83.767 visualizzazioni in 14 giorni, il 59,8\u00A0% da non follower; 4.775 account raggiunti, +1.931,9\u00A0% rispetto al periodo precedente"
         - work: "gebrueder-fritz"
           source: "zeugnis"
           href: "/pdf/zeugnis-gebrueder-fritz.pdf"
           text:
-            de: "Newsletter-Kampagnen erstellt und versendet, Kontakte in Mailchimp und Pipedrive gepflegt; Foto- und Videocontent unter Beachtung der Corporate Identity"
-            en: "Created and sent newsletter campaigns, maintained contacts in Mailchimp and Pipedrive; photo and video content in line with the corporate identity"
-            it: "Create e inviate campagne newsletter, curati i contatti in Mailchimp e Pipedrive; contenuti foto e video nel rispetto della corporate identity"
+            de: "Newsletter-Kampagnen erstellt und versendet, Kontakte in Mailchimp und Pipedrive gepflegt; Foto- und Videocontent im Corporate Design"
+            en: "Created and sent newsletter campaigns, maintained contacts in Mailchimp and Pipedrive; photo and video content in the corporate design"
+            it: "Create e inviate campagne newsletter, curati i contatti in Mailchimp e Pipedrive; contenuti foto e video secondo la corporate identity"
+        - work: "eintracht-pankow"
+          source: "zeugnis"
+          href: "/pdf/zeugnis-eintracht-pankow.pdf"
+          text:
+            de: "Label-Playlists und den YouTube-Kanal des Labels gepflegt und ein regelmäßiges Mailout zu Social-Media- und Marketingtrends für die Artists entwickelt"
+            en: "Maintained the label playlists and the label's YouTube channel and developed a regular mailout on social media and marketing trends for the artists"
+            it: "Curate le playlist e il canale YouTube della label e sviluppato un mailout periodico sui trend social e di marketing per gli artisti"
         - work: "eigenes-musikprojekt"
           source: "eigen"
           text:
-            de: "Social-Media- und Content-Strategien für Artists, im Schnitt rund 30.000 Views pro Beitrag"
-            en: "Social media and content strategies for artists, averaging around 30,000 views per post"
-            it: "Strategie social e di contenuto per artisti, in media circa 30.000 visualizzazioni per post"
+            de: "Content- und Social-Media-Planung für Independent Artists; einzelne Beiträge mit über 30.000 Aufrufen"
+            en: "Content and social media planning for independent artists; some posts reached more than 30,000 views"
+            it: "Pianificazione di contenuti e social per artisti indipendenti; alcuni post hanno superato le 30.000 visualizzazioni"
         - org:
             de: "FFHS, Studium"
             en: "FFHS, studies"
@@ -198,9 +182,9 @@ focus:
             en: "Research paper: vignette experiment on how social media marketing affects brand equity and customer response"
             it: "Ricerca: esperimento con vignette sull'effetto del social media marketing su brand equity e risposta dei clienti"
       roles:
-        de: ["Social Media Manager", "Content Creator / Content Manager", "Community Manager", "Kommunikation und PR", "Online-Redaktion", "Marketing in KMU"]
-        en: ["Social media manager", "Content creator / content manager", "Community manager", "Communications and PR", "Online editor", "Marketing in SMEs"]
-        it: ["Social media manager", "Content creator / content manager", "Community manager", "Comunicazione e PR", "Redazione web", "Marketing nelle PMI"]
+        de: ["Social Media Manager", "Content Manager", "Community Manager", "Kommunikation und PR", "Online-Redaktion", "Marketing in KMU"]
+        en: ["Social media manager", "Content manager", "Community manager", "Communications and PR", "Online editor", "Marketing in SMEs"]
+        it: ["Social media manager", "Content manager", "Community manager", "Comunicazione e PR", "Redazione web", "Marketing nelle PMI"]
 
     - id: "kontakte"
       word:
@@ -212,9 +196,9 @@ focus:
         en: "Business development, sales and partnerships"
         it: "Business development, vendite e partnership"
       intro:
-        de: "Ich knüpfe Erstkontakte, pflege Kundendaten im CRM und arbeite an Angeboten mit: im Vertrieb eines Anbieters von Eventlocations, bei der Ansprache neuer Künstler:innen für ein Label und auf Branchentreffen."
-        en: "I make first contact, keep client data up to date in the CRM and help prepare offers: in sales at an event venue company, when approaching new artists for a label and at industry events."
-        it: "Avvio primi contatti, curo i dati dei clienti nel CRM e collaboro alle offerte: nelle vendite di un'azienda di location per eventi, nel contatto con nuovi artisti per una label e agli incontri di settore."
+        de: "Ich pflege Kundendaten im CRM, verfolge Anfragen bis zum Angebot und knüpfe Erstkontakte: im Vertrieb eines Anbieters von Eventlocations, bei der Ansprache neuer Artists für ein Label und auf Branchentreffen."
+        en: "I keep client data up to date in the CRM, follow enquiries through to the offer and make first contact: in sales at an event venue company, when approaching new artists for a label and at industry events."
+        it: "Curo i dati dei clienti nel CRM, seguo le richieste fino all'offerta e avvio primi contatti: nelle vendite di un'azienda di location per eventi, nel contatto con nuovi artisti per una label e agli incontri di settore."
       evidence:
         - work: "gebrueder-fritz"
           source: "zeugnis"
@@ -241,21 +225,21 @@ focus:
           source: "zeugnis"
           href: "/pdf/zeugnis-eintracht-pankow.pdf"
           text:
-            de: "Networking auf Branchentreffen wie dem Reeperbahn Festival. Im Zeugnis: «hervorragende Fähigkeiten im Bereich Networking und Beziehungsaufbau»"
+            de: "Networking auf Branchentreffen wie dem Reeperbahn Festival. Im Zeugnis: „hervorragende Fähigkeiten im Bereich Networking und Beziehungsaufbau“"
             en: "Networking at industry events such as Reeperbahn Festival. The reference letter mentions “excellent abilities in networking and relationship building”"
             it: "Networking a incontri di settore come il Reeperbahn Festival. Nel certificato: «eccellenti doti di networking e di costruzione delle relazioni»"
         - work: "verbano-unihockey"
           source: "eigen"
           text:
-            de: "Kommunikation mit den Sponsor:innen des Vereins koordiniert"
+            de: "Kommunikation mit den Sponsoren des Vereins koordiniert"
             en: "Coordinated communication with the club's sponsors"
             it: "Coordinata la comunicazione con gli sponsor del club"
         - work: "eigenes-musikprojekt"
           source: "eigen"
           text:
-            de: "Zusammenarbeit mit dem Rapper Jake La Furia (Juror bei X Factor Italia) vorbereitet, inklusive Managementvereinbarung"
-            en: "Prepared a collaboration with the rapper Jake La Furia (judge on X Factor Italia), including a management agreement"
-            it: "Preparata una collaborazione con il rapper Jake La Furia (giudice di X Factor Italia), incluso un accordo di management"
+            de: "Vorbereitung einer möglichen Zusammenarbeit mit dem Rapper Jake La Furia begleitet"
+            en: "Supported the preparation of a possible collaboration with the rapper Jake La Furia"
+            it: "Seguita la preparazione di una possibile collaborazione con il rapper Jake La Furia"
       roles:
         de: ["Business Development", "Sales Development (SDR/BDR)", "Partnerschaften und Sponsoring", "Account Management", "Vertriebsinnendienst"]
         en: ["Business development", "Sales development (SDR/BDR)", "Partnerships and sponsorship", "Account management", "Inside sales"]
@@ -279,9 +263,9 @@ focus:
           source: "zeugnis"
           href: "/pdf/zeugnis-gebrueder-fritz.pdf"
           text:
-            de: "Unterstützung bei Planung, Aufbau, Organisation und Abbau von Events in den Eventlocations"
-            en: "Supported the planning, setup, organisation and breakdown of events at the venues"
-            it: "Supporto a pianificazione, allestimento, organizzazione e smontaggio degli eventi nelle location"
+            de: "Unterstützung bei Planung, Aufbau, Organisation und Abbau von Events"
+            en: "Supported the planning, setup, organisation and breakdown of events"
+            it: "Supporto a pianificazione, allestimento, organizzazione e smontaggio degli eventi"
         - work: "gebrueder-fritz"
           source: "zeugnis"
           href: "/pdf/zeugnis-gebrueder-fritz.pdf"
@@ -299,15 +283,15 @@ focus:
         - work: "initiative-musik"
           source: "eigen"
           text:
-            de: "Drehplan für Live-Instagram-Stories bei einem Branchenempfang auf der Most Wanted: Music 2026"
-            en: "Shooting plan for live Instagram stories at an industry reception during Most Wanted: Music 2026"
-            it: "Piano di ripresa per le Instagram stories live a un ricevimento di settore durante Most Wanted: Music 2026"
+            de: "Planung und Texte für Live-Stories auf Instagram bei Veranstaltungen der Initiative Musik"
+            en: "Planning and copy for live Instagram stories at Initiative Musik events"
+            it: "Pianificazione e testi delle storie live su Instagram agli eventi di Initiative Musik"
         - work: "eigenes-musikprojekt"
           source: "eigen"
           text:
-            de: "Ablauf von der Idee über den Content bis zur Veröffentlichung aufgebaut; Fotos, Videos und Artworks koordiniert"
-            en: "Set up a workflow from idea to content to release; coordinated photos, videos and artwork"
-            it: "Costruito un processo dall'idea al contenuto fino alla pubblicazione; coordinati foto, video e artwork"
+            de: "Ablauf von der Idee über den Content bis zur Veröffentlichung aufgebaut; Fotos, Videos und Cover koordiniert"
+            en: "Set up a workflow from idea to content to release; coordinated photos, videos and covers"
+            it: "Costruito un processo dall'idea al contenuto fino alla pubblicazione; coordinati foto, video e copertine"
         - org:
             de: "FFHS, Studium"
             en: "FFHS, studies"
@@ -325,7 +309,7 @@ focus:
           source: "artikel"
           href: "https://www.ffhs.ch/de/ffhs/news/artikel/2026-06-30-ein-jahr-nach-dem-pitch-was-aus-einer-studienidee-wurde"
           text:
-            de: "Innovationsprojekt «PlasticBank 2.0»: Aus unserer Gruppenidee entstand ein Prototyp, der aus PET-Flaschen 3D-Druck-Filament herstellt"
+            de: "Innovationsprojekt „PlasticBank 2.0“: Aus unserer Gruppenidee entstand ein Prototyp, der aus PET-Flaschen 3D-Druck-Filament herstellt"
             en: "Innovation project “PlasticBank 2.0”: our group idea led to a prototype that turns PET bottles into 3D-printing filament"
             it: "Progetto di innovazione «PlasticBank 2.0»: dalla nostra idea di gruppo è nato un prototipo che trasforma bottiglie in PET in filamento per la stampa 3D"
       roles:
@@ -334,32 +318,156 @@ focus:
         it: ["Coordinamento progetti / assistente di progetto", "Event management", "Operations", "Assistente di direzione"]
 
 # ---------------------------------------------------------------------
+# Selected work: three examples with clear attribution.
+#   work:   file name in content/erfahrung/ (the card links to that page)
+#   mine / credit: what I did / what the team or others did
+#   metric: only a documented number (value, label, source)
+# ---------------------------------------------------------------------
+featured:
+  heading:
+    de: "Ausgewählte Arbeiten"
+    en: "Selected work"
+    it: "Lavori selezionati"
+  intro:
+    de: "Drei Beispiele mit klarer Zuordnung: veröffentlichte Texte, belegte Reichweite und Arbeit mit Kunden im CRM."
+    en: "Three examples with clear attribution: published copy, documented reach and client work in a CRM."
+    it: "Tre esempi con attribuzione chiara: testi pubblicati, copertura documentata e lavoro con i clienti nel CRM."
+  read:
+    de: "Details ansehen"
+    en: "View details"
+    it: "Vedi i dettagli"
+  items:
+    - work: "initiative-musik"
+      image:
+        src: "/images/works/initiative-musik/applaus-kapa-tult.webp"
+        position: "center 30%"
+        alt:
+          de: "APPLAUS-Visual der Initiative Musik zum Live-Act Kapa Tult"
+          en: "Initiative Musik APPLAUS visual for the live act Kapa Tult"
+          it: "Visual APPLAUS di Initiative Musik per il live act Kapa Tult"
+      label:
+        de: "PR und Copywriting"
+        en: "PR and copywriting"
+        it: "PR e copywriting"
+      title:
+        de: "APPLAUS 2026: Texte für Social Media"
+        en: "APPLAUS 2026: social media copy"
+        it: "APPLAUS 2026: testi per i social"
+      text:
+        de: "Für die Initiative Musik, die Fördereinrichtung des Bundes für Popularmusik und Jazz, habe ich einen Großteil der Texte der veröffentlichten APPLAUS-2026-Beiträge auf Instagram geschrieben."
+        en: "For Initiative Musik, the German federal funding body for popular music and jazz, I wrote most of the copy for the published APPLAUS 2026 posts on Instagram."
+        it: "Per Initiative Musik, l'ente federale tedesco per la popular music e il jazz, ho scritto gran parte dei testi dei post APPLAUS 2026 pubblicati su Instagram."
+      mine:
+        de: "Die Texte der Beiträge."
+        en: "The copy of the posts."
+        it: "I testi dei post."
+      credit:
+        de: "Fotos, Grafiken und Kampagnenleitung: Initiative Musik und Rechteinhaber:innen."
+        en: "Photos, graphics and campaign lead: Initiative Musik and the rights holders."
+        it: "Foto, grafiche e guida della campagna: Initiative Musik e titolari dei diritti."
+      links:
+        - label:
+            de: "Beispiel auf Instagram"
+            en: "Example on Instagram"
+            it: "Esempio su Instagram"
+          url: "https://www.instagram.com/p/DePTpGejdrF/"
+    - work: "verbano-unihockey"
+      image:
+        src: "/images/works/verbano-unihockey/instagram-insights.webp"
+        position: "50% 12%"
+        alt:
+          de: "Instagram-Insights: 83.767 Aufrufe in 14 Tagen, 59,8 Prozent von Nicht-Followern, 4.775 erreichte Konten"
+          en: "Instagram insights: 83,767 views in 14 days, 59.8 percent from non-followers, 4,775 accounts reached"
+          it: "Insights di Instagram: 83.767 visualizzazioni in 14 giorni, 59,8 per cento da non follower, 4.775 account raggiunti"
+      label:
+        de: "Digital Marketing und Analyse"
+        en: "Digital marketing and analytics"
+        it: "Marketing digitale e analisi"
+      title:
+        de: "Social Media für einen Sportverein"
+        en: "Social media for a sports club"
+        it: "Social media per una società sportiva"
+      metric:
+        value:
+          de: "83.767"
+          en: "83,767"
+          it: "83.767"
+        label:
+          de: "Aufrufe in 14 Tagen, 59,8 % von Nicht-Followern"
+          en: "views in 14 days, 59.8% from non-followers"
+          it: "visualizzazioni in 14 giorni, 59,8 % da non follower"
+        source:
+          de: "Instagram Insights des Vereinskontos, 5.–18. August"
+          en: "Instagram insights of the club account, 5–18 August"
+          it: "Insights di Instagram dell'account del club, 5–18 agosto"
+      text:
+        de: "Ehrenamtlich habe ich Redaktionsplanung, Beiträge und die Website von Verbano Unihockey betreut und die Inhalte anhand der Insights geplant."
+        en: "As a volunteer I handled editorial planning, posts and the website of Verbano Unihockey and planned the content with the insights."
+        it: "Come volontario ho curato piano editoriale, post e sito del Verbano Unihockey e pianificato i contenuti con gli insights."
+      mine:
+        de: "Planung und Umsetzung der Inhalte, Website, Sponsoring-Kommunikation."
+        en: "Planning and producing content, the website, sponsor communication."
+        it: "Pianificazione e realizzazione dei contenuti, sito, comunicazione con gli sponsor."
+      credit:
+        de: "Die Zahlen gelten für das ganze Vereinskonto, nicht nur für meine Beiträge; keine bezahlte Reichweite."
+        en: "The numbers cover the whole club account, not only my posts; no paid reach."
+        it: "I numeri riguardano l'intero account del club, non solo i miei post; nessuna copertura a pagamento."
+    - work: "gebrueder-fritz"
+      image:
+        src: "/images/works/gebrueder-fritz/gebrueder-management.webp"
+        position: "center 30%"
+        alt:
+          de: "Luca Invernizzi mit dem Team von Gebrüder Fritz bei einem Event"
+          en: "Luca Invernizzi with the Gebrüder Fritz team at an event"
+          it: "Luca Invernizzi con il team di Gebrüder Fritz durante un evento"
+      label:
+        de: "CRM und Vertriebsunterstützung"
+        en: "CRM and sales support"
+        it: "CRM e supporto vendite"
+      title:
+        de: "Pipedrive, Angebote und Follow-ups"
+        en: "Pipedrive, offers and follow-ups"
+        it: "Pipedrive, offerte e follow-up"
+      text:
+        de: "Für einen Berliner Anbieter von Eventlocations habe ich Kundendaten und Deals in Pipedrive gepflegt, Anfragen bis zur Angebotsphase nachverfolgt und an Angeboten und Rechnungen mitgearbeitet."
+        en: "For a Berlin event venue company I maintained client data and deals in Pipedrive, followed enquiries to the offer stage and helped prepare offers and invoices."
+        it: "Per un'azienda berlinese di location per eventi ho curato dati clienti e trattative in Pipedrive, seguito le richieste fino all'offerta e collaborato a offerte e fatture."
+      mine:
+        de: "CRM-Pflege, Follow-ups, Vorbereitung von Angeboten und Rechnungen (laut Zeugnis)."
+        en: "CRM upkeep, follow-ups, preparing offers and invoices (as stated in the reference letter)."
+        it: "Gestione del CRM, follow-up, preparazione di offerte e fatture (come da certificato)."
+      credit:
+        de: "Preise, Angebote und Kundenentscheidungen lagen bei Geschäftsführung und Sales-Team."
+        en: "Prices, offers and client decisions were made by the management and the sales team."
+        it: "Prezzi, offerte e decisioni con i clienti spettavano alla direzione e al team sales."
+
+# ---------------------------------------------------------------------
 # Short intros of the sections on the start page
 # ---------------------------------------------------------------------
 sections:
   experience:
-    de: "Fünf Stationen seit 2024, in Berlin, im Tessin und in Mailand. Jede hat eine eigene Seite mit Aufgaben, Ergebnissen und Belegen."
-    en: "Five roles since 2024, in Berlin, Ticino and Milan. Each one has its own page with tasks, results and evidence."
-    it: "Cinque esperienze dal 2024, a Berlino, in Ticino e a Milano. Ognuna ha una pagina con attività, risultati e riscontri."
+    de: "Fünf Stationen seit 2024, in Berlin, im Tessin und in Mailand. Jede hat eine eigene Seite mit Kontext, Aufgaben, Ergebnissen und Belegen."
+    en: "Five roles since 2024, in Berlin, Ticino and Milan. Each has its own page with context, tasks, results and evidence."
+    it: "Cinque esperienze dal 2024, a Berlino, in Ticino e a Milano. Ognuna ha una pagina con contesto, attività, risultati e riscontri."
   references:
     de: "Was Vorgesetzte und Dozierende über meine Arbeit schreiben."
     en: "What managers and lecturers have written about my work."
     it: "Cosa scrivono del mio lavoro responsabili e docenti."
   education:
-    de: "Mein Weg führt von der Berufslehre an die Fachhochschule, typisch für das Schweizer Bildungssystem. Bei jedem Abschluss steht kurz, was er bedeutet."
-    en: "My path led from a vocational apprenticeship to a university of applied sciences, a typical route in the Swiss system. Each qualification comes with a short explanation."
-    it: "Il mio percorso va dall'apprendistato alla scuola universitaria professionale, una via tipica del sistema svizzero. Per ogni titolo c'è una breve spiegazione."
+    de: "Von der Berufslehre an die Fachhochschule, ein typischer Weg im Schweizer Bildungssystem. Bei jedem Abschluss steht kurz, was er bedeutet."
+    en: "From a vocational apprenticeship to a university of applied sciences, a typical route in the Swiss system. Each qualification comes with a short explanation."
+    it: "Dall'apprendistato alla scuola universitaria professionale, una via tipica del sistema svizzero. Per ogni titolo c'è una breve spiegazione."
   proof:
     de: "Zeugnisse, Zertifikate und Forschungsarbeiten zum Nachlesen. Persönliche Daten wie Geburtsdatum und Adresse sind geschwärzt."
     en: "Reference letters, certificates and research papers to read in full. Personal data such as date of birth and address have been redacted. The documents are in German."
     it: "Certificati di lavoro, attestati e ricerche da leggere per intero. I dati personali come data di nascita e indirizzo sono oscurati. I documenti sono in tedesco."
   contact:
-    de: "Am schnellsten erreichen Sie mich per E-Mail oder über LinkedIn. Mein Wohnsitz ist in der Schweiz; ich bin offen für Stellen in Deutschland, der Schweiz und Polen und kann für eine Stelle nach Warschau ziehen."
-    en: "The easiest way to reach me is by email or LinkedIn. I am based in Switzerland, have professional experience in Berlin and am open to roles in Germany, Switzerland and Poland, including relocating to Warsaw."
-    it: "Puoi contattarmi via email o LinkedIn. Risiedo in Svizzera, ho esperienza professionale a Berlino e valuto opportunità in Germania, Svizzera e Polonia, incluso un trasferimento a Varsavia."
+    de: "Am schnellsten erreichen Sie mich per E-Mail oder über LinkedIn. Ich wohne in der Schweiz, habe Berufserfahrung in Berlin und bin offen für Stellen in Deutschland, der Schweiz und Polen, auch mit Umzug nach Warschau."
+    en: "The easiest way to reach me is by email or LinkedIn. I am based in Switzerland, have work experience in Berlin and am open to roles in Germany, Switzerland and Poland, including relocating to Warsaw."
+    it: "Puoi contattarmi via e-mail o LinkedIn. Risiedo in Svizzera, ho esperienza professionale a Berlino e valuto opportunità in Germania, Svizzera e Polonia, incluso un trasferimento a Varsavia."
 
 # ---------------------------------------------------------------------
-# Languages, tools and interests (CV-style column)
+# Languages, tools and interests
 # ---------------------------------------------------------------------
 skills:
   languages:
@@ -385,26 +493,23 @@ skills:
         de: "Französisch"
         en: "French"
         it: "Francese"
-      level:
-        de: "A1"
-        en: "A1"
-        it: "A1"
+      level: "A1"
   tool_groups:
     - name:
-        de: "Content und Design"
-        en: "Content and design"
-        it: "Contenuti e design"
-      items: ["Canva", "CapCut", "Adobe Creative Cloud"]
+        de: "Vertrieb und Verwaltung"
+        en: "Sales and admin"
+        it: "Vendite e amministrazione"
+      items: ["Pipedrive (CRM)", "Sevdesk"]
     - name:
         de: "Web und Newsletter"
         en: "Web and newsletters"
         it: "Web e newsletter"
       items: ["WordPress", "Webflow", "Mailchimp"]
     - name:
-        de: "Vertrieb und Verwaltung"
-        en: "Sales and admin"
-        it: "Vendite e amministrazione"
-      items: ["Pipedrive (CRM)", "Sevdesk"]
+        de: "Content und Design"
+        en: "Content and design"
+        it: "Contenuti e design"
+      items: ["Canva", "CapCut", "Adobe Creative Cloud"]
     - name:
         de: "Organisation"
         en: "Organisation"
@@ -417,6 +522,11 @@ skills:
         - de: "Excel (Grundkenntnisse)"
           en: "Excel (basic)"
           it: "Excel (base)"
+    - name:
+        de: "KI-Tools"
+        en: "AI tools"
+        it: "Strumenti di IA"
+      items: ["ChatGPT", "Claude"]
   interests:
     - de: "Floorball (Unihockey), Spieler in der Bundesliga"
       en: "Floorball, Bundesliga player"

@@ -1,4 +1,6 @@
-# EDUCATION · Kantonsschule Bellinzona
+# EDUCATION · Passerelle at the Kantonsschule Bellinzona
+# Passerelle = supplementary examination "Berufsmaturität – universitäre Hochschulen".
+# It is NOT a gymnasiale Matura: never rename it.
 order: 2
 institution:
   de: "Kantonsschule Bellinzona"
@@ -14,21 +16,21 @@ image:
   src: "/images/education/kantonsschule-graduation.webp"
   position: "center 35%"
   alt:
-    de: "Klassenfoto bei der Maturfeier"
-    en: "Class photo at the graduation ceremony"
-    it: "Foto di classe alla cerimonia di maturità"
+    de: "Klassenfoto bei der Abschlussfeier in Bellinzona"
+    en: "Class photo at the closing ceremony in Bellinzona"
+    it: "Foto di classe alla cerimonia di chiusura a Bellinzona"
 de:
-  title: "Gymnasiale Maturität (Passerelle)"
-  explain: "Ergänzungsprüfung nach der Berufsmaturität. Sie öffnet den Zugang zu allen Schweizer Universitäten."
+  title: "Passerelle Berufsmaturität – universitäre Hochschulen"
+  explain: "Ergänzungsprüfung nach der Berufsmaturität: ein intensives Jahr, das den Zugang zu den universitären Hochschulen öffnet."
   points:
-    - "Intensives Übergangsjahr mit Italienisch, Deutsch, Mathematik, Naturwissenschaften, Geschichte und Geografie"
+    - "Schwerpunkte: Italienisch, Deutsch, Mathematik, Naturwissenschaften, Geschichte und Geografie"
 en:
-  title: "Swiss academic baccalaureate (Passerelle)"
-  explain: "A supplementary exam after the vocational baccalaureate that gives access to all Swiss universities."
+  title: "Passerelle (university entrance examination)"
+  explain: "Supplementary examination after the vocational baccalaureate: an intensive year that opens access to Swiss universities."
   points:
-    - "An intensive bridge year with Italian, German, mathematics, natural sciences, history and geography"
+    - "Focus on Italian, German, mathematics, natural sciences, history and geography"
 it:
-  title: "Maturità liceale (Passerella)"
-  explain: "Esame complementare dopo la maturità professionale, che dà accesso a tutte le università svizzere."
+  title: "Passerella maturità professionale – scuole universitarie"
+  explain: "Esame complementare dopo la maturità professionale: un anno intenso che apre l'accesso alle università."
   points:
-    - "Un anno intensivo di passaggio con italiano, tedesco, matematica, scienze naturali, storia e geografia"
+    - "Focus su italiano, tedesco, matematica, scienze naturali, storia e geografia"

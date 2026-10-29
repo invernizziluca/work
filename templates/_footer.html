@@ -1,10 +1,15 @@
-<footer class="footer">
-  <div class="footer__inner">
-    <p>© {{ build_year }} {{ home.name|tr(lang) }} · Portfolio</p>
-    <nav aria-label="Footer">
-      <a href="mailto:{{ home.contact.email }}">{{ home.contact.email }}</a>
-      <a href="{{ home.contact.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="#top">{{ ui.footer.top }}</a>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© {{ build_year }} {{ home.name|tr(lang) }}</p>
+    <nav aria-label="{{ ui.footer.nav }}">
+      <ul>
+        <li><a href="mailto:{{ home.contact.email }}">{{ ui.footer.email }}</a></li>
+        <li><a href="{{ home.contact.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+{% if home.contact.cv %}
+        <li><a href="{{ page.url(home.contact.cv) }}" target="_blank" rel="noopener">{{ ui.contact.cv }}</a></li>
+{% endif %}
+        <li><a href="#top">{{ ui.footer.top }}</a></li>
+      </ul>
     </nav>
   </div>
 </footer>

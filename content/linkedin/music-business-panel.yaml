@@ -2,12 +2,12 @@ order: 3
 date: "2026-01-30"
 url: "https://www.linkedin.com/posts/lucainve_letzte-woche-durfte-ich-erstmals-als-gast-activity-7422930738099941377-tFaH"
 image:
-  src: "/images/works/eintracht-pankow/music-business-panel.webp"
-  position: "center top"
+  src: "/images/works/eintracht-pankow/music-business-panel-questions.webp"
   alt:
-    de: "Fragen der Studierenden im Music Business Management Panel"
-    en: "Students' questions in the music business management panel"
-    it: "Le domande degli studenti nel panel di music business management"
+    de: "Fragen der Studierenden an das Panel, gesammelt mit Mentimeter"
+    en: "Students' questions to the panel, collected with Mentimeter"
+    it: "Le domande degli studenti al panel, raccolte con Mentimeter"
+show_on_home: true   # true = also shown in "Nachweise" on the start page
 de:
   title: "Erstmals als Gast in einem Music Business Panel"
   excerpt: "Mit Jens Herrndorff und Matilda Pfeil habe ich vor Studierenden über Karrierewege, Networking und erste Praxiserfahrungen gesprochen."

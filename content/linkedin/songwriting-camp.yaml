@@ -1,4 +1,4 @@
-# LINKEDIN POST · shown on the experience page that lists it under "posts"
+# LINKEDIN POST · shown on the experience or education entry that lists it under "posts"
 order: 1
 date: "2026-03-25"
 url: "https://www.linkedin.com/posts/lucainve_wei%C3%9Ft-du-wie-ein-songwriting-camp-aussieht-activity-7442450315599175680-L-eK/"
@@ -8,6 +8,7 @@ image:
     de: "Gruppenfoto beim Songwriting Camp"
     en: "Group photo at the songwriting camp"
     it: "Foto di gruppo al songwriting camp"
+show_on_home: true   # true = also shown in "Nachweise" on the start page
 de:
   title: "Weißt du, wie ein Songwriting Camp aussieht?"
   excerpt: "Organisation, Begleitung der Artists und ein direkter Blick in den kreativen Prozess: drei Tage bei Guesstimate / Loftyard Studios."

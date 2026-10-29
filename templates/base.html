@@ -2,7 +2,7 @@
 <html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{% endblock %}</title>
   <meta name="description" content="{% block description %}{% endblock %}">
 {% if canonical %}
@@ -25,24 +25,24 @@
   <meta property="og:image" content="{{ page.absolute(og_image) }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ home.name|tr(lang) }}">
 {% endif %}
   <meta property="og:locale" content="{{ ui.locale }}">
 {% for code in languages if code != lang %}
   <meta property="og:locale:alternate" content="{{ all_ui[code].locale }}">
 {% endfor %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#f7f9fc">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="{{ page.url('/favicon.svg') }}" type="image/svg+xml">
-  <link rel="icon" href="{{ page.url('/favicon.png') }}" type="image/png">
+  <link rel="icon" href="{{ page.url('/favicon.png') }}" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="{{ page.url('/apple-touch-icon.png') }}">
-  <link rel="preload" href="{{ page.url('/fonts/texgyreadventor-bold.woff2') }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ page.url('/fonts/texgyreadventor-regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ page.url('/fonts/archivo-latin-wdth-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ page.url('/css/site.css') }}?v={{ version }}">
-  <link rel="stylesheet" href="{{ page.url('/css/refined.css') }}?v={{ version }}">
 {% block head %}{% endblock %}
 </head>
 <body id="top">
-  <a class="skip" href="#inhalt">{{ ui.skip }}</a>
+  <a class="skip-link" href="#inhalt">{{ ui.skip }}</a>
 {% include "_header.html" %}
 {% block body %}{% endblock %}
 {% include "_footer.html" %}

@@ -1,0 +1,137 @@
+% =====================================================================
+% Luca Invernizzi · CV (general, business) · October 2026
+% ---------------------------------------------------------------------
+% Compile with XeLaTeX (or LuaLaTeX) twice:  xelatex business-general-2026.tex
+% Fonts: Archivo (SIL OFL) in ./fonts/ – the same family as the website.
+% Overleaf: upload this file and the fonts/ folder, Menu -> Compiler: XeLaTeX.
+% After compiling, copy the PDF to  static/pdf/luca-invernizzi-cv-general-en.pdf
+%
+% General business CV (not tailored to one company). Facts: reference letters,
+% LinkedIn posts and Luca's own statements (October 2026).
+% APPLAUS: Luca wrote most of the copy of the published posts – no design/photo/campaign lead claimed.
+% Verbano numbers: whole club account, 14 days; not follower growth, not paid reach.
+% "Over 30,000 views": some posts, self-reported. Jake La Furia: not in this CV (nothing concluded).
+% Portfolio link for business applications: https://invernizziluca.github.io/work/
+% =====================================================================
+\documentclass[10pt,a4paper]{article}
+
+% Phone number: hidden in the PDF that is published on the website.
+% For a CV you send directly, change \showphonefalse to \showphonetrue.
+\newif\ifshowphone
+\showphonefalse
+\newcommand{\phone}{+41 78 945 80 35}
+% Citizenship line (useful for applications in Poland or outside the EU/EFTA): change to \showcitizenshiptrue.
+\newif\ifshowcitizenship
+\showcitizenshipfalse
+
+\usepackage{fontspec}
+\setmainfont{Archivo}[
+  Path = fonts/, Extension = .ttf,
+  UprightFont = *-Regular, BoldFont = *-Bold,
+  ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic,
+  FontFace = {sb}{n}{*-SemiBold},
+]
+\newfontfamily\displayfont{Archivo-Bold}[Path = fonts/, Extension = .ttf]
+\newcommand{\semibold}{\fontseries{sb}\selectfont}
+
+\usepackage[margin=16mm,top=14mm,bottom=12mm]{geometry}
+\usepackage{xcolor,enumitem,titlesec,graphicx}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+
+\definecolor{ink}{HTML}{15253E}
+\definecolor{ink2}{HTML}{525E6E}
+\definecolor{accent}{HTML}{2B6B75}
+\definecolor{rule}{HTML}{DCE1E8}
+
+\hypersetup{
+  pdftitle={Luca Invernizzi – CV (business)},
+  pdfauthor={Luca Invernizzi},
+  pdfsubject={CV: marketing, CRM and sales support, communication, projects},
+  pdfkeywords={Luca Invernizzi, CV, business administration, marketing, CRM, business development, project coordination},
+  pdflang={en-GB},
+}
+
+\color{ink}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.08}
+\frenchspacing
+
+\setlist[itemize]{leftmargin=11pt,itemsep=1.6pt,topsep=2.5pt,parsep=0pt,partopsep=0pt,
+  label={\raisebox{0.28ex}{\textcolor{accent}{\scalebox{0.55}{$\bullet$}}}}}
+
+\titleformat{\section}{\semibold\fontsize{9.5}{11}\selectfont\color{accent}\addfontfeatures{LetterSpace=6}}{}{0pt}{\MakeUppercase}[\vspace{1.2pt}\color{rule}\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{4.5pt}
+
+% \job{Organisation, place}{period}{role}
+\newcommand{\job}[3]{%
+  \par\noindent{\semibold #1}\hfill{\small\color{ink2}#2}\\[-0.5pt]
+  {\small\color{ink2}#3}\par\vspace{0.5pt}}
+% \edu{School}{period}{qualification}
+\newcommand{\edu}[3]{%
+  \par\noindent{\semibold #1}\hfill{\small\color{ink2}#2}\\[-0.5pt]
+  {\small #3}\par\vspace{4pt}}
+
+\begin{document}
+\small\raggedright
+
+{\displayfont\fontsize{24}{27}\selectfont Luca Invernizzi}\par\vspace{3pt}
+{\semibold\fontsize{10}{12}\selectfont\color{accent} Business Administration student · Marketing, CRM and digital projects}\par\vspace{5pt}
+{\footnotesize\color{ink2}
+\href{mailto:luca.invernizzi@students.ffhs.ch}{luca.invernizzi@students.ffhs.ch}
+\ifshowphone\ \textbar\ \phone\fi
+\ \textbar\ \href{https://www.linkedin.com/in/lucainve/}{linkedin.com/in/lucainve}
+\ \textbar\ Portfolio: \href{https://invernizziluca.github.io/work/}{invernizziluca.github.io/work}
+\ifshowcitizenship\ \textbar\ Swiss citizen\fi}
+
+\section*{Profile}
+Business Administration student (BSc, Digital Business, FFHS) with three internships in Berlin: sales and CRM at an event venue company, label operations at an independent music company and press and public relations at a federal funding body.
+My reference letters highlight conscientious, structured work, initiative and strong communication and networking skills.
+I am looking for internships and early-career roles in marketing, business development and project coordination in Germany, Switzerland and Poland.
+
+\section*{Experience}
+\job{Initiative Musik gGmbH, Berlin}{09/2026 – present}{Intern, Press and Public Relations}
+\begin{itemize}
+  \item Wrote most of the copy for the published Instagram posts of the \textbf{APPLAUS Award 2026}; planned and wrote live stories at events.
+  \item Media and social media monitoring, research and reports on social media figures; contributed to the newsletter, the website and community management.
+  \item Editorial support for a venue profile on applaus-award.de; helped prepare the on-site branding of an Initiative Musik event.
+\end{itemize}
+\vspace{3pt}
+\job{Eintracht Pankow Musik GmbH, Berlin}{08/2025 – 01/2026}{Intern, Product Management and Label Operations, working closely with the managing director}
+\begin{itemize}
+  \item First contact and communication with potential new artists; attended industry events such as Reeperbahn Festival 2025.
+  \item Set up and ran the label's YouTube channel; kept playlists, SoundCloud and lyrics (Musixmatch) up to date.
+  \item Developed a regular mailout on social media and marketing trends for the artists; internal training on product setup and delivery in Believe's Backstage system; helped organise a three-day songwriting camp.
+\end{itemize}
+\vspace{3pt}
+\job{Gebrüder Fritz GmbH, Berlin}{07/2025 – 10/2025}{Intern, Sales, Marketing and Administration}
+\begin{itemize}
+  \item Maintained client data and deals in \textbf{Pipedrive} (CRM) from first contact to the offer stage; helped prepare offers and invoices in Sevdesk.
+  \item Created and sent newsletter campaigns with Mailchimp; photo and video content in the corporate design; supported events from planning to breakdown.
+  \item Prioritised tasks with the Eisenhower matrix; worked with Trello, Excel, OneDrive and Google Docs.
+\end{itemize}
+
+\section*{Volunteering and own projects}
+\job{Verbano Unihockey, Ticino}{08/2024 – 09/2025}{Volunteer, Digital Marketing and Social Media}
+\begin{itemize}
+  \item Editorial planning, website rework and sponsor communication; Instagram insights of the club account: \textbf{83,767 views in 14 days}, 59.8\% from non-followers.
+\end{itemize}
+\vspace{3pt}
+\job{Own music project, Milan / remote}{06/2024 – 07/2025}{Artist Coordination and Digital Marketing}
+\begin{itemize}
+  \item Content and social media planning for independent artists; coordinated photos, videos and covers; some posts reached more than 30,000 views (self-reported).
+\end{itemize}
+
+\section*{Education}
+\edu{Swiss Distance University of Applied Sciences (FFHS)}{02/2024 – expected 07/2028}{BSc Business Administration, major in Digital Business. Research papers on social media marketing (vignette experiment) and on perceived authenticity (interviews); TOPSIM General Management business simulation; innovation project «PlasticBank 2.0».}
+\edu{Kantonsschule Bellinzona}{08/2022 – 07/2023}{Passerelle (university entrance examination after the vocational baccalaureate)}
+\edu{Scuola d'arti e mestieri Bellinzona (SAMB)}{08/2018 – 07/2022}{Automation technician (Swiss Federal VET Diploma) with vocational baccalaureate}
+
+\section*{Languages and skills}
+{\semibold Languages:} Italian (native), German (C1), English (C1), French (A1)\par\vspace{2.5pt}
+{\semibold Business tools:} Pipedrive, Sevdesk, Mailchimp, Microsoft 365 (Word, PowerPoint, Excel basic), Google Workspace, Trello, Asana\par\vspace{2.5pt}
+{\semibold Web, content and AI:} WordPress, Webflow, Canva, CapCut, Adobe Creative Cloud, ChatGPT, Claude\par\vspace{2.5pt}
+{\semibold Interests:} floorball (Bundesliga player), music production, concerts and festivals\par
+
+\end{document}

@@ -1,36 +1,95 @@
 {# Small reusable pieces. Imported with context, so ui, page and lang are available. #}
 
+{% macro icon(name) -%}
+{% set paths = {
+  'arrow-left': 'M19 12H5m6-6-6 6 6 6',
+  'arrow-right': 'M5 12h14m-6-6 6 6-6 6',
+  'external': 'M8 16 16 8m-7 0h7v7',
+  'file': 'M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zm0 0v5h5M9 13h6m-6 4h4',
+  'mail': 'M4 6h16v12H4zm0 0 8 7 8-7',
+  'close': 'M6 6l12 12M18 6 6 18',
+} %}
+<svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="{{ paths[name] }}"/></svg>
+{%- endmacro %}
+
+{# External link with the "opens in a new tab" hint for screen readers #}
+{% macro ext(href, label, css='link') -%}
+{% set words = (label|string).split(' ') %}
+<a class="{{ css }}" href="{{ href }}" target="_blank" rel="noopener noreferrer">{% if words|length > 1 %}{{ words[:-1]|join(' ') }} {% endif %}<span class="nowrap">{{ words[-1] }}{{ icon('external') }}</span><span class="sr-only"> ({{ ui.external }})</span></a>
+{%- endmacro %}
+
+{# Source of a statement: Zeugnis, screenshot, LinkedIn post … (links to the source when there is one) #}
 {% macro source_chip(source, href) -%}
 {% set label = ui.sources[source] %}
 {% if href %}
-<a class="chip chip--{{ source }}" href="{{ page.url(href) }}" target="_blank" rel="noopener"><span class="sr-only">{{ ui.sources.source }}: </span>{{ label }}</a>
+<a class="source source--{{ source }}" href="{{ page.url(href) }}" target="_blank" rel="noopener"><span class="sr-only">{{ ui.sources.source }}: </span>{{ label }}<span class="sr-only"> ({{ ui.external }})</span></a>
 {%- else %}
-<span class="chip chip--{{ source }}"><span class="sr-only">{{ ui.sources.source }}: </span>{{ label }}</span>
+<span class="source source--{{ source }}"><span class="sr-only">{{ ui.sources.source }}: </span>{{ label }}</span>
 {%- endif %}
 {%- endmacro %}
 
 {% macro image_src(value) -%}{{ value.src if value is mapping else value }}{%- endmacro %}
 
 {% macro area_tags(area_ids) -%}
-<ul class="tags">
-{% for id in area_ids %}
-  <li class="tag" data-area="{{ id }}">{{ areas_by_id[id].word|tr(lang) }}</li>
+<ul class="tags" role="list">
+{% for area in home.focus.areas if area.id in area_ids %}
+  <li class="tag" data-area="{{ area.id }}">{{ area.word|tr(lang) }}</li>
 {% endfor %}
 </ul>
 {%- endmacro %}
 
-{% macro person(ref, size='56px') -%}
+{% macro person(ref) -%}
 {% set image = ref.image.src if ref.image is mapping else ref.image %}
-<div class="person">
+<span class="quote__person">
 {% if image %}
-  {{ page.img(image, '', sizes=size, css_class='person__photo') }}
+  {{ page.img(image, '', sizes='48px', css_class='quote__avatar') }}
 {% else %}
-  <span class="person__initials" aria-hidden="true">{{ ref.name.split()|map('first')|join('')|upper }}</span>
+  <span class="quote__avatar quote__avatar--initials" aria-hidden="true">{{ ref.name.split()|map('first')|join('')|upper }}</span>
 {% endif %}
-  <div class="person__text">
-    <span class="person__name">{{ ref.name|tr(lang) }}</span>
-    <span class="person__meta">{{ ref.role|tr(lang) }}</span>
-    <span class="person__meta">{{ ref.source|tr(lang) }}, {{ format_date(ref.date, lang) }}</span>
+  <span class="quote__who">
+    <span class="quote__name">{{ ref.name|tr(lang) }}</span>
+    <span class="quote__role">{{ ref.role|tr(lang) }}</span>
+    <span class="quote__source">{{ ref.source|tr(lang) }}, {{ format_date(ref.date, lang) }}</span>
+  </span>
+</span>
+{%- endmacro %}
+
+{# Document row: Zeugnis, certificate, research paper, article #}
+{% macro doc_item(doc, level=3) -%}
+{% set text = localized(doc, lang) %}
+{% set image = image_src(doc.image) if doc.image else '' %}
+<li class="doc">
+  <div class="doc__thumb">{% if image %}{{ page.img(image, '', sizes='88px') }}{% else %}{{ icon('file') }}{% endif %}</div>
+  <div class="doc__text">
+    <p class="doc__meta"><span>{{ ui.proof.types[doc.type] }}</span> <time datetime="{{ doc.date }}">{{ format_date(doc.date, lang) }}</time></p>
+    <h{{ level }} class="doc__title">{{ text.title }}</h{{ level }}>
+    <p class="doc__source">{{ doc.source|tr(lang) }}</p>
+    <p class="doc__summary">{{ text.summary }}</p>
+    <p class="doc__actions">
+{% if doc.pdf %}
+      <a class="link link--strong" href="{{ page.url(doc.pdf) }}" target="_blank" rel="noopener">{{ ui.proof.pdf }}<span class="sr-only">: {{ text.title }}</span></a>
+{% endif %}
+{% if doc.url %}
+      <a class="link link--strong" href="{{ doc.url }}" target="_blank" rel="noopener noreferrer">{{ ui.proof.link }}{{ icon('external') }}<span class="sr-only">: {{ text.title }} ({{ ui.external }})</span></a>
+{% endif %}
+    </p>
   </div>
-</div>
+</li>
+{%- endmacro %}
+
+{# LinkedIn post preview (no LinkedIn iframe) #}
+{% macro post_card(post, related=None) -%}
+{% set ptext = localized(post, lang) %}
+<article class="post">
+  <div class="post__media">{{ page.img(image_src(post.image), (post.image.alt|tr(lang)) if post.image is mapping else '', sizes='(min-width: 960px) 24rem, 88vw', position=(post.image.position if post.image is mapping else None)) }}</div>
+  <div class="post__body">
+    <p class="post__meta"><time datetime="{{ post.date }}">{{ format_date(post.date, lang) }}</time>{% if post.author %} <span>{{ ui.proof.post_by }} {{ post.author }}</span>{% endif %}</p>
+    <h4 class="post__title"><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ ptext.title }}<span class="sr-only"> – {{ ui.proof.read_post }} ({{ ui.external }})</span></a></h4>
+    <p class="post__excerpt">{{ ptext.excerpt }}</p>
+{% if related %}
+    <p class="post__related">{{ ui.proof.part_of }}: {{ related }}</p>
+{% endif %}
+    <p class="post__cta" aria-hidden="true">{{ ui.proof.read_post }}{{ icon('external') }}</p>
+  </div>
+</article>
 {%- endmacro %}

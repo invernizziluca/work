@@ -1,13 +1,16 @@
 # TEMPLATE · education
 # Copy to content/ausbildung/<name>.yaml
 order: 4
-institution: "Hochschule"
+institution: "Hochschule"     # or one text per language (de / en / it)
 location:
   de: "Ort, Land"
   en: "Place, country"
   it: "Luogo, paese"
 start: "2027-09"
-# end: "2028-07"
+# expected_end: "2029-07"     # planned end, shown as "voraussichtlich 07/2029"
+# end: "2029-07"              # real end (use this instead of expected_end once you have finished)
+website: "https://www.example.ch/"
+posts: []                     # LinkedIn posts that belong here, from content/linkedin/
 de:
   title: "Abschluss"
   focus: "Vertiefung (optional)"
@@ -16,9 +19,11 @@ de:
     - "Inhalt oder Projekt"
 en:
   title: "Degree"
+  focus: "Major (optional)"
   explain: "…"
   points: ["…"]
 it:
   title: "Titolo"
+  focus: "Indirizzo (facoltativo)"
   explain: "…"
   points: ["…"]

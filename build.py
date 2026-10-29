@@ -22,7 +22,7 @@ import re
 import shutil
 import sys
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, Undefined, select_autoescape
@@ -122,6 +122,10 @@ class Checker:
     def number(self, data, field: str):
         if not isinstance(data.get(field), (int, float)):
             self.fail(field, "must be a number, e.g. 3.")
+
+    def boolean(self, data, field: str):
+        if field in data and not isinstance(data.get(field), bool):
+            self.fail(field, "write  true  or  false  (without quotes).")
 
     def static_file(self, value, field: str):
         if not isinstance(value, str) or not value.startswith("/"):
@@ -239,11 +243,16 @@ def load_content(site: dict) -> dict:
     c.image(home.get("portrait"), "portrait")
     for key in ("title", "description"):
         c.text(home.get("seo") or {}, key)
-    c.text(home.get("hero") or {}, "lead")
+    c.text(home.get("seo") or {}, "og_line", required=False)
+    hero = home.get("hero") or {}
+    c.text(hero, "kicker", required=False)
+    for key in ("claim", "lead", "primary"):
+        c.text(hero, key)
     for i, fact in enumerate(home.get("facts") or []):
         c.text(fact, "label")
         c.text(fact, "value")
     focus = home.get("focus") or {}
+    c.text(focus, "heading")
     c.text(focus, "intro")
     seen_areas = []
     for i, area in enumerate(focus.get("areas") or []):
@@ -264,11 +273,33 @@ def load_content(site: dict) -> dict:
                 c.fail(f"{iname}.source", f'must be one of {", ".join(SOURCES)}.')
             if item.get("href"):
                 c.link_or_file(item["href"], f"{iname}.href")
+            elif item.get("source") not in ("eigen", None):
+                c.fail(f"{iname}.href", 'add the place where the source can be checked (a PDF, an image or a link), or use  source: "eigen".')
         roles = area.get("roles") or {}
         if not isinstance(roles, dict) or not isinstance(roles.get("de"), list):
             c.fail(f"{name}.roles", "write the roles as lists per language: de: [\"…\", \"…\"].")
     if sorted(seen_areas) != sorted(areas):
         c.fail("focus.areas", f'needs exactly one block for each area: {", ".join(areas)}.')
+    featured = home.get("featured") or {}
+    for key in ("heading", "intro", "read"):
+        c.text(featured, key)
+    items = featured.get("items") or []
+    if not 1 <= len(items) <= 6:
+        c.fail("featured.items", "add between 1 and 6 selected works (3 is the plan).")
+    for i, item in enumerate(items):
+        name = f"featured.items[{i + 1}]"
+        if item.get("work") not in work_ids:
+            c.fail(f"{name}.work", f'no experience called "{item.get("work")}" in content/erfahrung/.')
+        c.image(item.get("image"), f"{name}.image")
+        for key in ("label", "title", "text", "mine"):
+            c.text(item, key)
+        c.text(item, "credit", required=False)
+        if item.get("metric"):
+            for key in ("value", "label", "source"):
+                c.text(item["metric"], key)
+        for j, link in enumerate(item.get("links") or []):
+            c.text(link, "label")
+            c.url(link.get("url"), f"{name}.links[{j + 1}].url")
     for key in ("experience", "references", "education", "proof", "contact"):
         c.text(home.get("sections") or {}, key)
     skills = home.get("skills") or {}
@@ -285,7 +316,7 @@ def load_content(site: dict) -> dict:
 
     # experiences
     work_fields = ["title", "role", "summary", "context", "contribution"]
-    work_optional = ["tasks", "outputs", "highlights", "transfer", "learnings"]
+    work_optional = ["category", "goal", "tasks", "scope", "outputs", "highlights", "highlights_source", "transfer", "learnings"]
     for work in works:
         c = Checker(work["_path"], languages)
         c.number(work, "order")
@@ -317,6 +348,11 @@ def load_content(site: dict) -> dict:
             for key in transfer:
                 if key not in areas:
                     c.fail(f"{lang}.transfer.{key}", f'use one of {", ".join(areas)}.')
+            for i, item in enumerate(block.get("highlights") or []):
+                if not isinstance(item, dict) or not item.get("value") or not item.get("label"):
+                    c.fail(f"{lang}.highlights[{i + 1}]", 'write  value: "…"  and  label: "…"  (only numbers you can show).')
+            if block.get("highlights") and not block.get("highlights_source") and lang == "de":
+                c.fail(f"{lang}.highlights_source", "say where the numbers come from (e.g. the screenshot shown below).")
         guard(c)
 
     # education
@@ -327,7 +363,13 @@ def load_content(site: dict) -> dict:
         c.text(entry, "location")
         c.month(entry, "start")
         c.month(entry, "end", required=False)
+        c.month(entry, "expected_end", required=False)
+        if entry.get("website"):
+            c.url(entry["website"], "website")
         c.image(entry.get("image"), "image", required=False)
+        for ref in entry.get("posts") or []:
+            if ref not in post_ids:
+                c.fail("posts", f'no post called "{ref}" in content/linkedin/.')
         c.language_blocks(entry, ["title", "explain"], ["focus", "points"])
         guard(c)
 
@@ -356,6 +398,7 @@ def load_content(site: dict) -> dict:
         c.date(entry, "date")
         c.url(entry.get("url"), "url")
         c.image(entry.get("image"), "image")
+        c.boolean(entry, "show_on_home")
         c.language_blocks(entry, ["title", "excerpt"], [])
         guard(c)
 
@@ -423,10 +466,13 @@ def format_month(value: str) -> str:
     return f"{month}/{year}"
 
 
-def format_period(start: str, end: str | None, ui: dict) -> str:
-    if not end:
-        return f'{ui["period"]["since"]} {format_month(start)}'
-    return f"{format_month(start)} – {format_month(end)}"
+def format_period(start: str, end: str | None, ui: dict, expected_end: str | None = None) -> str:
+    """02/2024 – 07/2025, "seit 09/2026", or "02/2024 – voraussichtlich 07/2028" for a planned end."""
+    if end:
+        return f"{format_month(start)} – {format_month(end)}"
+    if expected_end:
+        return f'{format_month(start)} – {ui["period"]["expected"]} {format_month(expected_end)}'
+    return f'{ui["period"]["since"]} {format_month(start)}'
 
 
 def format_date(value: str, lang: str) -> str:
@@ -483,12 +529,40 @@ def build_images(dist: Path) -> dict:
     return manifest
 
 
-def og_font(bold: bool, size: int):
-    name = "texgyreadventor-bold.otf" if bold else "texgyreadventor-regular.otf"
+OG_NAVY, OG_INK_2, OG_TEAL, OG_BRAND, OG_WHITE = (0x15, 0x25, 0x3E), (0x52, 0x5E, 0x6E), (0x2B, 0x6B, 0x75), (0x33, 0x77, 0x81), (255, 255, 255)
+# The LI logo as polygons, copied from static/images/brand/li-logo.svg (viewBox 360 338 534 588).
+LOGO_SHAPES = (
+    (OG_NAVY, [(360, 338), (520, 338), (520, 792), (715, 792), (848, 925), (360, 925)]),
+    (OG_NAVY, [(733, 542), (893, 417), (893, 926), (733, 766)]),
+    (OG_BRAND, [(733, 338), (893, 338), (893, 373), (733, 500)]),
+)
+
+
+def og_font(weight: str, size: int):
+    """Archivo (static instances in scripts/fonts/): weight is "regular", "semibold" or "bold"."""
+    name = {"regular": "Archivo-Regular.ttf", "semibold": "Archivo-SemiBold.ttf", "bold": "Archivo-Bold.ttf"}[weight]
     try:
         return ImageFont.truetype(str(OG_FONTS / name), size)
     except OSError:
         return ImageFont.load_default()
+
+
+def og_logo(height: int) -> Image.Image:
+    """The logo drawn at 4x and scaled down (smooth edges), on a transparent background."""
+    scale = 4 * height / 588
+    width = round(534 * height / 588)
+    big = Image.new("RGBA", (width * 4, height * 4), (255, 255, 255, 0))
+    draw = ImageDraw.Draw(big)
+    for colour, points in LOGO_SHAPES:
+        draw.polygon([((x - 360) * scale, (y - 338) * scale) for x, y in points], fill=colour + (255,))
+    return big.resize((width, height), Image.LANCZOS)
+
+
+def fit_text(draw: ImageDraw.ImageDraw, text: str, weight: str, size: int, max_width: int, min_size: int = 18):
+    """Largest font size (down to min_size) at which the text fits on one line."""
+    while size > min_size and draw.textlength(text, font=og_font(weight, size)) > max_width:
+        size -= 2
+    return og_font(weight, size)
 
 
 def cover_crop(image: Image.Image, width: int, height: int, position: str | None) -> Image.Image:
@@ -509,65 +583,79 @@ def cover_crop(image: Image.Image, width: int, height: int, position: str | None
     return ImageOps.fit(image, (width, height), Image.LANCZOS, centering=(min(max(x, 0), 1), min(max(y, 0), 1)))
 
 
+def rounded(image: Image.Image, radius: int) -> Image.Image:
+    mask = Image.new("L", image.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, image.width - 1, image.height - 1), radius, fill=255)
+    out = image.convert("RGBA")
+    out.putalpha(mask)
+    return out
+
+
 def build_og_images(dist: Path, data: dict, site: dict) -> dict:
-    """1200×630 images for link previews (LinkedIn, WhatsApp, e-mail)."""
+    """1200×630 images for link previews (LinkedIn, WhatsApp, e-mail): white, Archivo, the LI logo."""
     out_dir = dist / "generated" / "og"
     out_dir.mkdir(parents=True, exist_ok=True)
     home = data["home"]
     result = {}
-    sand, caramel, ink, ochre, mist = (241, 226, 206), (196, 163, 129), (30, 27, 22), (126, 93, 43), (238, 242, 241)
     W, H = 1200, 630
-
-    def base_canvas():
-        canvas = Image.new("RGB", (W, H), mist)
-        column = Image.new("RGB", (430, H))
-        draw = ImageDraw.Draw(column)
-        for y in range(H):
-            t = y / (H - 1)
-            draw.line([(0, y), (430, y)], fill=tuple(round(caramel[i] + (sand[i] - caramel[i]) * t) for i in range(3)))
-        canvas.paste(column, (0, 0))
-        return canvas
+    host = re.sub(r"^https?://", "", site["site_url"]).rstrip("/")
 
     portrait_info = home["portrait"]
     try:
         with Image.open(STATIC / portrait_info["src"].lstrip("/")) as portrait:
-            portrait = cover_crop(portrait.convert("RGB"), 320, 400, portrait_info.get("position"))
+            portrait = rounded(cover_crop(portrait.convert("RGB"), 360, 450, portrait_info.get("position")), 32)
     except OSError:
         portrait = None
+    logo_big, logo_small = og_logo(76), og_logo(44)
 
     for lang in site["languages"]:
-        canvas = base_canvas()
+        canvas = Image.new("RGB", (W, H), OG_WHITE)
         draw = ImageDraw.Draw(canvas)
+        canvas.paste(logo_big, (80, 72), logo_big)
+        name = tr(home["name"], lang)
+        draw.text((78, 196), name, font=fit_text(draw, name, "bold", 76, 620), fill=OG_NAVY)
+        claim = tr(home["hero"]["claim"], lang).rstrip(".")
+        lines, line = [], ""
+        for word in claim.split():
+            test = f"{line} {word}".strip()
+            if draw.textlength(test, font=og_font("regular", 36)) > 600 and line:
+                lines.append(line)
+                line = word
+            else:
+                line = test
+        lines.append(line)
+        y = 304
+        for text in lines[:3]:
+            draw.text((80, y), text, font=og_font("regular", 36), fill=OG_NAVY)
+            y += 48
+        og_line = tr((home.get("seo") or {}).get("og_line"), lang)
+        if og_line:
+            draw.text((80, y + 14), og_line, font=fit_text(draw, og_line, "regular", 26, 620, 18), fill=OG_INK_2)
+        draw.text((80, 522), host, font=og_font("semibold", 26), fill=OG_TEAL)
         if portrait is not None:
-            frame = Image.new("RGB", (336, 416), (255, 255, 255))
-            canvas.paste(frame, (47, 107))
-            canvas.paste(portrait, (55, 115))
-        draw.text((500, 120), tr(home["name"], lang).upper(), font=og_font(True, 50), fill=ink)
-        y = 210
-        for area in home["focus"]["areas"]:
-            draw.text((500, y), tr(area["word"], lang) + ".", font=og_font(True, 64), fill=ink)
-            draw.text((500, y + 74), tr(area["title"], lang), font=og_font(False, 22), fill=ochre)
-            y += 118
+            canvas.paste(portrait, (760, 90), portrait)
         path = out_dir / f"home-{lang}.jpg"
-        canvas.save(path, "JPEG", quality=86, optimize=True)
+        canvas.save(path, "JPEG", quality=86, optimize=True, progressive=True)
         result[f"home-{lang}"] = "/" + path.relative_to(dist).as_posix()
 
     for work in data["works"]:
         cover = work["cover"] if isinstance(work["cover"], dict) else {"src": work["cover"]}
         try:
             with Image.open(STATIC / cover["src"].lstrip("/")) as image:
-                photo = cover_crop(image.convert("RGB"), W, 470, cover.get("position"))
+                photo = cover_crop(image.convert("RGB"), W, 430, cover.get("position"))
         except OSError:
             continue
         for lang in site["languages"]:
-            canvas = Image.new("RGB", (W, H), sand)
+            canvas = Image.new("RGB", (W, H), OG_WHITE)
             canvas.paste(photo, (0, 0))
             draw = ImageDraw.Draw(canvas)
-            draw.rectangle([0, 470, W, H], fill=sand)
-            draw.text((48, 498), tr(work["company"], lang), font=og_font(True, 44), fill=ink)
-            draw.text((48, 562), f'{tr(home["name"], lang)}, {localized(work, lang)["role"]}', font=og_font(False, 24), fill=ochre)
+            canvas.paste(logo_small, (64, 430 + 52), logo_small)
+            company = tr(work["company"], lang)
+            draw.text((136, 470), company, font=fit_text(draw, company, "bold", 44, 1000), fill=OG_NAVY)
+            line = f'{localized(work, lang)["role"]} · {tr(home["name"], lang)}'
+            draw.text((138, 532), line, font=fit_text(draw, line, "regular", 26, 1000), fill=OG_INK_2)
             path = out_dir / f'{work["id"]}-{lang}.jpg'
-            canvas.save(path, "JPEG", quality=84, optimize=True)
+            canvas.save(path, "JPEG", quality=84, optimize=True, progressive=True)
             result[f'{work["id"]}-{lang}'] = "/" + path.relative_to(dist).as_posix()
     return result
 
@@ -579,12 +667,14 @@ def build_og_images(dist: Path, data: dict, site: dict) -> dict:
 class Page:
     """Knows where a page is written, so every link can be relative (works under any base path)."""
 
-    def __init__(self, path: str, site_url: str, preview: bool, manifest: dict):
+    def __init__(self, path: str, site_url: str, preview: bool, manifest: dict, base_path: str | None = None):
         self.path = path  # e.g. "de/erfahrung/gebrueder-fritz/index.html"
         self.depth = path.count("/")
         self.site_url = site_url
         self.preview = preview
         self.manifest = manifest
+        # The 404 page is shown at any address, so its links start at the site root ("/work/…").
+        self.base_path = base_path
 
     def url(self, target: str) -> str:
         """Link to a page or file, given relative to the site root ("de/", "images/x.webp", "/pdf/a.pdf")."""
@@ -601,7 +691,7 @@ class Page:
             query = "?" + query
         if (target == "" or target.endswith("/")) and self.preview:
             target += "index.html"
-        prefix = "../" * self.depth
+        prefix = self.base_path if self.base_path is not None else "../" * self.depth
         result = prefix + target
         if result == "":
             result = "./"
@@ -645,7 +735,12 @@ def person_jsonld(home: dict, data: dict, page: "Page", lang: str) -> dict:
         "sameAs": [home["contact"]["linkedin"]],
         "address": {"@type": "PostalAddress", "addressCountry": "CH"},
         "knowsLanguage": known,
-        "alumniOf": [{"@type": "CollegeOrUniversity", "name": tr(entry["institution"], lang)} for entry in data["education"]],
+        # Finished schools are alumniOf; the university I am still enrolled at is an affiliation.
+        "alumniOf": [{"@type": "EducationalOrganization", "name": tr(entry["institution"], lang)}
+                     for entry in data["education"] if entry.get("end")],
+        "affiliation": [{"@type": "CollegeOrUniversity", "name": tr(entry["institution"], lang),
+                         **({"url": entry["website"]} if entry.get("website") else {})}
+                        for entry in data["education"] if not entry.get("end")],
         "description": tr(home["seo"]["description"], lang),
     }
 
@@ -692,6 +787,17 @@ def build(site_url: str, preview: bool, out: Path) -> None:
     works_by_id = {w["id"]: w for w in works}
     version = hashlib.sha1((STATIC / "css" / "site.css").read_bytes() + (STATIC / "js" / "site.js").read_bytes()).hexdigest()[:8]
 
+    def related_post(lang: str) -> dict:
+        """post id -> the experience or education entry it belongs to ("Gehört zu: …")."""
+        related = {}
+        for entry in data["education"]:
+            for post_id in entry.get("posts") or []:
+                related.setdefault(post_id, tr(entry["institution"], lang))
+        for work in works:
+            for post_id in work.get("posts") or []:
+                related.setdefault(post_id, tr(work["company"], lang))
+        return related
+
     def home_path(lang):
         return f"{lang}/"
 
@@ -733,6 +839,7 @@ def build(site_url: str, preview: bool, out: Path) -> None:
                 lang=lang,
                 ui=data["ui"][lang],
                 page=page,
+                related_post=related_post(lang),
                 canonical=home_path(lang),
                 alternates={l: home_path(l) for l in languages},
                 og_image=og.get(f"home-{lang}", "/images/profile/luca-portrait.webp"),
@@ -752,6 +859,7 @@ def build(site_url: str, preview: bool, out: Path) -> None:
                 lang=lang,
                 ui=data["ui"][lang],
                 page=page,
+                related_post=related_post(lang),
                 work=work,
                 text=localized(work, lang),
                 previous_work=previous_work,
@@ -765,7 +873,8 @@ def build(site_url: str, preview: bool, out: Path) -> None:
 
     # 404
     lang = languages[0]
-    page = Page("404.html", site_url, preview, manifest)
+    base_path = None if preview else (urlparse(site_url).path or "/")
+    page = Page("404.html", site_url, preview, manifest, base_path=base_path)
     html = env.get_template("404.html").render(
         **common, lang=lang, ui=data["ui"][lang], page=page, canonical=None,
         alternates={l: home_path(l) for l in languages}, og_image=og.get(f"home-{lang}", ""),

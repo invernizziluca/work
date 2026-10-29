@@ -1,0 +1,11 @@
+# TEMPLATE · one evidence line in a focus area (Schwerpunkte) on the start page
+# Paste it into content/home.yaml under  focus: -> areas: -> (the right area) -> evidence:
+# source: zeugnis | screenshot | linkedin | zertifikat | artikel | forschung | eigen
+# href is required for every source except "eigen" (self-reported): a PDF, an image or a link.
+- work: "firma"                         # file name in content/erfahrung/; for studies use  org: {de: "FFHS, Studium", …}
+  source: "screenshot"
+  href: "/images/works/firma/insights.webp"
+  text:
+    de: "Was belegt ist, in einem Satz, mit Zahl und Zeitraum."
+    en: "…"
+    it: "…"

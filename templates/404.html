@@ -2,13 +2,16 @@
 {% block title %}{{ ui.not_found.title }} | {{ home.name|tr(lang) }}{% endblock %}
 {% block description %}{{ ui.not_found.text }}{% endblock %}
 {% block body %}
-<main id="inhalt" class="notfound" tabindex="-1">
-  <h1>{{ ui.not_found.title }}</h1>
-  <p>{{ ui.not_found.text }}</p>
-  <div class="actions">
+<main id="inhalt" tabindex="-1">
+  <section class="container not-found">
+    <p class="kicker">404</p>
+    <h1 class="not-found__title">{{ ui.not_found.title }}</h1>
+    <p class="not-found__text">{{ ui.not_found.text }}</p>
+    <div class="actions">
 {% for code in languages %}
-    <a class="btn{% if loop.first %} btn--primary{% endif %}" href="{{ page.url(home_path(code)) }}" lang="{{ code }}">{{ all_ui[code].not_found.back }}</a>
+      <a class="btn {{ 'btn--primary' if loop.first else 'btn--secondary' }}" href="{{ page.url(home_path(code)) }}" lang="{{ code }}">{{ all_ui[code].not_found.back }}</a>
 {% endfor %}
-  </div>
+    </div>
+  </section>
 </main>
 {% endblock %}

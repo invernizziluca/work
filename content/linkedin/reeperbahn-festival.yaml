@@ -8,6 +8,7 @@ image:
     de: "Panel beim Reeperbahn Festival 2025"
     en: "Panel at Reeperbahn Festival 2025"
     it: "Panel al Reeperbahn Festival 2025"
+show_on_home: true   # true = also shown in "Nachweise" on the start page
 de:
   title: "Reeperbahn Festival 2025"
   excerpt: "Inputs zu Artist Marketing, Community Building, Algorithmen und Test & Learn, dazu viele Gespräche mit Menschen aus der Musikbranche."

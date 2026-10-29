@@ -1,14 +1,18 @@
 # TEMPLATE · document (reference letter, certificate, research paper, article)
-# Copy to content/nachweise/<name>.yaml. Put the PDF into static/pdf/ (remove date of birth and address first).
+# Copy to content/nachweise/<name>.yaml. Put the PDF into static/pdf/.
+# Privacy before publishing: black out date of birth, address, student number and signatures you do not
+# want online (rasterise the page so the text under the black box is really gone), then check with
+#   pdftotext static/pdf/<file>.pdf - | less
+# and clean the file properties (title/author) of the PDF.
 order: 8
 type: "zeugnis"               # zeugnis | zertifikat | forschung | artikel
 date: "2027-08-31"
 source: "Firma GmbH"
 pdf: "/pdf/zeugnis-firma.pdf" # or  url: "https://…"  for an article
-image: "/images/proof/zeugnis-firma.webp"   # optional small preview
+image: "/images/proof/zeugnis-firma.webp"   # optional small preview (made from the redacted PDF)
 de:
   title: "Praktikumszeugnis Firma"
-  summary: "Was drinsteht, in einem Satz."
+  summary: "Was drinsteht, in einem Satz. Zitate wörtlich in «…»."
 en:
   title: "Internship reference letter, Firma"
   summary: "…"

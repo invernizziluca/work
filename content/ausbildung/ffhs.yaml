@@ -1,13 +1,18 @@
 # EDUCATION · FFHS (shown on the start page, section "Ausbildung")
 order: 1
-institution: "Fernfachhochschule Schweiz (FFHS)"
+institution:
+  de: "Fernfachhochschule Schweiz (FFHS)"
+  en: "Swiss Distance University of Applied Sciences (FFHS)"
+  it: "Fernfachhochschule Schweiz (FFHS)"
 location:
   de: "Online und Zürich, Schweiz"
   en: "Online and Zurich, Switzerland"
   it: "Online e Zurigo, Svizzera"
 start: "2024-02"
-# end: "YYYY-MM"   <- add the month when you graduate
+expected_end: "2028-07"   # planned graduation, shown as "voraussichtlich 07/2028"
+# end: "2028-07"          <- add the month when you graduate (then remove expected_end)
 website: "https://www.ffhs.ch/"
+posts: ["innovationsprojekt"]   # LinkedIn posts that belong to this entry
 image:
   src: "/images/education/ffhs-campus.webp"
   alt:
@@ -17,30 +22,33 @@ image:
 de:
   title: "Bachelor of Science in Business Administration (Betriebsökonomie)"
   focus: "Vertiefung Digital Business"
-  explain: "Eidgenössisch anerkannte Fachhochschule. Fernstudium im Blended-Learning-Modell, parallel zu meinen Praktika in Berlin."
+  explain: "Eidgenössisch anerkannte Fachhochschule. Fernstudium im Blended-Learning-Modell auf Deutsch, parallel zu meinen Praktika in Berlin. Abschluss voraussichtlich im Juli 2028."
   points:
     - "Betriebswirtschaft, Marketing, Management und wissenschaftliches Arbeiten"
     - "Quantitative Forschung: Vignettenexperiment zum Einfluss von Social-Media-Marketing auf Markenwert und Kundenreaktion"
     - "Qualitative Forschung: Leitfadeninterviews zur Wahrnehmung von Authentizität in der Social-Media-Kommunikation unabhängiger Musikacts"
     - "TOPSIM General Management: Unternehmensplanspiel im Team, Juni 2026"
-    - "Innovationsmanagement: Aus unserer Gruppenidee «PlasticBank 2.0» entstand ein Prototyp, der aus PET-Flaschen 3D-Druck-Filament herstellt"
+    - "Innovationsmanagement: Aus unserer Gruppenidee „PlasticBank 2.0“ entstand ein Prototyp, der aus PET-Flaschen 3D-Druck-Filament herstellt"
+    - "Mentoring-Programm der FFHS: ehrliches Feedback zu Lebenslauf und Bewerbungen"
 en:
   title: "Bachelor of Science in Business Administration"
   focus: "Major in Digital Business"
-  explain: "A federally recognised Swiss university of applied sciences. Distance learning in a blended format, alongside my internships in Berlin."
+  explain: "A federally recognised Swiss university of applied sciences. Distance learning in a blended format, taught in German, alongside my internships in Berlin. Expected graduation: July 2028."
   points:
     - "Business administration, marketing, management and academic writing"
     - "Quantitative research: vignette experiment on how social media marketing affects brand equity and customer response"
     - "Qualitative research: guided interviews on how fans perceive authenticity in the social media communication of independent music acts"
     - "TOPSIM General Management: business simulation in a team, June 2026"
     - "Innovation management: our group idea “PlasticBank 2.0” led to a prototype that turns PET bottles into 3D-printing filament"
+    - "FFHS mentoring programme: honest feedback on my CV and applications"
 it:
   title: "Bachelor of Science in Business Administration (economia aziendale)"
   focus: "Indirizzo Digital Business"
-  explain: "Scuola universitaria professionale riconosciuta dalla Confederazione. Studio a distanza in formato blended, in parallelo agli stage a Berlino."
+  explain: "Scuola universitaria professionale riconosciuta dalla Confederazione. Studio a distanza in formato blended, in tedesco, in parallelo agli stage a Berlino. Laurea prevista a luglio 2028."
   points:
     - "Economia aziendale, marketing, management e lavoro scientifico"
     - "Ricerca quantitativa: esperimento con vignette sull'effetto del social media marketing su brand equity e risposta dei clienti"
     - "Ricerca qualitativa: interviste guidate sulla percezione dell'autenticità nella comunicazione social dei music act indipendenti"
     - "TOPSIM General Management: simulazione aziendale in team, giugno 2026"
     - "Innovation management: dalla nostra idea di gruppo «PlasticBank 2.0» è nato un prototipo che trasforma bottiglie in PET in filamento per la stampa 3D"
+    - "Programma di mentoring della FFHS: feedback sincero su curriculum e candidature"

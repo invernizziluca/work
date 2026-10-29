@@ -1,11 +1,12 @@
 # TEMPLATE · LinkedIn post
-# Copy to content/linkedin/<name>.yaml and add the name to "posts:" of an experience.
+# Copy to content/linkedin/<name>.yaml and add the name to "posts:" of an experience or education entry.
 order: 5
 date: "2027-03-15"
 url: "https://www.linkedin.com/posts/…"   # "…" menu on the post -> Copy link
 # author: "Name"              # only for posts written by someone else
+show_on_home: false           # true = also shown under "Nachweise" on the start page (3 at most look best)
 image:
-  src: "/images/works/<name>/bild.webp"
+  src: "/images/works/<name>/bild.webp"   # no screenshots with other people's private data
   alt:
     de: "Beschreibung"
     en: "Description"

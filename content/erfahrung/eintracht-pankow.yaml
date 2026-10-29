@@ -1,5 +1,7 @@
 # EXPERIENCE · Eintracht Pankow Musik
-# Page: /de/erfahrung/eintracht-pankow/
+# Page: /de/erfahrung/eintracht-pankow/   (the file name is the address)
+# Sources: reference letter of 31.01.2026 (static/pdf/zeugnis-eintracht-pankow.pdf) and my LinkedIn posts.
+# Channel reach is not documented: do not add follower or stream numbers without a screenshot.
 
 order: 2
 company: "Eintracht Pankow Musik GmbH"
@@ -10,39 +12,39 @@ location:
 start: "2025-08"
 end: "2026-01"
 website: "https://www.eintracht-pankow.de/"
-areas: ["content", "kontakte", "koordination"]
+areas: ["kontakte", "content", "koordination"]
 
 cover:
-  src: "/images/works/eintracht-pankow/songwriting-camp-cover.webp"
-  position: "center 45%"
+  src: "/images/works/eintracht-pankow/songwriting-desk.webp"
+  position: "center 35%"
   alt:
-    de: "Gruppenfoto der Teilnehmenden beim Songwriting Camp"
-    en: "Group photo of the songwriting camp participants"
-    it: "Foto di gruppo dei partecipanti al songwriting camp"
+    de: "Luca Invernizzi im Gespräch während einer Studio-Session im Songwriting Camp"
+    en: "Luca Invernizzi talking during a studio session at the songwriting camp"
+    it: "Luca Invernizzi durante una sessione in studio al songwriting camp"
 
-tools: ["YouTube", "Spotify", "SoundCloud", "Musixmatch", "Believe Backstage"]
+tools: ["Spotify", "YouTube", "SoundCloud", "Musixmatch", "Believe Backstage"]
 
 gallery:
   - src: "/images/works/eintracht-pankow/songwriting-camp-cover.webp"
     alt:
-      de: "Gruppenfoto beim Songwriting Camp"
-      en: "Group photo at the songwriting camp"
-      it: "Foto di gruppo al songwriting camp"
+      de: "Gruppenfoto der Teilnehmenden beim Songwriting Camp"
+      en: "Group photo of the songwriting camp participants"
+      it: "Foto di gruppo dei partecipanti al songwriting camp"
     caption:
       de: "Songwriting Camp bei Guesstimate / Loftyard Studios"
       en: "Songwriting camp at Guesstimate / Loftyard Studios"
       it: "Songwriting camp da Guesstimate / Loftyard Studios"
-  - src: "/images/works/eintracht-pankow/songwriting-desk.webp"
-    position: "center 30%"
-    alt:
-      de: "Luca im Gespräch während einer Studio-Session"
-      en: "Luca talking during a studio session"
-      it: "Luca durante una sessione in studio"
   - src: "/images/works/eintracht-pankow/songwriting-table.webp"
     alt:
       de: "Gemeinsames Essen der Teilnehmenden im Camp"
       en: "Participants sharing a meal at the camp"
       it: "Pranzo condiviso tra i partecipanti del camp"
+  - src: "/images/works/eintracht-pankow/guesstimate-loftyard.webp"
+    position: "center 30%"
+    alt:
+      de: "Eingang von Guesstimate und Loftyard Studios mit Gitarren"
+      en: "Entrance of Guesstimate and Loftyard Studios with guitars"
+      it: "Ingresso di Guesstimate e Loftyard Studios con chitarre"
   - src: "/images/works/eintracht-pankow/reeperbahn-panel.webp"
     alt:
       de: "Panel beim Reeperbahn Festival 2025"
@@ -52,95 +54,73 @@ gallery:
       de: "Reeperbahn Festival 2025"
       en: "Reeperbahn Festival 2025"
       it: "Reeperbahn Festival 2025"
-  - src: "/images/works/eintracht-pankow/foto-copertina-eintracht.webp"
-    position: "center 35%"
-    alt:
-      de: "Selfie mit Menschen aus der Musikbranche beim Reeperbahn Festival"
-      en: "Selfie with people from the music industry at Reeperbahn Festival"
-      it: "Selfie con persone del settore musicale al Reeperbahn Festival"
-  - src: "/images/works/eintracht-pankow/music-business-panel.webp"
-    position: "center top"
-    alt:
-      de: "Fragen der Studierenden im Music Business Management Panel"
-      en: "Students' questions in the music business management panel"
-      it: "Le domande degli studenti nel panel di music business management"
-    caption:
-      de: "Music Business Management Panel für Studierende"
-      en: "Music business management panel for students"
-      it: "Panel di music business management per studenti"
 
 documents: ["zeugnis-eintracht-pankow"]
 posts: ["songwriting-camp", "reeperbahn-festival", "music-business-panel"]
 links:
   - label:
-      de: "Label-Playlist auf Spotify, die ich gepflegt habe"
-      en: "Label playlist on Spotify that I maintained"
-      it: "Playlist della label su Spotify che ho curato"
+      de: "Label-Playlist auf Spotify, die ich regelmäßig aktualisiert habe"
+      en: "Label playlist on Spotify that I updated regularly"
+      it: "Playlist della label su Spotify che ho aggiornato regolarmente"
     url: "https://open.spotify.com/playlist/5CevRvf8lxaVhbfqST1afR"
 
 de:
   title: "Eintracht Pankow Musik"
-  role: "Praktikant Produktmanagement & Label"
-  summary: "Sechs Monate in einem unabhängigen Berliner Musikunternehmen, eng an der Seite des Geschäftsführers: Kanalmanagement, Erstkontakte mit neuen Künstler:innen, Mailouts und Branchentreffen."
-  context: "Eintracht Pankow ist ein unabhängiges Musikunternehmen aus Berlin, Label und Verlag zugleich, mit Fokus auf Künstlerentwicklung, digitale Vermarktung und zeitgemäße Release- und Content-Strategien. Geschäftsführer ist Jens Herrndorff, Entdecker und Manager der Band Fettes Brot."
-  contribution: "Ich arbeitete eng mit dem Geschäftsführer zusammen und nahm an allen relevanten internen Besprechungen teil. Ich habe den YouTube-Kanal des Labels konzipiert und aufgebaut, die Playlists und den SoundCloud-Kanal gepflegt, potenzielle neue Künstler:innen angesprochen und einen regelmäßigen Mailout zu Social-Media- und Marketing-Trends für die Artists entwickelt."
+  role: "Praktikum Produktmanagement und Label-Operations"
+  category: "Outreach & digitale Kanäle"
+  summary: "Sechs Monate in einem unabhängigen Berliner Musikunternehmen, eng an der Seite des Geschäftsführers: Erstkontakte zu Artists, digitale Kanäle und ein Trend-Mailout."
+  context: "Eintracht Pankow ist ein unabhängiges Musikunternehmen aus Berlin mit Fokus auf Künstlerentwicklung, digitale Vermarktung und zeitgemäße Release- und Content-Strategien. Geschäftsführer ist Jens Herrndorff, Manager der Band Fettes Brot."
+  goal: "Die digitalen Kanäle des Labels aktuell halten, potenzielle neue Künstler:innen ansprechen und die Artists mit Informationen zu Social-Media- und Marketingtrends unterstützen."
+  contribution: "Ich arbeitete eng mit dem Geschäftsführer zusammen und nahm an den internen Besprechungen teil. Ich nahm Erstkontakt zu potenziellen neuen Künstler:innen auf, richtete den YouTube-Kanal des Labels ein und betreute ihn, pflegte Playlists und den SoundCloud-Kanal, verwaltete Songtexte über Musixmatch und entwickelte ein regelmäßiges Mailout zu Social-Media- und Marketingtrends."
   tasks:
     - "Kontaktaufnahme und Erstkommunikation mit potenziellen neuen Künstler:innen (Signings)"
-    - "Regelmäßiges Aktualisieren und Pflegen der Label-Playlists"
     - "Konzeption, Einrichtung und Pflege des YouTube-Kanals des Labels; Betreuung des SoundCloud-Kanals"
+    - "Regelmäßiges Aktualisieren und Pflegen der Label-Playlists"
     - "Einpflegen und Verwalten von Songtexten über Musixmatch"
-    - "Konzeption eines regelmäßigen Mailouts zu Social-Media- und Marketing-Trends für die Artists"
-    - "Teilnahme an allen relevanten internen Besprechungen"
-    - "Interne Schulung zu Produktanlage und -anlieferung im Backstage-System des Vertriebspartners Believe"
+    - "Konzeption eines regelmäßigen Mailouts zu Social-Media- und Marketingtrends für die Artists"
+    - "Teilnahme an den internen Besprechungen; interne Schulung zu Produktanlage und Anlieferung im Backstage-System des Vertriebspartners Believe"
+  scope: "Signings, Releases und Marketingentscheidungen verantwortete das Label. Ich habe unterstützt und die genannten Kanäle betreut. Reichweiten der Kanäle nenne ich hier nicht."
   outputs:
-    - "YouTube-Kanal des Labels konzipiert, eingerichtet und laufend gepflegt"
-    - "Regelmäßiger Mailout für die Artists des Labels entwickelt"
-    - "Präsenz bei Branchentreffen wie dem Reeperbahn Festival"
+    - "Regelmäßiges Mailout zu Social-Media- und Marketingtrends für die Artists des Labels"
+    - "YouTube-Kanal des Labels eingerichtet und gepflegt; Playlists und SoundCloud laufend aktualisiert"
     - "Organisation eines dreitägigen Songwriting Camps unterstützt und die Artists begleitet"
-    - "Erstmals Gast in einem Music Business Management Panel für Studierende, gemeinsam mit Jens Herrndorff und Matilda Pfeil"
-    - "Gesamturteil im Zeugnis: «jederzeit zu unserer vollsten Zufriedenheit»"
-  highlights:
-    - value: "6 Monate"
-      label: "August 2025 bis Januar 2026"
-    - value: "3 Kanäle"
-      label: "YouTube, Spotify-Playlist und SoundCloud betreut"
+    - "Teilnahme an Branchentreffen wie dem Reeperbahn Festival 2025. Im Zeugnis hervorgehoben: Kommunikationsstärke, professionelles Auftreten, Networking und Beziehungsaufbau"
+    - "Gast in einem Music Business Management Panel für Studierende, gemeinsam mit Jens Herrndorff"
+    - "Im Zeugnis: „erledigte alle ihm übertragenen Aufgaben jederzeit zu unserer vollsten Zufriedenheit“"
   transfer:
-    content: "Kanäle aufbauen und pflegen, Inhalte für eine Zielgruppe kuratieren."
-    kontakte: "Neue Partner:innen erstmals ansprechen und Beziehungen auf Branchentreffen aufbauen."
-    koordination: "Ein mehrtägiges Format mitorganisieren; Abläufe von der Produktanlage bis zur Auslieferung kennen."
+    kontakte: "Potenzielle Partner erstmals ansprechen und Beziehungen auf Branchentreffen aufbauen."
+    content: "Digitale Kanäle aufbauen und pflegen, Informationen für eine Zielgruppe kuratieren."
+    koordination: "Ein mehrtägiges Format mitorganisieren; Abläufe von der Produktanlage bis zur Anlieferung kennen."
   learnings:
     - "Networking entsteht durch echtes Interesse, gute Vorbereitung und verlässliches Auftreten, nicht durch laute Gesten."
     - "Kanalpflege ist Positionierung: Zielgruppen verstehen und laufend beobachten."
 
 en:
   title: "Eintracht Pankow Musik"
-  role: "Product management & label intern"
-  summary: "Six months at an independent Berlin music company, working closely with the managing director: channel management, first contact with new artists, mailouts and industry events."
-  context: "Eintracht Pankow is an independent music company from Berlin, both a label and a publisher, focused on artist development, digital marketing and contemporary release and content strategies. Its managing director is Jens Herrndorff, who discovered and manages the band Fettes Brot."
-  contribution: "I worked closely with the managing director and took part in all relevant internal meetings. I conceived and set up the label's YouTube channel, maintained the playlists and the SoundCloud channel, approached potential new artists and developed a regular mailout on social media and marketing trends for the artists."
+  role: "Intern, product management and label operations"
+  category: "Outreach & digital channels"
+  summary: "Six months at an independent Berlin music company, working closely with the managing director: artist outreach, digital channels and a trends mailout."
+  context: "Eintracht Pankow is an independent music company from Berlin, focused on artist development, digital marketing and contemporary release and content strategies. Its managing director is Jens Herrndorff, the manager of the band Fettes Brot."
+  goal: "Keep the label's digital channels up to date, reach out to potential new artists and support the artists with information on social media and marketing trends."
+  contribution: "I worked closely with the managing director and took part in the internal meetings. I made first contact with potential new artists, set up and ran the label's YouTube channel, maintained the playlists and the SoundCloud channel, managed lyrics via Musixmatch and developed a regular mailout on social media and marketing trends."
   tasks:
     - "First contact and communication with potential new artists (signings)"
-    - "Updating and maintaining the label playlists on a regular basis"
     - "Concept, setup and maintenance of the label's YouTube channel; looking after the SoundCloud channel"
+    - "Updating and maintaining the label playlists"
     - "Adding and managing lyrics via Musixmatch"
     - "Concept for a regular mailout on social media and marketing trends for the artists"
-    - "Taking part in all relevant internal meetings"
-    - "Internal training on product setup and delivery in the Backstage system of distribution partner Believe"
+    - "Internal meetings; internal training on product setup and delivery in the Backstage system of distribution partner Believe"
+  scope: "Signings, releases and marketing decisions were the label's responsibility. I supported the team and looked after the channels listed. I do not quote channel reach here."
   outputs:
-    - "Conceived, set up and maintained the label's YouTube channel"
-    - "Developed a regular mailout for the label's artists"
-    - "Represented the label at industry events such as Reeperbahn Festival"
+    - "A regular mailout on social media and marketing trends for the label's artists"
+    - "Set up and maintained the label's YouTube channel; kept playlists and SoundCloud up to date"
     - "Supported the organisation of a three-day songwriting camp and looked after the artists"
-    - "First guest appearance on a music business management panel for students, together with Jens Herrndorff and Matilda Pfeil"
-    - "Overall assessment in the reference letter: “always to our complete satisfaction”, the highest grade in German reference letters"
-  highlights:
-    - value: "6 months"
-      label: "August 2025 to January 2026"
-    - value: "3 channels"
-      label: "YouTube, Spotify playlist and SoundCloud"
+    - "Attended industry events such as Reeperbahn Festival 2025. Highlighted in the reference letter: communication skills, a professional manner, networking and relationship building"
+    - "Guest on a Music Business Management panel for students, together with Jens Herrndorff"
+    - "The reference letter states that I completed all assigned tasks “always to our complete satisfaction”, the highest rating used in German reference letters"
   transfer:
-    content: "Building and maintaining channels, curating content for an audience."
-    kontakte: "Approaching new partners and building relationships at industry events."
+    kontakte: "Approaching potential partners for the first time and building relationships at industry events."
+    content: "Building and maintaining digital channels, curating information for an audience."
     koordination: "Co-organising a multi-day format; knowing the steps from product setup to delivery."
   learnings:
     - "Networking grows from genuine interest, preparation and reliability, not from big gestures."
@@ -148,33 +128,30 @@ en:
 
 it:
   title: "Eintracht Pankow Musik"
-  role: "Stagista product management e label"
-  summary: "Sei mesi in una realtà musicale indipendente di Berlino, a stretto contatto con l'amministratore delegato: gestione dei canali, primi contatti con nuovi artisti, mailout e incontri di settore."
-  context: "Eintracht Pankow è una realtà musicale indipendente di Berlino, label ed editore insieme, con focus su artist development, marketing digitale e strategie di release e contenuti. L'amministratore delegato è Jens Herrndorff, scopritore e manager della band Fettes Brot."
-  contribution: "Ho lavorato a stretto contatto con l'amministratore delegato e ho partecipato a tutte le riunioni interne rilevanti. Ho ideato e creato il canale YouTube della label, curato le playlist e il canale SoundCloud, contattato potenziali nuovi artisti e sviluppato un mailout periodico sui trend social e di marketing per gli artisti."
+  role: "Stage, product management e label operations"
+  category: "Outreach e canali digitali"
+  summary: "Sei mesi in una realtà musicale indipendente di Berlino, accanto all'amministratore delegato: contatti con nuovi artisti, canali digitali e un mailout sui trend."
+  context: "Eintracht Pankow è una realtà musicale indipendente di Berlino, con focus su artist development, marketing digitale e strategie di release e contenuti. L'amministratore delegato è Jens Herrndorff, manager della band Fettes Brot."
+  goal: "Tenere aggiornati i canali digitali della label, contattare potenziali nuovi artisti e supportare gli artisti con informazioni sui trend social e di marketing."
+  contribution: "Ho lavorato a stretto contatto con l'amministratore delegato e ho partecipato alle riunioni interne. Ho avviato i primi contatti con potenziali nuovi artisti, creato e gestito il canale YouTube della label, curato le playlist e il canale SoundCloud, gestito i testi su Musixmatch e sviluppato un mailout periodico sui trend social e di marketing."
   tasks:
     - "Primo contatto e comunicazione con potenziali nuovi artisti (signing)"
-    - "Aggiornamento e cura regolare delle playlist della label"
     - "Ideazione, creazione e gestione del canale YouTube della label; cura del canale SoundCloud"
+    - "Aggiornamento e cura delle playlist della label"
     - "Inserimento e gestione dei testi su Musixmatch"
     - "Ideazione di un mailout periodico sui trend social e di marketing per gli artisti"
-    - "Partecipazione a tutte le riunioni interne rilevanti"
-    - "Formazione interna su inserimento e consegna dei prodotti nel sistema Backstage del distributore Believe"
+    - "Riunioni interne; formazione interna su inserimento e consegna dei prodotti nel sistema Backstage del distributore Believe"
+  scope: "Signing, release e decisioni di marketing erano responsabilità della label. Io ho supportato il team e curato i canali indicati. Non riporto qui i numeri di copertura dei canali."
   outputs:
-    - "Canale YouTube della label ideato, creato e gestito"
-    - "Mailout periodico per gli artisti della label"
-    - "Presenza a incontri di settore come il Reeperbahn Festival"
+    - "Un mailout periodico sui trend social e di marketing per gli artisti della label"
+    - "Canale YouTube della label creato e gestito; playlist e SoundCloud sempre aggiornati"
     - "Supporto all'organizzazione di un songwriting camp di tre giorni, accompagnando gli artisti"
-    - "Prima partecipazione come ospite a un panel di music business management per studenti, con Jens Herrndorff e Matilda Pfeil"
-    - "Valutazione finale nel certificato: «jederzeit zu unserer vollsten Zufriedenheit», la formula più alta dei certificati tedeschi"
-  highlights:
-    - value: "6 mesi"
-      label: "da agosto 2025 a gennaio 2026"
-    - value: "3 canali"
-      label: "YouTube, playlist Spotify e SoundCloud"
+    - "Partecipazione a incontri di settore come il Reeperbahn Festival 2025. Il certificato sottolinea capacità comunicative, professionalità, networking e capacità relazionali"
+    - "Ospite di un panel di Music Business Management per studenti, insieme a Jens Herrndorff"
+    - "Nel certificato: ho svolto tutti i compiti affidati «sempre con la nostra massima soddisfazione», la formula più alta dei certificati di lavoro tedeschi"
   transfer:
-    content: "Creare e gestire canali, curare contenuti per un pubblico."
-    kontakte: "Contattare nuovi partner e costruire relazioni agli incontri di settore."
+    kontakte: "Contattare per la prima volta potenziali partner e costruire relazioni agli incontri di settore."
+    content: "Creare e gestire canali digitali, selezionare informazioni per un pubblico."
     koordination: "Co-organizzare un format di più giorni; conoscere i passaggi dall'inserimento del prodotto alla consegna."
   learnings:
     - "Il networking nasce da interesse autentico, preparazione e affidabilità, non da grandi gesti."

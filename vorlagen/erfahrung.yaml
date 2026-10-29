@@ -1,8 +1,10 @@
-# TEMPLATE · new experience
+# TEMPLATE · new experience (case study)
 # Copy to content/erfahrung/<name>.yaml (lowercase letters and hyphens: "label-xyz.yaml" -> /de/erfahrung/label-xyz/)
-# Put photos into static/images/works/<name>/
+# Put photos into static/images/works/<name>/ (WebP or JPG, about 1600 px wide).
+# Rules: only facts you can show. "contribution" = what I did myself; "scope" = what was the team's or not mine.
+# No internal documents, staff names, internal figures or screenshots with private data.
 
-order: 6                      # position in the list (1 = top)
+order: 6                      # position in the list (1 = top, newest first)
 company: "Firma GmbH"         # or one text per language (de / en / it)
 location:
   de: "Berlin"
@@ -22,35 +24,45 @@ cover:
     it: "Cosa mostra l'immagine"
 
 tools: ["Tool 1", "Tool 2"]
-gallery: []                   # same format as cover, one entry per image
+gallery: []                   # same format as cover (+ optional caption), one entry per image
 documents: []                 # file names from content/nachweise/, e.g. ["zeugnis-firma"]
 posts: []                     # file names from content/linkedin/
-links: []                     # - label: "Text"  url: "https://…"
+links: []                     # - label: {de: "…", en: "…", it: "…"}
+                              #   url: "https://www.instagram.com/p/…"
 
 de:
   title: "Firma"
-  role: "Praktikant …"
+  role: "Praktikum …"
+  category: "Marketing & CRM"           # short label above the title (optional)
   summary: "1–2 Sätze für die Übersicht."
   context: "Was die Organisation macht."
-  contribution: "Was ich konkret gemacht habe."
+  goal: "Was das Team erreichen wollte (optional)."
+  contribution: "Was ich konkret selbst gemacht habe."
   tasks:
     - "Aufgabe"
+  scope: "Was nicht mein Anteil war, und welche Zahlen ich bewusst nicht nenne (optional)."
   outputs:
     - "Ergebnis (nur was belegbar ist)"
-  highlights: []              # - value: "83.767"  label: "Aufrufe in 14 Tagen"
+  highlights: []              # numbers with a source, e.g.
+                              # - value: "83.767"
+                              #   label: "Aufrufe in 14 Tagen"
+  # highlights_source: "Quelle: Instagram Insights (Screenshot unten)."   <- required when there are highlights
   transfer:
-    content: "Wofür das in Kommunikation und Content zählt."
+    content: "Wofür das in Kommunikation und Marketing zählt."
     kontakte: "Wofür das in Vertrieb und Business Development zählt."
   learnings:
     - "Was ich mitnehme"
 
 en:
   title: "Company"
-  role: "… intern"
+  role: "Intern, …"
+  category: "Marketing & CRM"
   summary: "…"
   context: "…"
+  goal: "…"
   contribution: "…"
   tasks: ["…"]
+  scope: "…"
   outputs: ["…"]
   transfer:
     content: "…"
@@ -59,11 +71,14 @@ en:
 
 it:
   title: "Azienda"
-  role: "Stagista …"
+  role: "Stage, …"
+  category: "Marketing e CRM"
   summary: "…"
   context: "…"
+  goal: "…"
   contribution: "…"
   tasks: ["…"]
+  scope: "…"
   outputs: ["…"]
   transfer:
     content: "…"

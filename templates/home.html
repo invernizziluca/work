@@ -7,50 +7,42 @@
   <script type="application/ld+json">{{ person_jsonld(page, lang)|tojson }}</script>
 {% endblock %}
 {% block body %}
-<div class="frame">
-  <main id="inhalt" class="main" tabindex="-1">
+<main id="inhalt" tabindex="-1">
 
-    <section class="hero zone" aria-labelledby="hero-name">
-      <p class="hero__eyebrow">{{ home.hero.eyebrow|tr(lang) }}</p>
-      <h1 id="hero-name" class="hero__name">{{ home.name|tr(lang) }}</h1>
-      <p class="hero__headline">{{ home.hero.headline|tr(lang) }}</p>
+  <section class="hero container" aria-labelledby="hero-name">
+    <div class="hero__text">
+{% if home.hero.kicker %}
+      <p class="hero__kicker">{{ home.hero.kicker|tr(lang) }}</p>
+{% endif %}
+      <h1 id="hero-name" class="hero__title">{{ home.name|tr(lang) }}</h1>
+      <p class="hero__claim">{{ home.hero.claim|tr(lang) }}</p>
       <p class="hero__lead">{{ home.hero.lead|tr(lang) }}</p>
       <div class="actions">
-        <a class="btn btn--primary" href="#experience">{{ ui.nav.experience }} <span aria-hidden="true">↗</span></a>
-        <a class="btn" href="#proof">{{ ui.nav.proof }}</a>
-        <a class="btn btn--quiet" href="#contact">{{ ui.nav.contact }}</a>
+        <a class="btn btn--primary" href="#selected-work">{{ home.hero.primary|tr(lang) }}</a>
+{% if home.contact.cv %}
+        <a class="btn btn--secondary" href="{{ page.url(home.contact.cv) }}" target="_blank" rel="noopener">{{ m.icon('file') }}{{ ui.contact.cv }}</a>
+{% endif %}
       </div>
-      <div class="hero__proof" aria-label="{{ home.hero.proof_label|tr(lang) }}">
-{% for proof in home.hero.proof_points %}
-        <a class="proof-stat" href="{{ page.url(proof.href) if proof.href.startswith('/') else proof.href }}">
-          <span class="proof-stat__value">{{ proof.value|tr(lang) }}</span>
-          <span class="proof-stat__label">{{ proof.label|tr(lang) }}</span>
-        </a>
+    </div>
+    <aside class="profile" aria-label="{{ ui.profile.label }}">
+      <div class="profile__photo">{{ page.img(home.portrait.src, home.portrait.alt|tr(lang), sizes='(min-width: 960px) 8rem, 6rem', loading='eager', fetchpriority='high', position=home.portrait.position) }}</div>
+      <dl class="profile__facts">
+{% for fact in home.facts %}
+        <div>
+          <dt>{{ fact.label|tr(lang) }}</dt>
+          <dd>{{ fact.value|tr(lang) }}</dd>
+        </div>
 {% endfor %}
-      </div>
-      <div class="hero__focus-head">
-        <h2>{{ home.hero.focus_heading|tr(lang) }}</h2>
-        <p>{{ home.hero.focus_note|tr(lang) }}</p>
-      </div>
-      <ul class="triad">
-{% for area in home.focus.areas %}
-        <li>
-          <a class="triad__link" href="?fokus={{ area.id }}#focus" data-focus-link="{{ area.id }}">
-            <span class="triad__number">0{{ loop.index }}</span>
-            <span class="triad__word">{{ area.word|tr(lang) }}</span>
-            <span class="triad__title">{{ area.title|tr(lang) }}</span>
-            <span class="triad__arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-{% endfor %}
-      </ul>
-    </section>
+      </dl>
+    </aside>
+  </section>
 
-    <section id="focus" class="section zone" aria-labelledby="focus-title">
-      <div class="section__head">
-        <h2 id="focus-title"><span class="pill">{{ ui.sections.focus }}</span></h2>
-        <p class="section__intro">{{ home.focus.intro|tr(lang) }}</p>
-      </div>
+  <section id="focus" class="section section--tint" aria-labelledby="focus-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-head__title" id="focus-title">{{ home.focus.heading|tr(lang) }}</h2>
+        <p class="section-head__intro">{{ home.focus.intro|tr(lang) }}</p>
+      </header>
       <div class="lens" data-lens>
         <div class="lens__tabs" role="tablist" aria-label="{{ ui.focus.tabs_label }}" hidden>
 {% for area in home.focus.areas %}
@@ -59,18 +51,18 @@
         </div>
 {% for area in home.focus.areas %}
         <div class="lens__panel" role="tabpanel" id="panel-{{ area.id }}" aria-labelledby="tab-{{ area.id }}" data-panel="{{ area.id }}" tabindex="0">
-          <h3 class="lens__title"><span class="lens__title-word">{{ area.word|tr(lang) }}.</span> {{ area.title|tr(lang) }}</h3>
+          <h3 class="lens__title">{{ area.word|tr(lang) }}<span class="lens__subtitle">{{ area.title|tr(lang) }}</span></h3>
           <p class="lens__intro">{{ area.intro|tr(lang) }}</p>
           <div class="lens__cols">
             <div>
-              <h4 class="label">{{ ui.focus.evidence }}</h4>
-              <ul class="evidence">
+              <h4 class="lens__label">{{ ui.focus.evidence }}</h4>
+              <ul class="evidence" role="list">
 {% for item in area.evidence %}
                 <li class="evidence__item">
                   <p class="evidence__text">{{ item.text|tr(lang) }}</p>
                   <p class="evidence__meta">
 {% if item.work %}
-                    <a href="{{ page.url(work_path(lang, item.work)) }}">{{ works_by_id[item.work].company|tr(lang) }}</a>
+                    <a class="link" href="{{ page.url(work_path(lang, item.work)) }}">{{ works_by_id[item.work].company|tr(lang) }}</a>
 {% else %}
                     <span>{{ item.org|tr(lang) }}</span>
 {% endif %}
@@ -81,8 +73,8 @@
               </ul>
             </div>
             <div>
-              <h4 class="label">{{ ui.focus.roles }}</h4>
-              <ul class="roles__list">
+              <h4 class="lens__label">{{ ui.focus.roles }}</h4>
+              <ul class="chips" role="list">
 {% for role in (area.roles[lang] if area.roles[lang] else area.roles.de) %}
                 <li>{{ role }}</li>
 {% endfor %}
@@ -92,244 +84,251 @@
         </div>
 {% endfor %}
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="experience" class="section zone" aria-labelledby="experience-title">
-      <div class="section__head">
-        <h2 id="experience-title"><span class="pill">{{ ui.sections.experience }}</span></h2>
-        <p class="section__intro">{{ home.sections.experience|tr(lang) }}</p>
+  <section id="selected-work" class="section" aria-labelledby="selected-work-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-head__title" id="selected-work-title">{{ home.featured.heading|tr(lang) }}</h2>
+        <p class="section-head__intro">{{ home.featured.intro|tr(lang) }}</p>
+      </header>
+      <div class="work-grid work-grid--3">
+{% for item in home.featured['items'] %}
+{% set href = page.url(work_path(lang, item.work)) %}
+        <article class="work-card" aria-labelledby="work-{{ item.work }}">
+          <div class="work-card__media">{{ page.img(m.image_src(item.image), item.image.alt|tr(lang) if item.image is mapping else '', sizes='(min-width: 1240px) 24rem, (min-width: 900px) 30vw, 92vw', position=(item.image.position if item.image is mapping else None)) }}</div>
+          <div class="work-card__body">
+            <p class="kicker">{{ item.label|tr(lang) }}</p>
+            <h3 class="work-card__title" id="work-{{ item.work }}"><a href="{{ href }}">{{ item.title|tr(lang) }}</a></h3>
+{% if item.metric %}
+            <p class="metric">
+              <span class="metric__value">{{ item.metric.value|tr(lang) }}</span>
+              <span class="metric__label">{{ item.metric.label|tr(lang) }}</span>
+              <span class="metric__source">{{ item.metric.source|tr(lang) }}</span>
+            </p>
+{% endif %}
+            <p class="work-card__text">{{ item.text|tr(lang) }}</p>
+            <dl class="attribution attribution--compact">
+              <div>
+                <dt>{{ ui.work.mine }}</dt>
+                <dd>{{ item.mine|tr(lang) }}</dd>
+              </div>
+{% if item.credit %}
+              <div>
+                <dt>{{ ui.work.credit }}</dt>
+                <dd>{{ item.credit|tr(lang) }}</dd>
+              </div>
+{% endif %}
+            </dl>
+            <ul class="work-card__links" role="list">
+              <li><a class="link link--strong" href="{{ href }}">{{ home.featured.read|tr(lang) }}{{ m.icon('arrow-right') }}</a></li>
+{% for link in item.links or [] %}
+              <li>{{ m.ext(link.url, link.label|tr(lang)) }}</li>
+{% endfor %}
+            </ul>
+          </div>
+        </article>
+{% endfor %}
       </div>
-      <ol class="timeline">
+    </div>
+  </section>
+
+  <section id="experience" class="section section--tint" aria-labelledby="experience-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-head__title" id="experience-title">{{ ui.sections.experience }}</h2>
+        <p class="section-head__intro">{{ home.sections.experience|tr(lang) }}</p>
+      </header>
+      <ol class="rows" role="list">
 {% for work in works %}
 {% set text = localized(work, lang) %}
-        <li class="entry" data-areas="{{ work.areas|join(' ') }}">
-          {% set cover = work.cover if work.cover is mapping else {'src': work.cover} %}
-          <div class="entry__media" aria-hidden="true">{{ page.img(cover.src, '', sizes='(min-width: 960px) 420px, 100vw', position=cover.position) }}</div>
-          <p class="entry__when">
-            <span>{{ format_period(work.start, work.get('end'), ui) }}</span>
-{% if not work.get('end') %}
-            <span class="badge">{{ ui.period.current }}</span>
-{% endif %}
-          </p>
-          <div class="entry__body">
-            <h3 class="entry__org"><a href="{{ page.url(work_path(lang, work.id)) }}">{{ work.company|tr(lang) }}</a></h3>
-            <p class="entry__role">{{ text.role }}, {{ work.location|tr(lang) }}</p>
-            <p class="entry__summary">{{ text.summary }}</p>
-            <div class="entry__foot">
-              {{ m.area_tags(work.areas) }}
-              <a class="more" href="{{ page.url(work_path(lang, work.id)) }}">{{ ui.experience.read }}<span class="sr-only">: {{ work.company|tr(lang) }}</span></a>
-            </div>
+{% set cover = work.cover if work.cover is mapping else {'src': work.cover} %}
+        <li class="row" data-areas="{{ work.areas|join(' ') }}">
+          <div class="row__thumb">{{ page.img(cover.src, '', sizes='96px', position=cover.position) }}</div>
+          <p class="row__period">{{ format_period(work.start, work.get('end'), ui) }}{% if not work.get('end') %} <span class="badge">{{ ui.period.current }}</span>{% endif %}</p>
+          <div class="row__main">
+            <h3 class="row__title"><a class="row__link" href="{{ page.url(work_path(lang, work.id)) }}">{{ work.company|tr(lang) }}</a></h3>
+            <p class="row__role">{{ text.role }}, {{ work.location|tr(lang) }}</p>
           </div>
+          <div class="row__summary">
+            <p>{{ text.summary }}</p>
+            {{ m.area_tags(work.areas) }}
+          </div>
+          <span class="row__cta" aria-hidden="true">{{ ui.experience.read }}{{ m.icon('arrow-right') }}</span>
         </li>
 {% endfor %}
       </ol>
-    </section>
+    </div>
+  </section>
 
-    <section id="references" class="section zone" aria-labelledby="references-title">
-      <div class="section__head">
-        <h2 id="references-title"><span class="pill">{{ ui.sections.references }}</span></h2>
-        <p class="section__intro">{{ home.sections.references|tr(lang) }}</p>
-      </div>
-{% for ref in references if ref.featured %}
-{% set text = localized(ref, lang) %}
-      <figure class="quote quote--big">
-        <blockquote>
-{% for paragraph in text.quote|paragraphs %}
-          <p>{{ paragraph }}</p>
-{% endfor %}
-        </blockquote>
-        <figcaption class="quote__by">
-          {{ m.person(ref) }}
-{% if lang != ref.original_language %}
-          <p class="quote__note">{{ ui.references.translated }}</p>
-{% endif %}
-{% if text.full or ref.url %}
-          <div class="quote__links">
-{% if ref.url %}
-            <a href="{{ ref.url }}" target="_blank" rel="noopener">{{ ui.references.linkedin }}</a>
-{% endif %}
-          </div>
-{% endif %}
-        </figcaption>
-{% if text.full %}
-        <details class="quote__full">
-          <summary>{{ ui.references.full }}</summary>
-{% for paragraph in text.full|paragraphs %}
-          <p>{{ paragraph }}</p>
-{% endfor %}
-        </details>
-{% endif %}
-      </figure>
-{% endfor %}
-      <div class="quotes">
-{% for ref in references if not ref.featured %}
-{% set text = localized(ref, lang) %}
-        <figure class="quote">
-          <blockquote>
-{% for paragraph in text.quote|paragraphs %}
-            <p>{{ paragraph }}</p>
-{% endfor %}
-          </blockquote>
-          <figcaption class="quote__by">
-            {{ m.person(ref) }}
-{% if lang != ref.original_language %}
-            <p class="quote__note">{{ ui.references.translated }}</p>
-{% endif %}
-{% if ref.pdf %}
-            <div class="quote__links"><a href="{{ page.url(ref.pdf) }}" target="_blank" rel="noopener">{{ ui.references.pdf }}</a></div>
-{% endif %}
-          </figcaption>
-        </figure>
-{% endfor %}
-      </div>
-    </section>
-
-    <section id="education" class="section zone" aria-labelledby="education-title">
-      <div class="section__head">
-        <h2 id="education-title"><span class="pill">{{ ui.sections.education }}</span></h2>
-        <p class="section__intro">{{ home.sections.education|tr(lang) }}</p>
-      </div>
-      <ol class="timeline">
+  <section id="education" class="section" aria-labelledby="education-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-head__title" id="education-title">{{ ui.sections.education }}</h2>
+        <p class="section-head__intro">{{ home.sections.education|tr(lang) }}</p>
+      </header>
+      <ol class="edu" role="list">
 {% for entry in education %}
 {% set text = localized(entry, lang) %}
-        <li class="entry">
-          <p class="entry__when"><span>{{ format_period(entry.start, entry.get('end'), ui) }}</span></p>
-          <div class="entry__body">
-            <h3 class="entry__org">{{ text.title }}</h3>
-            <p class="entry__role">{{ entry.institution|tr(lang) }}, {{ entry.location|tr(lang) }}{% if text.focus %}. {{ text.focus }}{% endif %}</p>
-            <p class="entry__explain">{{ text.explain }}</p>
+        <li class="edu__item">
+          <p class="edu__period">{{ format_period(entry.start, entry.get('end'), ui, entry.get('expected_end')) }}</p>
+          <div class="edu__main">
+            <h3 class="edu__title">{{ text.title }}</h3>
+{% if text.focus %}
+            <p class="edu__focus">{{ text.focus }}</p>
+{% endif %}
+            <p class="edu__school">{{ entry.institution|tr(lang) }}, {{ entry.location|tr(lang) }}</p>
+            <p class="edu__explain">{{ text.explain }}</p>
 {% if text.points %}
-            <details class="entry__points">
+            <details class="edu__more">
               <summary>{{ ui.education.points }}</summary>
-              <ul class="dotlist">
+              <ul class="list">
 {% for point in text.points %}
                 <li>{{ point }}</li>
 {% endfor %}
               </ul>
             </details>
 {% endif %}
+{% if entry.posts %}
+            <ul class="edu__links" role="list">
+{% for id in entry.posts %}
+              <li>{{ m.ext(posts_by_id[id].url, ui.proof.posts_title ~ ': ' ~ localized(posts_by_id[id], lang).title) }}</li>
+{% endfor %}
+            </ul>
+{% endif %}
           </div>
         </li>
 {% endfor %}
       </ol>
-    </section>
+    </div>
+  </section>
 
-    <section id="proof" class="section zone" aria-labelledby="proof-title">
-      <div class="section__head">
-        <h2 id="proof-title"><span class="pill">{{ ui.sections.proof }}</span></h2>
-        <p class="section__intro">{{ home.sections.proof|tr(lang) }}</p>
+  <section id="references" class="section section--tint" aria-labelledby="references-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-head__title" id="references-title">{{ ui.sections.references }}</h2>
+        <p class="section-head__intro">{{ home.sections.references|tr(lang) }}</p>
+      </header>
+      <div class="quotes">
+{% for ref in references %}
+{% set text = localized(ref, lang) %}
+        <figure class="quote{% if ref.featured %} quote--featured{% endif %}">
+          <blockquote class="quote__text" lang="{{ ref.original_language if (lang != ref.original_language and not ref.get(lang, {}).get('quote')) else lang }}">
+{% for paragraph in text.quote|paragraphs %}
+            <p>{{ paragraph }}</p>
+{% endfor %}
+          </blockquote>
+{% if lang != ref.original_language and ref.get(lang, {}).get('quote') %}
+          <p class="quote__note">{{ ui.references.translated }}</p>
+{% endif %}
+          <figcaption>{{ m.person(ref) }}</figcaption>
+{% if ref.pdf or ref.url %}
+          <p class="quote__links">
+{% if ref.pdf %}
+            <a class="link" href="{{ page.url(ref.pdf) }}" target="_blank" rel="noopener">{{ ui.references.pdf }}</a>
+{% endif %}
+{% if ref.url %}
+            {{ m.ext(ref.url, ui.references.linkedin) }}
+{% endif %}
+          </p>
+{% endif %}
+{% if text.full %}
+          <details class="quote__more">
+            <summary>{{ ui.references.full }}</summary>
+            <div class="quote__full">
+{% for paragraph in text.full|paragraphs %}
+              <p>{{ paragraph }}</p>
+{% endfor %}
+            </div>
+          </details>
+{% endif %}
+        </figure>
+{% endfor %}
       </div>
-      <div class="docs">
-{% for type in proof_types %}
-{% set items = proofs|selectattr('type', 'equalto', type)|list %}
-{% if items %}
-        <div class="docs__group">
-          <h3 class="docs__title">{{ ui.proof.groups[type] }}</h3>
-          <ul class="doclist">
-{% for doc in items %}
-{% set text = localized(doc, lang) %}
-{% set image = m.image_src(doc.image) if doc.image else '' %}
-            <li class="doc{% if not image %} doc--noimg{% endif %}">
-{% if image %}
-              <span class="doc__thumb">{{ page.img(image, '', sizes='64px') }}</span>
-{% endif %}
-              <div class="doc__body">
-                <p class="doc__title"><a href="{{ page.url(doc.pdf) if doc.pdf else doc.url }}" target="_blank" rel="noopener">{{ text.title }}</a></p>
-                <p class="doc__meta">{{ doc.source|tr(lang) }}, {{ format_date(doc.date, lang) }}{% if doc.pdf %}, PDF{% endif %}</p>
-                <p class="doc__summary">{{ text.summary }}</p>
-              </div>
-            </li>
-{% endfor %}
-          </ul>
-        </div>
-{% endif %}
-{% endfor %}
-{% if posts %}
-        <div class="docs__group">
-          <h3 class="docs__title">{{ ui.proof.posts_title }}</h3>
-          <ul class="doclist">
-{% for post in posts %}
-{% set text = localized(post, lang) %}
-            <li class="doc">
-              <span class="doc__thumb">{{ page.img(m.image_src(post.image), '', sizes='64px', position=(post.image.position if post.image is mapping else None)) }}</span>
-              <div class="doc__body">
-                <p class="doc__title"><a href="{{ post.url }}" target="_blank" rel="noopener">{{ text.title }}</a></p>
-                <p class="doc__meta">{% if post.author %}{{ ui.proof.post_by }} {{ post.author }}, {% endif %}{{ format_date(post.date, lang) }}</p>
-                <p class="doc__summary">{{ text.excerpt }}</p>
-              </div>
-            </li>
-{% endfor %}
-          </ul>
-        </div>
-{% endif %}
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="contact zone" aria-labelledby="contact-title">
-      <h2 id="contact-title"><span class="pill">{{ ui.sections.contact }}</span></h2>
-      <p class="contact__text">{{ home.sections.contact|tr(lang) }}</p>
-      <p class="contact__email"><a href="mailto:{{ home.contact.email }}">{{ home.contact.email }}</a></p>
-      <div class="actions">
-        <a class="btn btn--light" href="{{ home.contact.linkedin }}" target="_blank" rel="noopener">{{ ui.contact.linkedin }}</a>
-{% if home.contact.cv %}
-        <a class="btn btn--light" href="{{ page.url(home.contact.cv) }}" target="_blank" rel="noopener">{{ ui.contact.cv }}</a>
-{% endif %}
+  <section id="proof" class="section" aria-labelledby="proof-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-head__title" id="proof-title">{{ ui.sections.proof }}</h2>
+        <p class="section-head__intro">{{ home.sections.proof|tr(lang) }}</p>
+      </header>
+      <ul class="docs docs--home" role="list">
+{% for doc in proofs %}
+        {{ m.doc_item(doc) }}
+{% endfor %}
+      </ul>
+{% set home_posts = posts|selectattr('show_on_home')|list %}
+{% if home_posts %}
+      <h3 class="subhead">{{ ui.proof.posts_title }}</h3>
+      <div class="posts">
+{% for post in home_posts %}
+        {{ m.post_card(post, related_post.get(post.id)) }}
+{% endfor %}
       </div>
-    </section>
-  </main>
+{% endif %}
+    </div>
+  </section>
 
-  <div class="side">
-    <aside class="side__profile zone" aria-label="{{ ui.side.profile }}">
-      <div class="portrait">{{ page.img(home.portrait.src, home.portrait.alt|tr(lang), sizes='(min-width: 960px) 300px, 240px', loading='eager', fetchpriority='high', position=home.portrait.position) }}</div>
-      <dl class="facts">
-{% for fact in home.facts %}
+  <section id="skills" class="section section--tint" aria-labelledby="skills-title">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-head__title" id="skills-title">{{ ui.sections.skills }}</h2>
+      </header>
+      <div class="skills-grid">
         <div>
-          <dt>{{ fact.label|tr(lang) }}</dt>
-          <dd>{{ fact.value|tr(lang) }}</dd>
-        </div>
-{% endfor %}
-      </dl>
-      <div class="side-block">
-        <h2><span class="pill pill--side">{{ ui.side.contact }}</span></h2>
-        <ul class="side__links">
-          <li><a href="mailto:{{ home.contact.email }}">{{ home.contact.email }}</a></li>
-          <li><a href="{{ home.contact.linkedin }}" target="_blank" rel="noopener">{{ home.contact.linkedin|replace('https://www.', '')|replace('https://', '')|trim('/') }}</a></li>
-        </ul>
-      </div>
-    </aside>
-
-    <aside class="side__details zone" aria-label="{{ ui.side.languages }}, {{ ui.side.tools }}">
-      <div class="side-block">
-        <h2><span class="pill pill--side">{{ ui.side.languages }}</span></h2>
-        <dl class="langlist">
+          <h3 class="subhead subhead--small">{{ ui.skills.languages }}</h3>
+          <dl class="languages">
 {% for item in home.skills.languages %}
-          <div>
-            <dt>{{ item.name|tr(lang) }}</dt>
-            <dd>{{ item.level|tr(lang) }}</dd>
-          </div>
+            <div>
+              <dt>{{ item.name|tr(lang) }}</dt>
+              <dd>{{ item.level|tr(lang) }}</dd>
+            </div>
 {% endfor %}
-        </dl>
-      </div>
-      <div class="side-block">
-        <h2><span class="pill pill--side">{{ ui.side.tools }}</span></h2>
-        <dl class="toolgroups">
-{% for group in home.skills.tool_groups %}
-          <div>
-            <dt>{{ group.name|tr(lang) }}</dt>
-            <dd>{% for item in group['items'] %}{{ item|tr(lang) }}{% if not loop.last %}, {% endif %}{% endfor %}</dd>
-          </div>
-{% endfor %}
-        </dl>
-      </div>
-      <div class="side-block">
-        <h2><span class="pill pill--side">{{ ui.side.interests }}</span></h2>
-        <ul class="side__list">
+          </dl>
+          <h3 class="subhead subhead--small">{{ ui.skills.interests }}</h3>
+          <ul class="list list--plain">
 {% for item in home.skills.interests %}
-          <li>{{ item|tr(lang) }}</li>
+            <li>{{ item|tr(lang) }}</li>
 {% endfor %}
-        </ul>
+          </ul>
+        </div>
+        <div>
+          <h3 class="subhead subhead--small">{{ ui.skills.tools }}</h3>
+          <dl class="tool-groups">
+{% for group in home.skills.tool_groups %}
+            <div>
+              <dt>{{ group.name|tr(lang) }}</dt>
+              <dd>
+                <ul class="chips chips--white" role="list">
+{% for item in group['items'] %}
+                  <li>{{ item|tr(lang) }}</li>
+{% endfor %}
+                </ul>
+              </dd>
+            </div>
+{% endfor %}
+          </dl>
+        </div>
       </div>
-    </aside>
-  </div>
-</div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact" aria-labelledby="contact-title">
+    <div class="container contact__inner">
+      <h2 class="contact__title" id="contact-title">{{ ui.sections.contact }}</h2>
+      <p class="contact__text">{{ home.sections.contact|tr(lang) }}</p>
+      <div class="actions actions--center">
+        <a class="btn btn--primary" href="mailto:{{ home.contact.email }}">{{ m.icon('mail') }}{{ ui.contact.email }}</a>
+        <a class="btn btn--secondary" href="{{ home.contact.linkedin }}" target="_blank" rel="noopener noreferrer">{{ ui.contact.linkedin }}</a>
+{% if home.contact.cv %}
+        <a class="btn btn--secondary" href="{{ page.url(home.contact.cv) }}" target="_blank" rel="noopener">{{ ui.contact.cv }}</a>
+{% endif %}
+      </div>
+      <p class="contact__mail"><a href="mailto:{{ home.contact.email }}">{{ home.contact.email }}</a></p>
+    </div>
+  </section>
+</main>
 {% endblock %}

@@ -1,34 +1,50 @@
 {% set start = home_path(lang) %}
 {% set nav = [
   ('#focus', ui.nav.focus),
+  ('#selected-work', ui.nav.work),
   ('#experience', ui.nav.experience),
   ('#education', ui.nav.education),
-  ('#proof', ui.nav.proof),
   ('#contact', ui.nav.contact),
 ] %}
-<header class="topbar">
-  <div class="topbar__inner">
-    <a class="brand" href="{{ page.url(start) }}" aria-label="{{ home.name|tr(lang) }}">
-      <span class="brand__mark" aria-hidden="true"><img class="brand__logo" src="{{ page.url('/images/brand/luca-invernizzi-logo.png') }}" alt="" width="1280" height="1280"></span>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ page.url(start) }}">
+      <img class="brand__mark" src="{{ page.url('/images/brand/li-logo.svg') }}" alt="" width="30" height="33">
       <span class="brand__name">{{ home.name|tr(lang) }}</span>
     </a>
-    <nav class="topnav" aria-label="{{ ui.menu }}">
+    <nav class="site-nav" aria-label="{{ ui.main_nav }}">
+      <ul>
 {% for anchor, label in nav %}
-      <a href="{{ page.url(start + anchor) }}">{{ label }}</a>
+        <li><a href="{{ page.url(start + anchor) }}">{{ label }}</a></li>
 {% endfor %}
+      </ul>
     </nav>
-    <div class="langs" role="group" aria-label="{{ ui.language_switch }}">
+    <div class="site-header__tools">
+      <nav class="lang-switch" aria-label="{{ ui.language_switch }}">
+        <ul>
 {% for code in languages %}
-      <a href="{{ page.url(alternates[code]) }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ all_ui[code].language_name }}"{% if code == lang %} aria-current="true"{% endif %}>{{ code|upper }}</a>
+          <li><a href="{{ page.url(alternates[code]) }}" hreflang="{{ code }}" lang="{{ code }}"{% if code == lang %} aria-current="page"{% endif %}><span aria-hidden="true">{{ code|upper }}</span><span class="sr-only">{{ all_ui[code].language_name }}</span></a></li>
 {% endfor %}
-    </div>
-    <details class="menu">
-      <summary aria-label="{{ ui.menu }}"><span class="menu__bars" aria-hidden="true"></span></summary>
-      <nav class="menu__panel" aria-label="{{ ui.menu }}">
-{% for anchor, label in nav %}
-        <a href="{{ page.url(start + anchor) }}">{{ label }}</a>
-{% endfor %}
+        </ul>
       </nav>
-    </details>
+{% if home.contact.cv %}
+      <a class="btn btn--secondary btn--small site-header__cv" href="{{ page.url(home.contact.cv) }}" target="_blank" rel="noopener">{{ ui.contact.cv_short }}</a>
+{% endif %}
+      <details class="menu">
+        <summary class="menu__button" aria-label="{{ ui.menu }}"><span class="menu__icon" aria-hidden="true"></span></summary>
+        <div class="menu__panel">
+          <nav aria-label="{{ ui.main_nav }}">
+            <ul>
+{% for anchor, label in nav %}
+              <li><a href="{{ page.url(start + anchor) }}">{{ label }}</a></li>
+{% endfor %}
+            </ul>
+          </nav>
+{% if home.contact.cv %}
+          <a class="btn btn--primary menu__cv" href="{{ page.url(home.contact.cv) }}" target="_blank" rel="noopener">{{ ui.contact.cv }}</a>
+{% endif %}
+        </div>
+      </details>
+    </div>
   </div>
 </header>
